@@ -19,7 +19,7 @@ export const PersonalizedDescription: React.FC<PersonalizedDescriptionProps> = (
         </CardHeader>
         <CardContent className="p-8">
           <div className="prose prose-blue max-w-none text-muted-foreground leading-relaxed">
-            <p className="text-lg font-medium text-foreground whitespace-pre-line">
+            <p className="text-lg font-medium text-foreground whitespace-pre-line text-center">
               {description}
             </p>
           </div>
