@@ -31,7 +31,7 @@ export const QuizContainer: React.FC = () => {
     {
       question: "Você sente insegurança ou dificuldade em elaborar o PEI?",
       options: [
-        { label: "Sim, me faz perder muito tempo", icon: "😟" },
+        { label: "Sim, nunca sei se está correto ou completo", icon: "👍" },
         { label: "Um pouco, mas consigo equilibrar", icon: "🙂" }
       ]
     },
