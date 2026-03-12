@@ -191,7 +191,7 @@ export const QuizContainer: React.FC = () => {
             <PersonalizedDescription description={personalizedDesc} />
           </div>
           
-          <div className="mb-10">
+          <div className="mb-4">
             <CTAButton />
           </div>
 
@@ -203,7 +203,7 @@ export const QuizContainer: React.FC = () => {
             <SocialProof />
           </div>
 
-          <div className="mt-16 mb-12 text-center space-y-4 px-4">
+          <div className="mt-16 mb-6 text-center space-y-4 px-4">
             <h3 className="text-[21px] font-headline font-bold text-primary">
               Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
             </h3>
@@ -252,7 +252,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-20">
+          <div className="mt-8">
             <OfferSection />
           </div>
         </div>

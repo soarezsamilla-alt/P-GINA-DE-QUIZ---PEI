@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -22,7 +21,7 @@ export const OfferSection: React.FC = () => {
   ]
 
   return (
-    <div id="offer-section" className="py-16 text-center max-w-2xl mx-auto space-y-8">
+    <div id="offer-section" className="pb-16 pt-8 text-center max-w-2xl mx-auto space-y-8">
       <div className="space-y-4 px-4">
         <h2 className="text-[21px] font-headline text-primary font-bold">
           Garanta agora os melhores modelos de PEI e otimize seu tempo!
