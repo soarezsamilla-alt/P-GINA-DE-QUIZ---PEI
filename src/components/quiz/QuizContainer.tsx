@@ -68,7 +68,7 @@ export const QuizContainer: React.FC = () => {
       image: "https://image2url.com/r2/default/images/1773351312705-04ec6820-800f-4144-8bd9-5694237c8b28.webp"
     },
     {
-      title: "Guia de PDI Passo a Passo",
+      title: "Plano de Desenvolvimento PDI e PEI",
       description: "Um guia completo com estratégias de ensino.",
       image: "https://image2url.com/r2/default/images/1773351395354-2a5033b1-313f-4462-97c1-54229810db19.webp"
     },
