@@ -1,14 +1,24 @@
-
 "use client"
 
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, Mail, Zap, ArrowRight } from 'lucide-react'
+import { ShieldCheck, Mail, Zap, ArrowRight, Check } from 'lucide-react'
 
 export const OfferSection: React.FC = () => {
   const handlePurchase = () => {
     window.location.href = "https://pay.example.com/checkout/pei-models"
   }
+
+  const benefits = [
+    "Mais de 200 Modelos de PEI prontos e editáveis",
+    "Combo Ed. Especial com materiais extras",
+    "Acesso aos modelos fundamentais",
+    "Todos os 6 Bônus",
+    "Incluindo PEI para deficiências múltiplas",
+    "PEI Autismo Ed. Infantil",
+    "Relatórios AEE",
+    "Acesso a futuras atualizações"
+  ]
 
   return (
     <div id="offer-section" className="py-16 text-center max-w-2xl mx-auto space-y-8">
@@ -41,15 +51,20 @@ export const OfferSection: React.FC = () => {
           <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>
 
-        <div className="mt-8 space-y-4 text-sm text-muted-foreground text-left">
-          <div className="flex items-start gap-3">
-            <Mail className="w-5 h-5 text-accent shrink-0" />
-            <p>Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu e-mail.</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <ShieldCheck className="w-5 h-5 text-accent shrink-0" />
-            <p><strong>É seguro? Sim.</strong> Utilizamos a maior plataforma de pagamentos da América Latina. Seus dados estarão completamente seguros.</p>
-          </div>
+        <div className="mt-8 space-y-3 text-left border-t pt-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-center gap-3 text-[14px] text-primary/80 font-medium">
+              <div className="bg-green-100 p-0.5 rounded-full">
+                <Check className="w-4 h-4 text-green-600 shrink-0" />
+              </div>
+              <span>{benefit}</span>
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-6 flex items-center justify-center gap-2 text-[12px] text-muted-foreground">
+          <ShieldCheck className="w-4 h-4 text-accent" />
+          <span>Pagamento 100% Seguro e Acesso Imediato</span>
         </div>
       </div>
       
