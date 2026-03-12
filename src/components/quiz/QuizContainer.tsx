@@ -212,37 +212,41 @@ export const QuizContainer: React.FC = () => {
               {bonuses.map((bonus, idx) => (
                 <div 
                   key={idx} 
-                  className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border-2 border-white/60 group hover:border-accent/30 hover:shadow-xl transition-all duration-300 max-w-[340px] w-full"
-                  style={{ backgroundColor: bonus.bgColor }}
+                  className="group p-[3px] rounded-[2.1rem] bg-gradient-to-br from-primary/40 via-accent/40 to-primary/40 hover:from-primary hover:via-accent hover:to-primary transition-all duration-500 shadow-md hover:shadow-2xl max-w-[340px] w-full"
                 >
-                  {/* Badge Bônus */}
-                  <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
-                    Bônus {idx + 1}º
-                  </div>
-                  
-                  {/* Imagem do Produto (Reduzida) */}
-                  <div className="relative w-[70%] aspect-square mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-500">
-                    <Image 
-                      src={bonus.image} 
-                      alt={bonus.title}
-                      fill
-                      className="object-cover"
-                      data-ai-hint="bonus digital product cover"
-                    />
-                  </div>
+                  <div 
+                    className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center h-full transition-colors duration-300"
+                    style={{ backgroundColor: bonus.bgColor }}
+                  >
+                    {/* Badge Bônus */}
+                    <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
+                      Bônus {idx + 1}º
+                    </div>
+                    
+                    {/* Imagem do Produto (Reduzida) */}
+                    <div className="relative w-[70%] aspect-square mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-110 transition-transform duration-500">
+                      <Image 
+                        src={bonus.image} 
+                        alt={bonus.title}
+                        fill
+                        className="object-cover"
+                        data-ai-hint="bonus digital product cover"
+                      />
+                    </div>
 
-                  {/* Textos */}
-                  <div className="space-y-2 mb-4 flex-grow">
-                    <h4 className="text-[16px] font-bold text-primary leading-tight">{bonus.title}</h4>
-                    <p className="text-muted-foreground text-[12px] leading-relaxed px-1">
-                      {bonus.description}
-                    </p>
-                  </div>
+                    {/* Textos */}
+                    <div className="space-y-2 mb-4 flex-grow">
+                      <h4 className="text-[16px] font-bold text-primary leading-tight">{bonus.title}</h4>
+                      <p className="text-muted-foreground text-[12px] leading-relaxed px-1">
+                        {bonus.description}
+                      </p>
+                    </div>
 
-                  {/* Preços */}
-                  <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
-                    <span className="text-muted-foreground line-through text-[11px] font-medium">R$ 47,00</span>
-                    <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
+                    {/* Preços */}
+                    <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
+                      <span className="text-muted-foreground line-through text-[11px] font-medium">R$ 47,00</span>
+                      <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
+                    </div>
                   </div>
                 </div>
               ))}
