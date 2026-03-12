@@ -27,13 +27,13 @@ export const SampleGallery: React.FC = () => {
         </p>
       </div>
 
-      <div className="max-w-lg mx-auto relative px-10 sm:px-14">
+      <div className="max-w-xl mx-auto relative px-10 sm:px-14">
         <Carousel className="w-full">
           <CarouselContent>
             {samples.map((sample) => (
               <CarouselItem key={sample.id}>
                 <div className="relative group overflow-hidden rounded-3xl shadow-xl bg-white border-4 border-white">
-                  <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="relative aspect-[2/3] overflow-hidden">
                     <Image 
                       src={sample.imageUrl} 
                       alt={sample.description}
