@@ -1,3 +1,4 @@
+
 'use server';
 /**
  * @fileOverview This file implements a Genkit flow for generating personalized product descriptions.
@@ -61,7 +62,7 @@ Based on these answers, generate a personalized, enthusiastic, and problem-solvi
 
 For example:
 - If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon.
-- If the user was looking for ready-made models (Q2), highlight the ready-to-use and editable nature with numerous examples they can trust.
+- If the user has tried other models but didn't find what they needed (Q2), highlight the high quality, professionalism, and "exactly what's needed" nature of our specific collection of 47 models.
 - If the user wants organization and time-saving, stress the structured content and efficiency.
 - If the user has difficulties (Q3), position the product as the solution to ease their burden and increase their confidence.
 - Reinforce the immediate value if the user is keen to buy now (Q5).
