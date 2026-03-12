@@ -18,7 +18,7 @@ export const SocialProof: React.FC = () => {
   return (
     <div className="pt-2 pb-12 px-4">
       <div className="space-y-4 mb-10">
-        <h3 className="text-xl font-headline text-center text-primary font-bold">
+        <h3 className="text-2xl font-headline text-center text-primary font-bold">
           Quem adquire nossos materiais, RECOMENDA!
         </h3>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto">
