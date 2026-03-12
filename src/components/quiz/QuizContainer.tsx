@@ -90,7 +90,7 @@ export const QuizContainer: React.FC = () => {
     {
       title: "Grupo VIP de Professoras",
       description: "Comunidade exclusiva para troca de experiências.",
-      image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || ''
+      image: "https://image2url.com/r2/default/images/1773351519083-42be1ab9-67d9-4a04-9330-9d9a4baaadcf.webp"
     }
   ]
 
