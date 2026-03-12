@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -211,7 +212,7 @@ export const QuizContainer: React.FC = () => {
               {bonuses.map((bonus, idx) => (
                 <div 
                   key={idx} 
-                  className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[340px] w-full"
+                  className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border-2 border-white/60 group hover:border-accent/30 hover:shadow-xl transition-all duration-300 max-w-[340px] w-full"
                   style={{ backgroundColor: bonus.bgColor }}
                 >
                   {/* Badge Bônus */}
