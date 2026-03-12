@@ -42,7 +42,7 @@ export const OfferSection: React.FC = () => {
           </div>
           <p className="text-[9px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
           
-          <div className="mt-6 relative w-full h-20">
+          <div className="mt-8 relative w-full h-32">
             <Image 
               src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
               alt="Garantia"
@@ -80,9 +80,10 @@ export const OfferSection: React.FC = () => {
         <Button 
           onClick={handlePurchase}
           size="lg" 
-          className="w-full h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group"
+          className="w-full h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group animate-pulse-border hover:scale-105"
+          style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
         >
-          ACESSAR AGORA!
+          LIBERAR ACESSO!
           <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>
         
