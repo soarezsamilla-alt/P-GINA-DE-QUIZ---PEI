@@ -32,7 +32,7 @@ export const OfferSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10 mx-auto max-w-[340px]">
+      <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10 mx-auto max-w-[380px]">
         <div className="space-y-2 mb-8 text-center">
           <p className="text-muted-foreground line-through text-lg">De R$ 97,90</p>
           <div className="flex items-baseline justify-center">
