@@ -84,7 +84,7 @@ export const QuizContainer: React.FC = () => {
     },
     {
       title: "Planejamento AEE 2026",
-      description: "Organização completa para das escolares.",
+      description: "Um guia planejado para o Atendimento Educacional Especializado (AEE) na Sala de Recurso Multifuncional para o ano de 2026.",
       image: "https://image2url.com/r2/default/images/1773351499103-d61ae935-e459-475a-8cb5-88f110b88e3f.webp"
     },
     {
