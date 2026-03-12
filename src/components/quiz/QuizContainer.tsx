@@ -34,7 +34,7 @@ export const QuizContainer: React.FC = () => {
     {
       question: "Você sente insegurança ou dificuldade em elaborar o PEI?",
       options: [
-        { label: "Sim, nunca sei se está correto ou completo", icon: "👍" },
+        { label: "Sim, nunca sei se está correto or completo", icon: "👍" },
         { label: "Um pouco, mas consigo me virar", icon: "😥" }
       ]
     },
@@ -75,7 +75,7 @@ export const QuizContainer: React.FC = () => {
     {
       title: "Modelos de Relatórios",
       description: "Estruturas profissionais para uma escrita rápida.",
-      image: PlaceHolderImages.find(img => img.id === 'pei-sample-5')?.imageUrl || ''
+      image: "https://image2url.com/r2/default/images/1773351423137-18ea825c-b9b8-4d7d-a701-cf860462aba4.webp"
     },
     {
       title: "Sugestões de Metas",
