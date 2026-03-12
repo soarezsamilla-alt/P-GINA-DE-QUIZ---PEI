@@ -17,7 +17,7 @@ export const SampleGallery: React.FC = () => {
 
   return (
     <div className="py-12 px-4 bg-secondary/30 rounded-3xl mb-4">
-      <div className="space-y-4 mb-8">
+      <div className="space-y-4 mb-12">
         <h3 className="text-2xl font-headline text-center text-primary font-bold">
           Veja abaixo algumas amostras:
         </h3>
