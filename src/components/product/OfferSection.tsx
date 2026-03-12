@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ShieldCheck, Zap, ArrowRight, Check } from 'lucide-react'
 
@@ -32,7 +33,7 @@ export const OfferSection: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10 mx-auto max-w-[400px]">
-        <div className="space-y-2 mb-8 text-center">
+        <div className="space-y-2 mb-6 text-center">
           <p className="text-muted-foreground line-through text-lg">De R$ 97,90</p>
           <div className="flex items-baseline justify-center">
             <span className="text-6xl font-bold text-primary mr-1">R$</span>
@@ -40,18 +41,18 @@ export const OfferSection: React.FC = () => {
             <span className="text-2xl font-bold text-primary">,90</span>
           </div>
           <p className="text-[9px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
+          
+          <div className="mt-6 relative w-full h-20">
+            <Image 
+              src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
+              alt="Garantia"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
 
-        <Button 
-          onClick={handlePurchase}
-          size="lg" 
-          className="w-full h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group"
-        >
-          ACESSAR AGORA!
-          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-        </Button>
-
-        <div className="mt-8 space-y-3 text-left border-t pt-8">
+        <div className="mt-8 space-y-3 text-left border-t pt-8 mb-8">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-center gap-3 text-[14px] text-[#5c6570] font-medium">
               <div className="bg-green-100 p-0.5 rounded-full">
@@ -75,6 +76,15 @@ export const OfferSection: React.FC = () => {
             </div>
           ))}
         </div>
+
+        <Button 
+          onClick={handlePurchase}
+          size="lg" 
+          className="w-full h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group"
+        >
+          ACESSAR AGORA!
+          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+        </Button>
         
         <div className="mt-6 flex items-center justify-center gap-2 text-[12px] text-muted-foreground">
           <ShieldCheck className="w-4 h-4 text-accent" />
