@@ -15,7 +15,7 @@ const PersonalizedProductDescriptionInputSchema = z.object({
   q2Answer: z.string().describe("User's answer to 'Você já procurou por modelos de PEI prontos?'"),
   q3Answer: z.string().describe("User's answer to 'O que você espera de um material que ajude a elaborar um PEI?'"),
   q4Answer: z.string().describe("User's answer to 'Você é:'"),
-  q5Answer: z.string().describe("User's answer to 'Se pudesse investir em modelos prontos e editáveis por um valor acessível, você...'"),
+  q5Answer: z.string().describe("User's answer to 'Se tivesse acesso a modelos prontos e editáveis por um preço acessível, você…'"),
 });
 export type PersonalizedProductDescriptionInput = z.infer<typeof PersonalizedProductDescriptionInputSchema>;
 
@@ -52,7 +52,7 @@ Answer 3: "{{{q3Answer}}}"
 Question 4: "Você é:"
 Answer 4: "{{{q4Answer}}}"
 
-Question 5: "Se pudesse investir em modelos prontos e editáveis por um valor acessível, você..."
+Question 5: "Se tivesse acesso a modelos prontos e editáveis por um preço acessível, você…"
 Answer 5: "{{{q5Answer}}}"
 
 ---
