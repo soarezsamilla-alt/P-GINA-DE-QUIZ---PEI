@@ -8,7 +8,8 @@ import { SampleGallery } from '@/components/product/SampleGallery'
 import { SocialProof } from '@/components/product/SocialProof'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2 } from 'lucide-react'
+import { Loader2, ArrowRight } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 type QuizState = 'QUIZ' | 'LOADING' | 'PRESENTATION'
 
@@ -84,7 +85,24 @@ export const QuizContainer: React.FC = () => {
     }
   }
 
+  const handlePurchase = () => {
+    window.location.href = "https://pay.example.com/checkout/pei-models"
+  }
+
   const progress = ((step + 1) / quizSteps.length) * 100
+
+  const CTAButton = () => (
+    <div className="flex justify-center px-4">
+      <Button 
+        onClick={handlePurchase}
+        size="lg" 
+        className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group animate-pulse"
+      >
+        Quero receber os modelos!
+        <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+      </Button>
+    </div>
+  )
 
   return (
     <div className="min-h-screen py-10 px-4">
@@ -124,8 +142,14 @@ export const QuizContainer: React.FC = () => {
           <div className="space-y-8">
             <PersonalizedDescription description={personalizedDesc} />
           </div>
+          
+          <CTAButton />
+
           <SampleGallery />
+          
           <SocialProof />
+
+          <CTAButton />
         </div>
       )}
     </div>
