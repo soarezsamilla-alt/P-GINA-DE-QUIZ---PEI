@@ -241,7 +241,7 @@ export const QuizContainer: React.FC = () => {
                     </div>
 
                     <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
-                      <span className="text-muted-foreground line-through text-[11px] font-medium">R$ 47,00</span>
+                      <span className="text-muted-foreground line-through text-[13px] font-medium">R$ 47,00</span>
                       <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
                     </div>
                   </div>
