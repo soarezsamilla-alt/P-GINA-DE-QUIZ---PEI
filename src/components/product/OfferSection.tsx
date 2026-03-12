@@ -62,6 +62,10 @@ export const OfferSection: React.FC = () => {
                   <>
                     Acesso a <span className="text-[#2c293d] font-bold">futuras atualizações</span>
                   </>
+                ) : benefit === "Mais de 200 Modelos de PEI prontos e editáveis" ? (
+                  <>
+                    Mais de <span className="text-[#2c293d] font-bold">200 Modelos</span> de PEI prontos e editáveis
+                  </>
                 ) : (
                   benefit
                 )}
