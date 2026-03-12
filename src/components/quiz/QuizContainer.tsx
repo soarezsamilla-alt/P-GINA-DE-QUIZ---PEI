@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -32,7 +33,7 @@ export const QuizContainer: React.FC = () => {
       question: "Você sente insegurança ou dificuldade em elaborar o PEI?",
       options: [
         { label: "Sim, nunca sei se está correto ou completo", icon: "👍" },
-        { label: "😥 Um pouco, mas consigo me virar", icon: "😥" }
+        { label: "Um pouco, mas consigo me virar", icon: "😥" }
       ]
     },
     {
