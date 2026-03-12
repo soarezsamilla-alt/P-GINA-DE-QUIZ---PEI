@@ -95,7 +95,7 @@ export const QuizContainer: React.FC = () => {
       <Button 
         onClick={handlePurchase}
         size="lg" 
-        className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
+        className="w-full max-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
         style={{
           '--accent-rgb': '88, 56, 236'
         } as React.CSSProperties}
@@ -141,24 +141,24 @@ export const QuizContainer: React.FC = () => {
 
       {state === 'PRESENTATION' && (
         <div className="max-w-5xl mx-auto pb-20">
-          <div className="mb-10">
+          <div className="mb-8">
             <PersonalizedDescription description={personalizedDesc} />
           </div>
           
-          <div className="mb-4">
+          <div className="mb-10">
             <CTAButton />
           </div>
 
-          <div className="mb-0">
+          <div className="mb-2">
             <SampleGallery />
           </div>
           
-          <div className="mb-0">
+          <div className="mb-2">
             <SocialProof />
           </div>
 
-          <div className="mt-12 text-center px-4 max-w-2xl mx-auto space-y-6">
-            <p className="text-xl font-bold text-primary leading-tight">
+          <div className="mt-8 text-center px-4 max-w-2xl mx-auto space-y-4">
+            <p className="text-sm font-bold text-black leading-tight">
               Tenha seus PEIs prontos, editáveis e adaptáveis para qualquer turma, sem perder horas do seu tempo!
             </p>
             <CTAButton />
