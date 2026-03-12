@@ -26,7 +26,7 @@ export const SocialProof: React.FC = () => {
         </p>
       </div>
 
-      <div className="max-w-md mx-auto relative px-10 sm:px-14">
+      <div className="max-w-lg mx-auto relative px-10 sm:px-14">
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((test) => (
