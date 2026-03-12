@@ -197,13 +197,13 @@ export const QuizContainer: React.FC = () => {
             <h3 className="text-[21px] font-headline font-bold text-primary">
               Você Merece Bônus EXCLUSIVOS!
             </h3>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
+            <p className="text-muted-foreground max-w-3xl mx-auto text-[14px] leading-relaxed">
               Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
               {bonuses.map((bonus, idx) => (
-                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[240px] w-full">
+                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[280px] w-full">
                   {/* Badge Bônus */}
                   <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
                     Bônus {idx + 1}º
