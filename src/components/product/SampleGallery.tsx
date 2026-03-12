@@ -10,7 +10,7 @@ export const SampleGallery: React.FC = () => {
 
   return (
     <div className="py-12">
-      <h3 className="text-2xl font-headline text-center text-primary mb-8">Amostras dos Modelos</h3>
+      <h3 className="text-2xl font-headline text-center text-primary mb-8">Veja abaixo algumas amostras!</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {samples.map((sample) => (
           <div key={sample.id} className="relative group overflow-hidden rounded-2xl shadow-md bg-white">
