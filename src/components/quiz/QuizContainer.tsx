@@ -30,7 +30,7 @@ export const QuizContainer: React.FC = () => {
       ]
     },
     {
-      question: "Você já procurou por modelos de PEI prontos?",
+      question: "Você sente que elaborar o PEI atrapalha outras tarefas importantes?",
       options: [
         { label: "Sim, e nem sempre encontro algo de qualidade", icon: "👍" },
         { label: "Não, mas gostaria de ter uma base confiável.", icon: "😟" }

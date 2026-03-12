@@ -1,3 +1,4 @@
+
 'use server';
 /**
  * @fileOverview This file implements a Genkit flow for generating personalized product descriptions.
@@ -11,7 +12,7 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const PersonalizedProductDescriptionInputSchema = z.object({
-  q1Answer: z.string().describe("User's answer to 'Você já procurou por modelos de PEI prontos?'"),
+  q1Answer: z.string().describe("User's answer to 'Você sente que elaborar o PEI atrapalha outras tarefas importantes?'"),
   q2Answer: z.string().describe("User's answer to 'O que você busca em um bom material de apoio para elaborar um PEI?'"),
   q3Answer: z.string().describe("User's answer to 'Você tem dificuldades em elaborar o PEI?'"),
   q4Answer: z.string().describe("User's answer to 'Você é:'"),
@@ -40,7 +41,7 @@ Your goal is to highlight the benefits and features of this product in a way tha
 
 --- User's Quiz Responses ---
 
-Question 1: "Você já procurou por modelos de PEI prontos?"
+Question 1: "Você sente que elaborar o PEI atrapalha outras tarefas importantes?"
 Answer 1: "{{{q1Answer}}}"
 
 Question 2: "O que você busca em um bom material de apoio para elaborar um PEI?"
