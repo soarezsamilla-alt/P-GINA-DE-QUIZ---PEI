@@ -1,0 +1,64 @@
+{
+  "placeholderImages": [
+    {
+      "id": "pei-sample-1",
+      "description": "Modelo de PEI preenchido para ensino fundamental",
+      "imageUrl": "https://image2url.com/r2/default/images/1773344368532-3824630f-0716-4fd0-b503-5a95f30a1818.png",
+      "imageHint": "educational document"
+    },
+    {
+      "id": "pei-sample-2",
+      "description": "Modelo editável de plano de ensino individualizado",
+      "imageUrl": "https://image2url.com/r2/default/images/1773344753379-3b31ac5f-7ced-40cf-a45c-7f22745d00cc.png",
+      "imageHint": "teacher planning"
+    },
+    {
+      "id": "pei-sample-3",
+      "description": "Documento pedagógico estruturado",
+      "imageUrl": "https://image2url.com/r2/default/images/1773344922856-ceba4d53-30e1-4259-8aec-6088137997cc.png",
+      "imageHint": "curriculum design"
+    },
+    {
+      "id": "pei-sample-4",
+      "description": "Atividades adaptadas inclusivas",
+      "imageUrl": "https://image2url.com/r2/default/images/1773344958427-f71f6227-716f-4cb9-9e7f-71d6edf32934.png",
+      "imageHint": "inclusive education"
+    },
+    {
+      "id": "pei-sample-5",
+      "description": "Relatório de acompanhamento escolar",
+      "imageUrl": "https://image2url.com/r2/default/images/1773344998241-46eb2641-3785-453b-a8b3-cb2f9c608e89.png",
+      "imageHint": "school report"
+    },
+    {
+      "id": "pei-sample-6",
+      "description": "Planejamento de aula para educação especial",
+      "imageUrl": "https://picsum.photos/seed/pei6/600/800",
+      "imageHint": "lesson planning"
+    },
+    {
+      "id": "pei-sample-7",
+      "description": "Ficha de avaliação do aluno",
+      "imageUrl": "https://picsum.photos/seed/pei7/600/800",
+      "imageHint": "student assessment"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Depoimento de professora satisfeita no WhatsApp",
+      "imageUrl": "https://image2url.com/r2/default/images/1773346193570-7b27b497-0802-499f-809e-028be9800793.webp",
+      "imageHint": "chat testimonial"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Feedback positivo sobre os modelos de PEI",
+      "imageUrl": "https://image2url.com/r2/default/images/1773346221613-07457161-0dec-471b-8003-24f7f6a75344.webp",
+      "imageHint": "positive review"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Relato de sucesso e praticidade com o material",
+      "imageUrl": "https://image2url.com/r2/default/images/1773346284754-254fd099-f421-47bd-8fd5-85183b7f5377.webp",
+      "imageHint": "customer success"
+    }
+  ]
+}
