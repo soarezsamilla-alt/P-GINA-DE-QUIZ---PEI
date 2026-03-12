@@ -60,7 +60,7 @@ Answer 5: "{{{q5Answer}}}"
 Based on these answers, generate a personalized, enthusiastic, and problem-solving product description. Focus on the pain points and desires revealed by the user.
 
 For example:
-- If the user struggles with quality (Q1), emphasize that these models are professionally planned.
+- If the user feels they lose a lot of time (Q1: "Sim, me faz perder muito tempo"), strongly emphasize how much time they will save and how they can regain their productivity.
 - If the user seeks practicality and examples (Q2), highlight the ready-to-use and editable nature with numerous examples.
 - If the user wants organization and time-saving (Q2), stress the structured content and efficiency.
 - If the user has difficulties (Q3), position the product as the solution to ease their burden.
