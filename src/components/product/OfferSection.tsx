@@ -57,7 +57,7 @@ export const OfferSection: React.FC = () => {
               <div className="bg-green-100 p-0.5 rounded-full">
                 <Check className="w-4 h-4 text-green-600 shrink-0" />
               </div>
-              <span className={benefit === "Todos os 6 Bônus" ? "text-accent font-bold" : ""}>
+              <span className={benefit === "Todos os 6 Bônus" ? "text-[#2c293d] font-bold" : ""}>
                 {benefit}
               </span>
             </div>
