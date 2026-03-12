@@ -40,7 +40,7 @@ export const QuizContainer: React.FC = () => {
       question: "Você já procurou por modelos de PEI prontos?",
       options: [
         { label: "Sim, mas nunca encontrei exatamente o que precisava", icon: "😕" },
-        { label: "Organização e economia de tempo.", icon: "😟" }
+        { label: "Não, mas quero uma base confiável e prática", icon: "🙂" }
       ]
     },
     {
@@ -103,7 +103,7 @@ export const QuizContainer: React.FC = () => {
           </div>
           <QuizStep 
             question={quizSteps[step].question}
-            description={quizSteps[step].description}
+            description={step === 0 ? "Por favor escolha uma das opções abaixo!" : undefined}
             options={quizSteps[step].options}
             onSelect={handleNextStep}
           />

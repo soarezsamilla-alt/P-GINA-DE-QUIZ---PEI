@@ -61,10 +61,10 @@ Answer 5: "{{{q5Answer}}}"
 Based on these answers, generate a personalized, enthusiastic, and problem-solving product description. Focus on the pain points and desires revealed by the user.
 
 For example:
-- If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon.
+- If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon, giving them the confidence they lack.
 - If the user has tried other models but didn't find what they needed (Q2), highlight the high quality, professionalism, and "exactly what's needed" nature of our specific collection of 47 models.
-- If the user wants organization and time-saving, stress the structured content and efficiency.
-- If the user has difficulties (Q3), position the product as the solution to ease their burden and increase their confidence.
+- If the user hasn't looked for models yet but wants a reliable and practical base (Q2), emphasize the professional planning and immediate readiness of the material as the perfect starting point.
+- If the user has difficulties (Q3), position the product as the solution to ease their burden and increase their efficiency.
 - Reinforce the immediate value if the user is keen to buy now (Q5).
 
 Start directly with the compelling description. Keep it concise, engaging, and directly responsive to their answers.`,
