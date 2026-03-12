@@ -74,7 +74,7 @@ export const QuizContainer: React.FC = () => {
     },
     {
       title: "Plano Educacional PEI 4 e 5 Anos",
-      description: "Estruturas profissionais para uma escrita rápida.",
+      description: "Um guia educacional para alunos de 4 e 5 anos na educação Infantil, histórico escolar, saúde e desenvolvimento do aluno.",
       image: "https://image2url.com/r2/default/images/1773351423137-18ea825c-b9b8-4d7d-a701-cf860462aba4.webp"
     },
     {
