@@ -85,7 +85,7 @@ export const QuizContainer: React.FC = () => {
     {
       title: "Cronograma de Prazos",
       description: "Organização completa para das escolares.",
-      image: PlaceHolderImages.find(img => img.id === 'pei-sample-1')?.imageUrl || ''
+      image: "https://image2url.com/r2/default/images/1773351499103-d61ae935-e459-475a-8cb5-88f110b88e3f.webp"
     },
     {
       title: "Grupo VIP de Professoras",
