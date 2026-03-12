@@ -64,32 +64,32 @@ export const QuizContainer: React.FC = () => {
   const bonuses = [
     {
       title: "Atividades Adaptadas",
-      description: "100 atividades prontas para aplicar hoje com apoio individualizado.",
+      description: "100 atividades prontas para aplicar hoje.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-4')?.imageUrl || ''
     },
     {
       title: "Guia de PDI Passo a Passo",
-      description: "Um guia completo com apoio individualizado e estratégias de ensino.",
+      description: "Um guia completo com estratégias de ensino.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-3')?.imageUrl || ''
     },
     {
       title: "Modelos de Relatórios",
-      description: "Estruturas profissionais para uma escrita rápida e segura.",
+      description: "Estruturas profissionais para uma escrita rápida.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-5')?.imageUrl || ''
     },
     {
       title: "Sugestões de Metas",
-      description: "Centenas de objetivos pedagógicos prontos para o seu PEI.",
+      description: "Centenas de objetivos pedagógicos prontos.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-7')?.imageUrl || ''
     },
     {
       title: "Cronograma de Prazos",
-      description: "Organização completa para nunca mais perder uma data escolar.",
+      description: "Organização completa para datas escolares.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-1')?.imageUrl || ''
     },
     {
       title: "Grupo VIP de Professoras",
-      description: "Comunidade exclusiva para troca de experiências e suporte.",
+      description: "Comunidade exclusiva para troca de experiências.",
       image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || ''
     }
   ]
@@ -194,23 +194,23 @@ export const QuizContainer: React.FC = () => {
           </div>
 
           <div className="mt-16 mb-12 text-center space-y-4 px-4">
-            <h2 className="text-[21px] font-headline font-bold text-primary">
+            <h3 className="text-[21px] font-headline font-bold text-primary">
               Você Merece Bônus EXCLUSIVOS!
-            </h2>
+            </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
               Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
               {bonuses.map((bonus, idx) => (
-                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2.5rem] p-6 pt-16 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-xl transition-all duration-300">
+                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[240px] w-full">
                   {/* Badge Bônus */}
-                  <div className="absolute top-5 left-5 bg-accent px-4 py-1.5 rounded-full text-white text-xs font-bold shadow-md z-10">
+                  <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
                     Bônus {idx + 1}º
                   </div>
                   
                   {/* Imagem do Produto */}
-                  <div className="relative w-full aspect-[3/4] mb-8 rounded-xl overflow-hidden shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative w-full aspect-[4/5] mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-500">
                     <Image 
                       src={bonus.image} 
                       alt={bonus.title}
@@ -221,17 +221,17 @@ export const QuizContainer: React.FC = () => {
                   </div>
 
                   {/* Textos */}
-                  <div className="space-y-3 mb-6 flex-grow">
-                    <h4 className="text-[19px] font-bold text-primary leading-tight">{bonus.title}</h4>
-                    <p className="text-muted-foreground text-[13px] leading-relaxed px-2">
+                  <div className="space-y-2 mb-4 flex-grow">
+                    <h4 className="text-[16px] font-bold text-primary leading-tight">{bonus.title}</h4>
+                    <p className="text-muted-foreground text-[12px] leading-relaxed px-1">
                       {bonus.description}
                     </p>
                   </div>
 
                   {/* Preços */}
-                  <div className="mt-auto pt-4 flex flex-col items-center gap-1">
-                    <span className="text-muted-foreground line-through text-sm font-medium">R$ 47,00</span>
-                    <span className="text-green-500 font-extrabold text-2xl tracking-tighter">GRÁTIS</span>
+                  <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
+                    <span className="text-muted-foreground line-through text-[11px] font-medium">R$ 47,00</span>
+                    <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
                   </div>
                 </div>
               ))}
