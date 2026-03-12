@@ -13,7 +13,7 @@ export const OfferSection: React.FC = () => {
   return (
     <div id="offer-section" className="py-16 text-center max-w-2xl mx-auto space-y-8">
       <div className="space-y-4">
-        <h2 className="text-3xl font-headline text-primary font-bold">
+        <h2 className="text-[21px] font-headline text-primary font-bold">
           Garanta agora os melhores modelos de PEI e otimize seu tempo!
         </h2>
         <div className="inline-block bg-accent text-white px-6 py-2 rounded-full font-bold animate-pulse">
