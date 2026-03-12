@@ -32,7 +32,7 @@ export const QuizContainer: React.FC = () => {
       question: "Você sente que elaborar PEI atrapalha outras tarefas importantes?",
       options: [
         { label: "Sim, me faz perder muito tempo", icon: "😟" },
-        { label: "Não, mas gostaria de ter uma base confiável.", icon: "😟" }
+        { label: "Um pouco, mas consigo equilibrar", icon: "🙂" }
       ]
     },
     {
