@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -235,13 +234,13 @@ export const QuizContainer: React.FC = () => {
 
                     <div className="space-y-2 mb-4 flex-grow">
                       <h4 className="text-[16px] font-bold text-primary leading-tight">{bonus.title}</h4>
-                      <p className="text-muted-foreground text-[12px] leading-relaxed px-1">
+                      <p className="text-muted-foreground text-[14px] leading-relaxed px-1">
                         {bonus.description}
                       </p>
                     </div>
 
                     <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
-                      <span className="text-muted-foreground line-through text-[13px] font-medium">R$ 47,00</span>
+                      <span className="text-muted-foreground line-through text-[13px] font-medium">R$ 37,90</span>
                       <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
                     </div>
                   </div>
