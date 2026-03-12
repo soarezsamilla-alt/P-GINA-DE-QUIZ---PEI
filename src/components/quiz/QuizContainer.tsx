@@ -127,8 +127,11 @@ export const QuizContainer: React.FC = () => {
     }
   }
 
-  const handlePurchase = () => {
-    window.location.href = "https://pay.example.com/checkout/pei-models"
+  const scrollToOffer = () => {
+    const element = document.getElementById('offer-section')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const progress = ((step + 1) / quizSteps.length) * 100
@@ -136,7 +139,7 @@ export const QuizContainer: React.FC = () => {
   const CTAButton = () => (
     <div className="flex justify-center px-4">
       <Button 
-        onClick={handlePurchase}
+        onClick={scrollToOffer}
         size="lg" 
         className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
         style={{
