@@ -17,8 +17,8 @@ export const SampleGallery: React.FC = () => {
   const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 5)
 
   return (
-    <div className="pt-2 pb-12 px-4">
-      <div className="space-y-4 mb-10">
+    <div className="pt-2 pb-2 px-4">
+      <div className="space-y-4 mb-6">
         <h3 className="text-2xl font-headline text-center text-primary font-bold">
           Veja abaixo algumas amostras:
         </h3>
