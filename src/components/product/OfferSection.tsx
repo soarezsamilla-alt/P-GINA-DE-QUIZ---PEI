@@ -22,12 +22,13 @@ export const OfferSection: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10">
-        <div className="space-y-2 mb-8">
+        <div className="space-y-2 mb-8 text-center">
           <p className="text-muted-foreground line-through text-lg">De R$ 37,80</p>
           <div className="flex items-center justify-center gap-2">
             <span className="text-sm font-bold text-primary align-top mt-2">R$</span>
             <span className="text-6xl font-bold text-primary">18,90</span>
           </div>
+          <p className="text-sm font-bold text-primary/70 uppercase tracking-tight">Pagamento único</p>
         </div>
 
         <Button 
