@@ -63,7 +63,7 @@ export const QuizContainer: React.FC = () => {
 
   const bonuses = [
     {
-      title: "Atividades Adaptadas",
+      title: "Plano Educacional PEI",
       description: "Um guia completo com apoio individualizado e estratégias de atividades adaptadas.",
       image: "https://image2url.com/r2/default/images/1773351312705-04ec6820-800f-4144-8bd9-5694237c8b28.webp"
     },
