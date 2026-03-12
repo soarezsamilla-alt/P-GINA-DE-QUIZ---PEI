@@ -42,7 +42,7 @@ export const OfferSection: React.FC = () => {
           </div>
           <p className="text-[9px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
           
-          <div className="mt-8 relative w-full h-32">
+          <div className="mt-8 relative w-full h-40">
             <Image 
               src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
               alt="Garantia"
