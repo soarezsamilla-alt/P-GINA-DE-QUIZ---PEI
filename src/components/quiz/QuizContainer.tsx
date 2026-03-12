@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -97,6 +96,9 @@ export const QuizContainer: React.FC = () => {
         onClick={handlePurchase}
         size="lg" 
         className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
+        style={{
+          '--accent-rgb': '88, 56, 236'
+        } as React.CSSProperties}
       >
         Quero receber os modelos!
         <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
@@ -143,19 +145,22 @@ export const QuizContainer: React.FC = () => {
             <PersonalizedDescription description={personalizedDesc} />
           </div>
           
-          <div className="mb-6">
+          <div className="mb-4">
             <CTAButton />
           </div>
 
-          <div className="mb-1">
+          <div className="mb-0">
             <SampleGallery />
           </div>
           
-          <div className="mb-1">
+          <div className="mb-0">
             <SocialProof />
           </div>
 
-          <div className="mt-8">
+          <div className="mt-12 text-center px-4 max-w-2xl mx-auto space-y-6">
+            <p className="text-xl font-bold text-primary leading-tight">
+              Tenha seus PEIs prontos, editáveis e adaptáveis para qualquer turma, sem perder horas do seu tempo!
+            </p>
             <CTAButton />
           </div>
         </div>
