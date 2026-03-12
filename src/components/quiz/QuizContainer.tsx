@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -155,13 +156,6 @@ export const QuizContainer: React.FC = () => {
           
           <div className="mb-2">
             <SocialProof />
-          </div>
-
-          <div className="mt-8 text-center px-4 max-w-2xl mx-auto space-y-4">
-            <p className="text-sm font-bold text-black leading-tight">
-              Tenha seus PEIs prontos, editáveis e adaptáveis para qualquer turma, sem perder horas do seu tempo!
-            </p>
-            <CTAButton />
           </div>
         </div>
       )}
