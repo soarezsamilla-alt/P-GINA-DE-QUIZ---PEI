@@ -78,7 +78,7 @@ export const QuizContainer: React.FC = () => {
       image: "https://image2url.com/r2/default/images/1773351423137-18ea825c-b9b8-4d7d-a701-cf860462aba4.webp"
     },
     {
-      title: "Sugestões de Metas",
+      title: "Plano de Desenvolvimento Psicoeducacional (PDPI)",
       description: "Centenas de objetivos pedagógicos prontos.",
       image: "https://image2url.com/r2/default/images/1773351465518-52681892-c99b-4902-8e3c-9a08778d5c53.webp"
     },
