@@ -11,7 +11,7 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const PersonalizedProductDescriptionInputSchema = z.object({
-  q1Answer: z.string().describe("User's answer to 'Você sente que elaborar PEI atrapalha outras tarefas importantes?'"),
+  q1Answer: z.string().describe("User's answer to 'Você sente insegurança ou dificuldade em elaborar o PEI?'"),
   q2Answer: z.string().describe("User's answer to 'O que você busca em um bom material de apoio para elaborar um PEI?'"),
   q3Answer: z.string().describe("User's answer to 'Você tem dificuldades em elaborar o PEI?'"),
   q4Answer: z.string().describe("User's answer to 'Você é:'"),
@@ -40,7 +40,7 @@ Your goal is to highlight the benefits and features of this product in a way tha
 
 --- User's Quiz Responses ---
 
-Question 1: "Você sente que elaborar PEI atrapalha outras tarefas importantes?"
+Question 1: "Você sente insegurança ou dificuldade em elaborar o PEI?"
 Answer 1: "{{{q1Answer}}}"
 
 Question 2: "O que você busca em um bom material de apoio para elaborar um PEI?"
@@ -60,10 +60,10 @@ Answer 5: "{{{q5Answer}}}"
 Based on these answers, generate a personalized, enthusiastic, and problem-solving product description. Focus on the pain points and desires revealed by the user.
 
 For example:
-- If the user feels they lose a lot of time (Q1: "Sim, me faz perder muito tempo"), strongly emphasize how much time they will save and how they can regain their productivity.
+- If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon.
 - If the user seeks practicality and examples (Q2), highlight the ready-to-use and editable nature with numerous examples.
 - If the user wants organization and time-saving (Q2), stress the structured content and efficiency.
-- If the user has difficulties (Q3), position the product as the solution to ease their burden.
+- If the user has difficulties (Q3), position the product as the solution to ease their burden and increase their confidence.
 - Reinforce the immediate value if the user is keen to buy now (Q5).
 
 Start directly with the compelling description. Keep it concise, engaging, and directly responsive to their answers.`,
