@@ -63,7 +63,7 @@ For example:
 - If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon, giving them the confidence they lack.
 - If the user has tried other models but didn't find what they needed (Q2), highlight the high quality, professionalism, and "exactly what's needed" nature of our specific collection of 47 models.
 - If the user highlights "Praticidade e modelos prontos para usar" (Q3), position the product as a "plug-and-play" solution that saves massive amounts of time and effort.
-- If the user highlights "Segurança e embasamento profissional" (Q3), emphasize that these 47 models were planned by education professionals to ensure pedagogical quality.
+- If the user highlights "Organização e economia de tempo" (Q3), emphasize how the structured and ready-to-use nature of the material directly translates into massive time savings and a more organized workflow.
 - Reinforce the immediate value if the user is keen to buy now (Q5).
 
 Start directly with the compelling description. Keep it concise, engaging, and directly responsive to their answers.`,

@@ -46,7 +46,7 @@ export const QuizContainer: React.FC = () => {
       question: "O que você espera de um material que ajude a elaborar um PEI?",
       options: [
         { label: "Praticidade e modelos prontos para usar", icon: "👍" },
-        { label: "Segurança e embasamento profissional", icon: "😊" }
+        { label: "Organização e economia de tempo", icon: "😊" }
       ]
     },
     {
