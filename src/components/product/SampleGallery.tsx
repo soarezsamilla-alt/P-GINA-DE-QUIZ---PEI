@@ -13,12 +13,11 @@ import {
 } from "@/components/ui/carousel"
 
 export const SampleGallery: React.FC = () => {
-  // Filtramos as amostras e pegamos as 5 primeiras conforme solicitado (1 original + 4 novas)
   const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 5)
 
   return (
-    <div className="pt-2 pb-2 px-4">
-      <div className="space-y-4 mb-6">
+    <div className="py-12 px-4 bg-secondary/30 rounded-3xl mb-4">
+      <div className="space-y-4 mb-8">
         <h3 className="text-2xl font-headline text-center text-primary font-bold">
           Veja abaixo algumas amostras:
         </h3>
