@@ -1,15 +1,17 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { QuizStep } from './QuizStep'
 import { PersonalizedDescription } from '@/components/product/PersonalizedDescription'
 import { SampleGallery } from '@/components/product/SampleGallery'
 import { SocialProof } from '@/components/product/SocialProof'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight, BookOpen, FileText, ClipboardCheck, Target, Calendar, Users } from 'lucide-react'
+import { Loader2, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 type QuizState = 'QUIZ' | 'LOADING' | 'PRESENTATION'
 
@@ -63,32 +65,32 @@ export const QuizContainer: React.FC = () => {
     {
       title: "Atividades Adaptadas",
       description: "100 atividades prontas para aplicar hoje.",
-      icon: <BookOpen className="w-6 h-6 text-accent" />
+      image: PlaceHolderImages.find(img => img.id === 'pei-sample-4')?.imageUrl || ''
     },
     {
       title: "Guia de PDI Passo a Passo",
       description: "Domine o Plano de Desenv. Individual.",
-      icon: <FileText className="w-6 h-6 text-accent" />
+      image: PlaceHolderImages.find(img => img.id === 'pei-sample-3')?.imageUrl || ''
     },
     {
       title: "Modelos de Relatórios",
       description: "Escrita rápida e profissional garantida.",
-      icon: <ClipboardCheck className="w-6 h-6 text-accent" />
+      image: PlaceHolderImages.find(img => img.id === 'pei-sample-5')?.imageUrl || ''
     },
     {
       title: "Sugestões de Metas",
       description: "Centenas de objetivos prontos para o PEI.",
-      icon: <Target className="w-6 h-6 text-accent" />
+      image: PlaceHolderImages.find(img => img.id === 'pei-sample-7')?.imageUrl || ''
     },
     {
       title: "Cronograma de Prazos",
       description: "Nunca mais perca uma data importante.",
-      icon: <Calendar className="w-6 h-6 text-accent" />
+      image: PlaceHolderImages.find(img => img.id === 'pei-sample-1')?.imageUrl || ''
     },
     {
       title: "Grupo VIP de Professoras",
       description: "Troque experiências e tire suas dúvidas.",
-      icon: <Users className="w-6 h-6 text-accent" />
+      image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || ''
     }
   ]
 
@@ -203,8 +205,20 @@ export const QuizContainer: React.FC = () => {
               {bonuses.map((bonus, idx) => (
                 <Card key={idx} className="border-none shadow-md bg-white hover:shadow-lg transition-shadow">
                   <CardContent className="p-5 flex flex-col items-center text-center space-y-3">
-                    <div className="p-3 bg-accent/10 rounded-2xl">
-                      {bonus.icon}
+                    <div className="relative w-14 h-14 rounded-xl overflow-hidden shadow-inner bg-secondary">
+                      {bonus.image ? (
+                        <Image 
+                          src={bonus.image} 
+                          alt={bonus.title}
+                          fill
+                          className="object-cover"
+                          data-ai-hint="bonus material thumbnail"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-primary font-bold">
+                          {idx + 1}
+                        </div>
+                      )}
                     </div>
                     <div className="space-y-1">
                       <h4 className="font-bold text-primary text-sm">{bonus.title}</h4>
