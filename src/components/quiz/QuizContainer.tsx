@@ -69,7 +69,7 @@ export const QuizContainer: React.FC = () => {
     },
     {
       title: "Plano de Desenvolvimento PDI e PEI",
-      description: "Um guia completo com estratégias de ensino.",
+      description: "Um guia focado na aprendizagen e na inclusão de alunos PDI e PEI.",
       image: "https://image2url.com/r2/default/images/1773351395354-2a5033b1-313f-4462-97c1-54229810db19.webp"
     },
     {
