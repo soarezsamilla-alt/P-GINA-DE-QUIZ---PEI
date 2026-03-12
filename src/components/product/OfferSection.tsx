@@ -22,13 +22,16 @@ export const OfferSection: React.FC = () => {
 
   return (
     <div id="offer-section" className="py-16 text-center max-w-2xl mx-auto space-y-8">
-      <div className="space-y-4">
+      <div className="space-y-4 px-4">
         <h2 className="text-[21px] font-headline text-primary font-bold">
           Garanta agora os melhores modelos de PEI e otimize seu tempo!
         </h2>
+        <p className="text-[14px] text-[#5c6570] font-medium max-w-lg mx-auto leading-relaxed">
+          Aproveite agora tenha acesso a PEIs prontos e editáveis para otimizar seu tempo, melhorar sua performance e impressionar sua coordenação.
+        </p>
       </div>
 
-      <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10">
+      <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10 mx-4">
         <div className="space-y-2 mb-8 text-center">
           <p className="text-muted-foreground line-through text-lg">De R$ 97,90</p>
           <div className="flex items-baseline justify-center">
@@ -54,8 +57,10 @@ export const OfferSection: React.FC = () => {
               <div className="bg-green-100 p-0.5 rounded-full">
                 <Check className="w-4 h-4 text-green-600 shrink-0" />
               </div>
-              <span className={benefit === "Todos os 6 Bônus" ? "text-[#2c293d] font-bold" : ""}>
-                {benefit === "Acesso a futuras atualizações" ? (
+              <span>
+                {benefit === "Todos os 6 Bônus" ? (
+                  <span className="text-[#2c293d] font-bold">Todos os 6 Bônus</span>
+                ) : benefit === "Acesso a futuras atualizações" ? (
                   <>
                     Acesso a <span className="text-[#2c293d] font-bold">futuras atualizações</span>
                   </>
