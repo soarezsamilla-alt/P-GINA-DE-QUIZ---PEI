@@ -7,8 +7,9 @@ import { SampleGallery } from '@/components/product/SampleGallery'
 import { SocialProof } from '@/components/product/SocialProof'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight } from 'lucide-react'
+import { Loader2, ArrowRight, BookOpen, FileText, ClipboardCheck, Target, Calendar, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 
 type QuizState = 'QUIZ' | 'LOADING' | 'PRESENTATION'
 
@@ -58,6 +59,39 @@ export const QuizContainer: React.FC = () => {
     }
   ]
 
+  const bonuses = [
+    {
+      title: "Atividades Adaptadas",
+      description: "100 atividades prontas para aplicar hoje.",
+      icon: <BookOpen className="w-6 h-6 text-accent" />
+    },
+    {
+      title: "Guia de PDI Passo a Passo",
+      description: "Domine o Plano de Desenv. Individual.",
+      icon: <FileText className="w-6 h-6 text-accent" />
+    },
+    {
+      title: "Modelos de Relatórios",
+      description: "Escrita rápida e profissional garantida.",
+      icon: <ClipboardCheck className="w-6 h-6 text-accent" />
+    },
+    {
+      title: "Sugestões de Metas",
+      description: "Centenas de objetivos prontos para o PEI.",
+      icon: <Target className="w-6 h-6 text-accent" />
+    },
+    {
+      title: "Cronograma de Prazos",
+      description: "Nunca mais perca uma data importante.",
+      icon: <Calendar className="w-6 h-6 text-accent" />
+    },
+    {
+      title: "Grupo VIP de Professoras",
+      description: "Troque experiências e tire suas dúvidas.",
+      icon: <Users className="w-6 h-6 text-accent" />
+    }
+  ]
+
   const handleNextStep = async (answer: string) => {
     const updatedAnswers = [...answers, answer]
     setAnswers(updatedAnswers)
@@ -95,7 +129,7 @@ export const QuizContainer: React.FC = () => {
       <Button 
         onClick={handlePurchase}
         size="lg" 
-        className="w-full max-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
+        className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
         style={{
           '--accent-rgb': '88, 56, 236'
         } as React.CSSProperties}
@@ -157,13 +191,29 @@ export const QuizContainer: React.FC = () => {
             <SocialProof />
           </div>
 
-          <div className="mt-16 mb-8 text-center space-y-4 px-4">
+          <div className="mt-16 mb-12 text-center space-y-4 px-4">
             <h2 className="text-[21px] font-headline font-bold text-primary">
               Você Merece Bônus EXCLUSIVOS!
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
               Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
             </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-8">
+              {bonuses.map((bonus, idx) => (
+                <Card key={idx} className="border-none shadow-md bg-white hover:shadow-lg transition-shadow">
+                  <CardContent className="p-5 flex flex-col items-center text-center space-y-3">
+                    <div className="p-3 bg-accent/10 rounded-2xl">
+                      {bonus.icon}
+                    </div>
+                    <div className="space-y-1">
+                      <h4 className="font-bold text-primary text-sm">{bonus.title}</h4>
+                      <p className="text-muted-foreground text-xs">{bonus.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       )}
