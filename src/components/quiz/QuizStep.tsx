@@ -3,7 +3,7 @@
 
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
 interface QuizOption {
@@ -13,18 +13,24 @@ interface QuizOption {
 
 interface QuizStepProps {
   question: string
+  description?: string
   options: QuizOption[]
   onSelect: (answer: string) => void
   className?: string
 }
 
-export const QuizStep: React.FC<QuizStepProps> = ({ question, options, onSelect, className }) => {
+export const QuizStep: React.FC<QuizStepProps> = ({ question, description, options, onSelect, className }) => {
   return (
     <Card className={cn("w-full max-w-md mx-auto shadow-xl border-none animate-in fade-in slide-in-from-bottom-4 duration-500", className)}>
       <CardHeader className="text-center pb-2">
         <CardTitle className="text-xl font-headline text-primary leading-tight">
           {question}
         </CardTitle>
+        {description && (
+          <CardDescription className="text-muted-foreground mt-2">
+            {description}
+          </CardDescription>
+        )}
       </CardHeader>
       <CardContent className="space-y-4 pt-4">
         {options.map((option, index) => (

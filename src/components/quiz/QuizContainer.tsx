@@ -22,9 +22,11 @@ export const QuizContainer: React.FC = () => {
   const quizSteps = [
     {
       question: "Você é:",
+      description: "Por favor escolha uma das opções abaixo!",
       options: [
         { label: "Professora Ed. Especial", icon: "👩‍🏫" },
         { label: "Professora Ensino Regular", icon: "👩‍🏫" },
+        { label: "Professor Ensino Médio regular", icon: "👩‍🏫" },
         { label: "Orientador Educacional", icon: "👩‍🏫" }
       ]
     },
@@ -102,6 +104,7 @@ export const QuizContainer: React.FC = () => {
           </div>
           <QuizStep 
             question={quizSteps[step].question}
+            description={quizSteps[step].description}
             options={quizSteps[step].options}
             onSelect={handleNextStep}
           />
