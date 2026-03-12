@@ -96,7 +96,7 @@ export const QuizContainer: React.FC = () => {
       <Button 
         onClick={handlePurchase}
         size="lg" 
-        className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/60 transition-all hover:scale-105 active:scale-95 group animate-pulse"
+        className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
       >
         Quero receber os modelos!
         <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
@@ -139,23 +139,25 @@ export const QuizContainer: React.FC = () => {
 
       {state === 'PRESENTATION' && (
         <div className="max-w-5xl mx-auto pb-20">
-          <div className="mb-12">
+          <div className="mb-10">
             <PersonalizedDescription description={personalizedDesc} />
           </div>
           
-          <div className="mb-4">
+          <div className="mb-6">
             <CTAButton />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-1">
             <SampleGallery />
           </div>
           
-          <div className="mb-4">
+          <div className="mb-1">
             <SocialProof />
           </div>
 
-          <CTAButton />
+          <div className="mt-8">
+            <CTAButton />
+          </div>
         </div>
       )}
     </div>

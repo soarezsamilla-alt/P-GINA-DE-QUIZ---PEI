@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -88,10 +89,16 @@ export default {
             height: '0',
           },
         },
+        'pulse-border': {
+          '0%': { boxShadow: '0 0 0 0 hsl(var(--accent) / 0.7)' },
+          '70%': { boxShadow: '0 0 0 10px hsl(var(--accent) / 0)' },
+          '100%': { boxShadow: '0 0 0 0 hsl(var(--accent) / 0)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-border': 'pulse-border 2s infinite',
       },
     },
   },
