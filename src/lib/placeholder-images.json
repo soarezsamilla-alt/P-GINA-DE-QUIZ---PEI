@@ -59,6 +59,12 @@
       "description": "Relato de sucesso e praticidade com o material",
       "imageUrl": "https://image2url.com/r2/default/images/1773346284754-254fd099-f421-47bd-8fd5-85183b7f5377.webp",
       "imageHint": "customer success"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Nova recomendação de professora sobre os modelos",
+      "imageUrl": "https://picsum.photos/seed/testimonial4/600/800",
+      "imageHint": "teacher recommendation"
     }
   ]
 }
