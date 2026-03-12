@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react'
@@ -26,7 +27,7 @@ export const SampleGallery: React.FC = () => {
         </p>
       </div>
 
-      <div className="max-w-md mx-auto relative px-12">
+      <div className="max-w-md mx-auto relative px-10 sm:px-14">
         <Carousel className="w-full">
           <CarouselContent>
             {samples.map((sample) => (
@@ -55,14 +56,10 @@ export const SampleGallery: React.FC = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="hidden sm:block">
-            <CarouselPrevious className="-left-14 h-12 w-12 bg-primary text-white hover:bg-primary/90 hover:text-white border-none shadow-lg" />
-            <CarouselNext className="-right-14 h-12 w-12 bg-primary text-white hover:bg-primary/90 hover:text-white border-none shadow-lg" />
-          </div>
-          <div className="flex sm:hidden justify-center gap-4 mt-6">
-            <CarouselPrevious className="static h-12 w-12 bg-primary text-white border-none translate-y-0" />
-            <CarouselNext className="static h-12 w-12 bg-primary text-white border-none translate-y-0" />
-          </div>
+          
+          {/* Setas posicionadas nas laterais da imagem */}
+          <CarouselPrevious className="-left-6 sm:-left-14 h-10 w-10 sm:h-12 sm:w-12 bg-primary text-white hover:bg-primary/90 hover:text-white border-none shadow-lg" />
+          <CarouselNext className="-right-6 sm:-right-14 h-10 w-10 sm:h-12 sm:w-12 bg-primary text-white hover:bg-primary/90 hover:text-white border-none shadow-lg" />
         </Carousel>
       </div>
     </div>
