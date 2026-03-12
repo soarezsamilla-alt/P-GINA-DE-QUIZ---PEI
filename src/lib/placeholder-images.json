@@ -53,6 +53,12 @@
       "description": "Feedback positivo sobre os modelos de PEI",
       "imageUrl": "https://image2url.com/r2/default/images/1773346221613-07457161-0dec-471b-8003-24f7f6a75344.webp",
       "imageHint": "positive review"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Relato de sucesso e praticidade com o material",
+      "imageUrl": "https://image2url.com/r2/default/images/1773346284754-254fd099-f421-47bd-8fd5-85183b7f5377.webp",
+      "imageHint": "customer success"
     }
   ]
 }
