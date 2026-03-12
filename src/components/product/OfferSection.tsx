@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, Mail, Zap, ArrowRight, Check } from 'lucide-react'
+import { ShieldCheck, Zap, ArrowRight, Check } from 'lucide-react'
 
 export const OfferSection: React.FC = () => {
   const handlePurchase = () => {
@@ -57,7 +57,9 @@ export const OfferSection: React.FC = () => {
               <div className="bg-green-100 p-0.5 rounded-full">
                 <Check className="w-4 h-4 text-green-600 shrink-0" />
               </div>
-              <span>{benefit}</span>
+              <span className={benefit === "Todos os 6 Bônus" ? "text-accent font-bold" : ""}>
+                {benefit}
+              </span>
             </div>
           ))}
         </div>
