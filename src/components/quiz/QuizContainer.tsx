@@ -157,6 +157,15 @@ export const QuizContainer: React.FC = () => {
           <div className="mb-2">
             <SocialProof />
           </div>
+
+          <div className="mt-16 mb-8 text-center space-y-4 px-4">
+            <h2 className="text-3xl font-headline font-bold text-primary">
+              Você Merece Bônus EXCLUSIVOS!
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+              Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
+            </p>
+          </div>
         </div>
       )}
     </div>
