@@ -88,7 +88,7 @@ export const QuizContainer: React.FC = () => {
       image: "https://image2url.com/r2/default/images/1773351499103-d61ae935-e459-475a-8cb5-88f110b88e3f.webp"
     },
     {
-      title: "Ficha Individual de Acompanhamento PEI",
+      title: "Ficha Individual PEI",
       description: "Ficha de acompanhamento para alunos com necessidades educacionais especiais. A ficha coleta dados sobre o aluno e avalia suas habilidades em áreas como psicomotricidade.",
       image: "https://image2url.com/r2/default/images/1773351519083-42be1ab9-67d9-4a04-9330-9d9a4baaadcf.webp"
     }
