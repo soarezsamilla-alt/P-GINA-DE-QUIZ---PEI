@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -28,7 +27,7 @@ export const PersonalizedDescription: React.FC<PersonalizedDescriptionProps> = (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FeatureItem 
               icon={<FileText className="text-accent" />}
-              title="47 Modelos Prontos"
+              title="Mais de 200 Modelos"
               description="Planejados por profissionais da educação"
             />
             <FeatureItem 
@@ -44,7 +43,7 @@ export const PersonalizedDescription: React.FC<PersonalizedDescriptionProps> = (
             <FeatureItem 
               icon={<CheckCircle2 className="text-accent" />}
               title="Acesso Imediato"
-              description="Receba em PDF e Word (48 páginas no total)"
+              description="Material 100% editável para facilitar sua rotina"
             />
           </div>
         </CardContent>

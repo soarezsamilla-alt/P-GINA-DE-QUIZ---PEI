@@ -34,7 +34,7 @@ const prompt = ai.definePrompt({
   output: { schema: PersonalizedProductDescriptionOutputSchema },
   prompt: `You are an AI assistant tasked with generating a compelling and personalized product description for PEI (Individualized Educational Plan) models.
 
-The product is a collection of 47 ready-to-use and editable PEI models, planned by education professionals. They are suitable for Fundamental I and II, but are editable to adapt for other grades and needs. The package includes PDF and editable Word formats, totaling 48 pages.
+The product is a collection of more than 200 ready-to-use and 100% editable PEI models, planned by education professionals. They are suitable for Fundamental I and II, but are editable to adapt for ANY grade and special needs. The models are designed to save time, ensure professional results, and impress coordinators and parents.
 
 Your goal is to highlight the benefits and features of this product in a way that directly addresses the user's expressed needs and challenges, as gathered from their quiz responses below. Emphasize how the product solves their specific problems.
 
@@ -61,12 +61,12 @@ Based on these answers, generate a personalized, enthusiastic, and problem-solvi
 
 For example:
 - If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon, giving them the confidence they lack.
-- If the user has tried other models but didn't find what they needed (Q2), highlight the high quality, professionalism, and "exactly what's needed" nature of our specific collection of 47 models.
+- If the user has tried other models but didn't find what they needed (Q2), highlight the high quality, professionalism, and "exactly what's needed" nature of our massive collection of 200+ models.
 - If the user highlights "Praticidade e modelos prontos para usar" (Q3), position the product as a "plug-and-play" solution that saves massive amounts of time and effort.
 - If the user highlights "Organização e economia de tempo" (Q3), emphasize how the structured and ready-to-use nature of the material directly translates into massive time savings and a more organized workflow.
 - Reinforce the immediate value if the user is keen to buy now (Q5).
 
-Start directly with the compelling description. Keep it concise, engaging, and directly responsive to their answers.`,
+Start directly with the compelling description. Keep it concise, engaging, and directly responsive to their answers. Mention that they are 100% editable and adaptable for any grade.`,
 });
 
 const personalizedProductDescriptionFlow = ai.defineFlow(

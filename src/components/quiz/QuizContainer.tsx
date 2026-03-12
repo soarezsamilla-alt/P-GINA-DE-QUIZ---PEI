@@ -78,7 +78,7 @@ export const QuizContainer: React.FC = () => {
         setState('PRESENTATION')
       } catch (error) {
         console.error("Error generating personalized description:", error)
-        setPersonalizedDesc("Dê adeus à dificuldade em elaborar seu PEI! Aqui temos modelos PRONTOS E EDITÁVEIS! No arquivo contém 47 modelos, planejados por profissionais da educação. Servem para fundamental I e II. Mas como são editáveis você consegue Adaptar para OUTRAS TURMAS também. Recebe em PDF e EDITÁVEL NO WORD – 48 páginas no total.")
+        setPersonalizedDesc("Dê adeus à dificuldade em elaborar seu PEI! Aqui temos modelos PRONTOS E EDITÁVEIS! Com nossos mais de 200 modelos de PEI 100% editáveis, planejados por profissionais da educação. Você entrega resultados perfeitos, ganha tempo e impressiona coordenadores e pais. Além de serem 100% editáveis você consegue Adaptar para QUALQUER TURMA.")
         setState('PRESENTATION')
       }
     }
