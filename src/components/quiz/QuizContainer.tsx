@@ -80,7 +80,7 @@ export const QuizContainer: React.FC = () => {
     {
       title: "Sugestões de Metas",
       description: "Centenas de objetivos pedagógicos prontos.",
-      image: PlaceHolderImages.find(img => img.id === 'pei-sample-7')?.imageUrl || ''
+      image: "https://image2url.com/r2/default/images/1773351465518-52681892-c99b-4902-8e3c-9a08778d5c53.webp"
     },
     {
       title: "Cronograma de Prazos",
