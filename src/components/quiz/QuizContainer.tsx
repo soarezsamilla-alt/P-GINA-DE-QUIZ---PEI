@@ -64,32 +64,32 @@ export const QuizContainer: React.FC = () => {
   const bonuses = [
     {
       title: "Atividades Adaptadas",
-      description: "100 atividades prontas para aplicar hoje.",
+      description: "100 atividades prontas para aplicar hoje com apoio individualizado.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-4')?.imageUrl || ''
     },
     {
       title: "Guia de PDI Passo a Passo",
-      description: "Domine o Plano de Desenv. Individual.",
+      description: "Um guia completo com apoio individualizado e estratégias de ensino.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-3')?.imageUrl || ''
     },
     {
       title: "Modelos de Relatórios",
-      description: "Escrita rápida e profissional garantida.",
+      description: "Estruturas profissionais para uma escrita rápida e segura.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-5')?.imageUrl || ''
     },
     {
       title: "Sugestões de Metas",
-      description: "Centenas de objetivos prontos para o PEI.",
+      description: "Centenas de objetivos pedagógicos prontos para o seu PEI.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-7')?.imageUrl || ''
     },
     {
       title: "Cronograma de Prazos",
-      description: "Nunca mais perca uma data importante.",
+      description: "Organização completa para nunca mais perder uma data escolar.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-1')?.imageUrl || ''
     },
     {
       title: "Grupo VIP de Professoras",
-      description: "Troque experiências e tire suas dúvidas.",
+      description: "Comunidade exclusiva para troca de experiências e suporte.",
       image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || ''
     }
   ]
@@ -201,31 +201,39 @@ export const QuizContainer: React.FC = () => {
               Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
               {bonuses.map((bonus, idx) => (
-                <Card key={idx} className="border-none shadow-md bg-white hover:shadow-lg transition-shadow">
-                  <CardContent className="p-5 flex flex-col items-center text-center space-y-3">
-                    <div className="relative w-14 h-14 rounded-xl overflow-hidden shadow-inner bg-secondary">
-                      {bonus.image ? (
-                        <Image 
-                          src={bonus.image} 
-                          alt={bonus.title}
-                          fill
-                          className="object-cover"
-                          data-ai-hint="bonus material thumbnail"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-primary font-bold">
-                          {idx + 1}
-                        </div>
-                      )}
-                    </div>
-                    <div className="space-y-1">
-                      <h4 className="font-bold text-primary text-sm">{bonus.title}</h4>
-                      <p className="text-muted-foreground text-xs">{bonus.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2.5rem] p-6 pt-16 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-xl transition-all duration-300">
+                  {/* Badge Bônus */}
+                  <div className="absolute top-5 left-5 bg-accent px-4 py-1.5 rounded-full text-white text-xs font-bold shadow-md z-10">
+                    Bônus {idx + 1}º
+                  </div>
+                  
+                  {/* Imagem do Produto */}
+                  <div className="relative w-full aspect-[3/4] mb-8 rounded-xl overflow-hidden shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                    <Image 
+                      src={bonus.image} 
+                      alt={bonus.title}
+                      fill
+                      className="object-cover"
+                      data-ai-hint="bonus digital product cover"
+                    />
+                  </div>
+
+                  {/* Textos */}
+                  <div className="space-y-3 mb-6 flex-grow">
+                    <h4 className="text-[19px] font-bold text-primary leading-tight">{bonus.title}</h4>
+                    <p className="text-muted-foreground text-[13px] leading-relaxed px-2">
+                      {bonus.description}
+                    </p>
+                  </div>
+
+                  {/* Preços */}
+                  <div className="mt-auto pt-4 flex flex-col items-center gap-1">
+                    <span className="text-muted-foreground line-through text-sm font-medium">R$ 47,00</span>
+                    <span className="text-green-500 font-extrabold text-2xl tracking-tighter">GRÁTIS</span>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
