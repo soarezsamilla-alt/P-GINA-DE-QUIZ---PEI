@@ -83,7 +83,7 @@ export const QuizContainer: React.FC = () => {
       image: "https://image2url.com/r2/default/images/1773351465518-52681892-c99b-4902-8e3c-9a08778d5c53.webp"
     },
     {
-      title: "Cronograma de Prazos",
+      title: "Planejamento AEE 2026",
       description: "Organização completa para das escolares.",
       image: "https://image2url.com/r2/default/images/1773351499103-d61ae935-e459-475a-8cb5-88f110b88e3f.webp"
     },
