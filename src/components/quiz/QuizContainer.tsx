@@ -65,32 +65,38 @@ export const QuizContainer: React.FC = () => {
     {
       title: "Plano Educacional PEI",
       description: "Um guia completo com apoio individualizado e estratégias de atividades adaptadas.",
-      image: "https://image2url.com/r2/default/images/1773351312705-04ec6820-800f-4144-8bd9-5694237c8b28.webp"
+      image: "https://image2url.com/r2/default/images/1773351312705-04ec6820-800f-4144-8bd9-5694237c8b28.webp",
+      bgColor: "#FDF2F2" // Vermelho suave
     },
     {
       title: "Plano de Desenvolvimento PDI e PEI",
       description: "Um guia focado na aprendizagen e na inclusão de alunos PDI e PEI.",
-      image: "https://image2url.com/r2/default/images/1773351395354-2a5033b1-313f-4462-97c1-54229810db19.webp"
+      image: "https://image2url.com/r2/default/images/1773351395354-2a5033b1-313f-4462-97c1-54229810db19.webp",
+      bgColor: "#F2F6FD" // Azul suave
     },
     {
       title: "Plano Educacional PEI 4 e 5 Anos",
       description: "Um guia educacional para alunos de 4 e 5 anos na educação Infantil, histórico escolar, saúde e desenvolvimento do aluno.",
-      image: "https://image2url.com/r2/default/images/1773351423137-18ea825c-b9b8-4d7d-a701-cf860462aba4.webp"
+      image: "https://image2url.com/r2/default/images/1773351423137-18ea825c-b9b8-4d7d-a701-cf860462aba4.webp",
+      bgColor: "#F2FDF4" // Verde suave
     },
     {
       title: "Plano de Desenvolvimento Psicoeducacional (PDPI)",
       description: "Um guia desenvolvido com estratégias, acompanhamento e planejamento psicoeducacional.",
-      image: "https://image2url.com/r2/default/images/1773351465518-52681892-c99b-4902-8e3c-9a08778d5c53.webp"
+      image: "https://image2url.com/r2/default/images/1773351465518-52681892-c99b-4902-8e3c-9a08778d5c53.webp",
+      bgColor: "#FDFCF2" // Amarelo suave
     },
     {
       title: "Planejamento AEE 2026",
       description: "Um guia planejado para o Atendimento Educacional Especializado (AEE) na Sala de Recurso Multifuncional para o ano de 2026.",
-      image: "https://image2url.com/r2/default/images/1773351499103-d61ae935-e459-475a-8cb5-88f110b88e3f.webp"
+      image: "https://image2url.com/r2/default/images/1773351499103-d61ae935-e459-475a-8cb5-88f110b88e3f.webp",
+      bgColor: "#F6F2FD" // Roxo suave
     },
     {
       title: "Ficha Individual PEI",
       description: "Ficha de acompanhamento para alunos com necessidades educacionais especiais. A ficha coleta dados sobre o aluno e avalia suas habilidades em áreas como psicomotricidade.",
-      image: "https://image2url.com/r2/default/images/1773351519083-42be1ab9-67d9-4a04-9330-9d9a4baaadcf.webp"
+      image: "https://image2url.com/r2/default/images/1773351519083-42be1ab9-67d9-4a04-9330-9d9a4baaadcf.webp",
+      bgColor: "#FDF2F9" // Rosa suave
     }
   ]
 
@@ -203,14 +209,18 @@ export const QuizContainer: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
               {bonuses.map((bonus, idx) => (
-                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[340px] w-full">
+                <div 
+                  key={idx} 
+                  className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[340px] w-full"
+                  style={{ backgroundColor: bonus.bgColor }}
+                >
                   {/* Badge Bônus */}
                   <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
                     Bônus {idx + 1}º
                   </div>
                   
-                  {/* Imagem do Produto */}
-                  <div className="relative w-full aspect-[4/5] mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-500">
+                  {/* Imagem do Produto (Reduzida) */}
+                  <div className="relative w-[70%] aspect-square mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-500">
                     <Image 
                       src={bonus.image} 
                       alt={bonus.title}
