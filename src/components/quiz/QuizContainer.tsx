@@ -31,28 +31,28 @@ export const QuizContainer: React.FC = () => {
     {
       question: "Você sente insegurança ou dificuldade em elaborar o PEI?",
       options: [
-        { label: "Sim, nunca sei se está correto ou completo", icon: "😉" },
+        { label: "Sim, nunca sei se está correto ou completo", icon: "👍" },
         { label: "Um pouco, mas consigo me virar", icon: "😥" }
       ]
     },
     {
       question: "Você já procurou por modelos de PEI prontos?",
       options: [
-        { label: "Sim, mas nunca encontrei exatamente o que precisava", icon: "😉" },
+        { label: "Sim, mas nunca encontrei exatamente o que precisava", icon: "👍" },
         { label: "Não, mas quero uma base confiável e prática", icon: "🙂" }
       ]
     },
     {
       question: "O que você espera de um material que ajude a elaborar um PEI?",
       options: [
-        { label: "Praticidade e modelos prontos para usar", icon: "😉" },
+        { label: "Praticidade e modelos prontos para usar", icon: "👍" },
         { label: "Organização e economia de tempo", icon: "😊" }
       ]
     },
     {
       question: "Se pudesse investir em modelos prontos e editáveis por um valor acessível, você...",
       options: [
-        { label: "Compraria agora para aplicar já!", icon: "😉" },
+        { label: "Compraria agora para aplicar já!", icon: "👍" },
         { label: "Queria ter conhecido antes!", icon: "😆" }
       ]
     }
