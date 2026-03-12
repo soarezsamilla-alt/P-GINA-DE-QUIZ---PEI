@@ -73,7 +73,7 @@ export const QuizContainer: React.FC = () => {
       image: "https://image2url.com/r2/default/images/1773351395354-2a5033b1-313f-4462-97c1-54229810db19.webp"
     },
     {
-      title: "Modelos de Relatórios",
+      title: "Plano Educacional PEI 4 e 5 Anos",
       description: "Estruturas profissionais para uma escrita rápida.",
       image: "https://image2url.com/r2/default/images/1773351423137-18ea825c-b9b8-4d7d-a701-cf860462aba4.webp"
     },
