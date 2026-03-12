@@ -28,7 +28,7 @@ export const OfferSection: React.FC = () => {
             <span className="text-sm font-bold text-primary align-top mt-2">R$</span>
             <span className="text-6xl font-bold text-primary">18,90</span>
           </div>
-          <p className="text-sm font-bold text-primary/70 uppercase tracking-tight">Pagamento único</p>
+          <p className="text-[13px] font-bold text-muted-foreground uppercase tracking-tight">Pagamento único</p>
         </div>
 
         <Button 
