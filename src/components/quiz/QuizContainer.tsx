@@ -6,11 +6,9 @@ import { QuizStep } from './QuizStep'
 import { PersonalizedDescription } from '@/components/product/PersonalizedDescription'
 import { SampleGallery } from '@/components/product/SampleGallery'
 import { SocialProof } from '@/components/product/SocialProof'
-import { OfferSection } from '@/components/product/OfferSection'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Loader2 } from 'lucide-react'
 
 type QuizState = 'QUIZ' | 'LOADING' | 'PRESENTATION'
 
@@ -86,11 +84,6 @@ export const QuizContainer: React.FC = () => {
     }
   }
 
-  const scrollToOffer = () => {
-    const element = document.getElementById('offer-section')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   const progress = ((step + 1) / quizSteps.length) * 100
 
   return (
@@ -130,20 +123,9 @@ export const QuizContainer: React.FC = () => {
         <div className="max-w-5xl mx-auto space-y-12 pb-20">
           <div className="space-y-8">
             <PersonalizedDescription description={personalizedDesc} />
-            <div className="flex justify-center -mt-4">
-              <Button 
-                onClick={scrollToOffer}
-                size="lg"
-                className="h-14 px-8 text-lg font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group"
-              >
-                Quero receber os modelos!
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div>
           </div>
           <SampleGallery />
           <SocialProof />
-          <OfferSection />
         </div>
       )}
     </div>
