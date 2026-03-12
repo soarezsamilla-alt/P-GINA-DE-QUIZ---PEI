@@ -47,11 +47,6 @@ export const SampleGallery: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="p-6 bg-white">
-                    <p className="text-sm font-bold text-center text-primary uppercase tracking-tight">
-                      {sample.description}
-                    </p>
-                  </div>
                 </div>
               </CarouselItem>
             ))}
