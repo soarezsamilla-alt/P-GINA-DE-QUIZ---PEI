@@ -138,14 +138,22 @@ export const QuizContainer: React.FC = () => {
       )}
 
       {state === 'PRESENTATION' && (
-        <div className="max-w-5xl mx-auto space-y-2 pb-20">
-          <PersonalizedDescription description={personalizedDesc} />
+        <div className="max-w-5xl mx-auto pb-20">
+          <div className="mb-12">
+            <PersonalizedDescription description={personalizedDesc} />
+          </div>
           
-          <CTAButton />
+          <div className="mb-4">
+            <CTAButton />
+          </div>
 
-          <SampleGallery />
+          <div className="mb-4">
+            <SampleGallery />
+          </div>
           
-          <SocialProof />
+          <div className="mb-8">
+            <SocialProof />
+          </div>
 
           <CTAButton />
         </div>
