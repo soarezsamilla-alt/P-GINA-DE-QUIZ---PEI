@@ -65,7 +65,7 @@ export const QuizContainer: React.FC = () => {
     {
       title: "Atividades Adaptadas",
       description: "100 atividades prontas para aplicar hoje.",
-      image: PlaceHolderImages.find(img => img.id === 'pei-sample-4')?.imageUrl || ''
+      image: "https://image2url.com/r2/default/images/1773351312705-04ec6820-800f-4144-8bd9-5694237c8b28.webp"
     },
     {
       title: "Guia de PDI Passo a Passo",
@@ -84,7 +84,7 @@ export const QuizContainer: React.FC = () => {
     },
     {
       title: "Cronograma de Prazos",
-      description: "Organização completa para datas escolares.",
+      description: "Organização completa para das escolares.",
       image: PlaceHolderImages.find(img => img.id === 'pei-sample-1')?.imageUrl || ''
     },
     {
