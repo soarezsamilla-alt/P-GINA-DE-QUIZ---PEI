@@ -19,6 +19,30 @@
       "imageHint": "curriculum design"
     },
     {
+      "id": "pei-sample-4",
+      "description": "Atividades adaptadas inclusivas",
+      "imageUrl": "https://picsum.photos/seed/pei4/600/800",
+      "imageHint": "inclusive education"
+    },
+    {
+      "id": "pei-sample-5",
+      "description": "Relatório de acompanhamento escolar",
+      "imageUrl": "https://picsum.photos/seed/pei5/600/800",
+      "imageHint": "school report"
+    },
+    {
+      "id": "pei-sample-6",
+      "description": "Planejamento de aula para educação especial",
+      "imageUrl": "https://picsum.photos/seed/pei6/600/800",
+      "imageHint": "lesson planning"
+    },
+    {
+      "id": "pei-sample-7",
+      "description": "Ficha de avaliação do aluno",
+      "imageUrl": "https://picsum.photos/seed/pei7/600/800",
+      "imageHint": "student assessment"
+    },
+    {
       "id": "testimonial-1",
       "description": "Depoimento de professora satisfeita no WhatsApp",
       "imageUrl": "https://picsum.photos/seed/wa1/400/200",
