@@ -14,7 +14,7 @@ import { z } from 'genkit';
 const PersonalizedProductDescriptionInputSchema = z.object({
   q1Answer: z.string().describe("User's answer to 'Você sente insegurança ou dificuldade em elaborar o PEI?'"),
   q2Answer: z.string().describe("User's answer to 'Você já procurou por modelos de PEI prontos?'"),
-  q3Answer: z.string().describe("User's answer to 'Você tem dificuldades em elaborar o PEI?'"),
+  q3Answer: z.string().describe("User's answer to 'O que você espera de um material que ajude a elaborar um PEI?'"),
   q4Answer: z.string().describe("User's answer to 'Você é:'"),
   q5Answer: z.string().describe("User's answer to 'Se pudesse investir em modelos prontos e editáveis por um valor acessível, você...'"),
 });
@@ -47,7 +47,7 @@ Answer 1: "{{{q1Answer}}}"
 Question 2: "Você já procurou por modelos de PEI prontos?"
 Answer 2: "{{{q2Answer}}}"
 
-Question 3: "Você tem dificuldades em elaborar o PEI?"
+Question 3: "O que você espera de um material que ajude a elaborar um PEI?"
 Answer 3: "{{{q3Answer}}}"
 
 Question 4: "Você é:"
@@ -64,7 +64,7 @@ For example:
 - If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon, giving them the confidence they lack.
 - If the user has tried other models but didn't find what they needed (Q2), highlight the high quality, professionalism, and "exactly what's needed" nature of our specific collection of 47 models.
 - If the user hasn't looked for models yet but wants a reliable and practical base (Q2), emphasize the professional planning and immediate readiness of the material as the perfect starting point.
-- If the user has difficulties (Q3), position the product as the solution to ease their burden and increase their efficiency.
+- If the user highlights specific expectations (Q3), position the product as the exact solution that meets those requirements.
 - Reinforce the immediate value if the user is keen to buy now (Q5).
 
 Start directly with the compelling description. Keep it concise, engaging, and directly responsive to their answers.`,

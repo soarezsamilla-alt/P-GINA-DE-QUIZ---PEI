@@ -44,7 +44,7 @@ export const QuizContainer: React.FC = () => {
       ]
     },
     {
-      question: "Você tem dificuldades em elaborar o PEI?",
+      question: "O que você espera de um material que ajude a elaborar um PEI?",
       options: [
         { label: "Sim", icon: "👍" },
         { label: "Um pouco.", icon: "😊" }
