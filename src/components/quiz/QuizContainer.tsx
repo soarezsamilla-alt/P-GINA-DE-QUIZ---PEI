@@ -79,7 +79,7 @@ export const QuizContainer: React.FC = () => {
     },
     {
       title: "Plano de Desenvolvimento Psicoeducacional (PDPI)",
-      description: "Centenas de objetivos pedagógicos prontos.",
+      description: "Um guia desenvolvido com estratégias, acompanhamento e planejamento psicoeducacional.",
       image: "https://image2url.com/r2/default/images/1773351465518-52681892-c99b-4902-8e3c-9a08778d5c53.webp"
     },
     {
