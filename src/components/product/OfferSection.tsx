@@ -53,7 +53,7 @@ export const OfferSection: React.FC = () => {
 
         <div className="mt-8 space-y-3 text-left border-t pt-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center gap-3 text-[14px] text-primary/80 font-medium">
+            <div key={index} className="flex items-center gap-3 text-[14px] text-[#5c6570] font-medium">
               <div className="bg-green-100 p-0.5 rounded-full">
                 <Check className="w-4 h-4 text-green-600 shrink-0" />
               </div>
