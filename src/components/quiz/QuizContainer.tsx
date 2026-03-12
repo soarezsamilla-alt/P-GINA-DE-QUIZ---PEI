@@ -203,7 +203,7 @@ export const QuizContainer: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
               {bonuses.map((bonus, idx) => (
-                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[320px] w-full">
+                <div key={idx} className="relative bg-[#FDF2F2] rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center shadow-sm border border-black/5 group hover:shadow-md transition-all duration-300 max-w-[340px] w-full">
                   {/* Badge Bônus */}
                   <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
                     Bônus {idx + 1}º
