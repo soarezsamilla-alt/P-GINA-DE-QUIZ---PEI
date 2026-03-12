@@ -21,7 +21,7 @@ export const SocialProof: React.FC = () => {
         <h3 className="text-[21px] font-headline text-center text-primary font-bold">
           Quem adquire nossos materiais, RECOMENDA!
         </h3>
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto text-sm">
           Veja o que as professoras que já utilizam nossos modelos de PEI estão dizendo sobre os resultados.
         </p>
       </div>
