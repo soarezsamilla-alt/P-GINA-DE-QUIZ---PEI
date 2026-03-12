@@ -10,7 +10,7 @@ export const SampleGallery: React.FC = () => {
 
   return (
     <div className="py-12">
-      <h3 className="text-2xl font-headline text-center text-primary mb-2">Veja abaixo algumas amostras!</h3>
+      <h3 className="text-2xl font-headline text-center text-primary mb-2">Veja abaixo algumas amostras:</h3>
       <p className="text-center text-muted-foreground mb-8">Nossos modelos de PEI são feitos para tornar o ensino mais divertido e interativo!</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {samples.map((sample) => (
