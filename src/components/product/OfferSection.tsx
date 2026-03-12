@@ -26,9 +26,6 @@ export const OfferSection: React.FC = () => {
         <h2 className="text-[21px] font-headline text-primary font-bold">
           Garanta agora os melhores modelos de PEI e otimize seu tempo!
         </h2>
-        <div className="inline-block bg-accent text-white px-6 py-2 rounded-full font-bold animate-pulse">
-          50% OFF - POR TEMPO LIMITADO
-        </div>
       </div>
 
       <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10">
