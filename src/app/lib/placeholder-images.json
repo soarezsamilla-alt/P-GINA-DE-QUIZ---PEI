@@ -60,6 +60,12 @@
       "description": "Relato de sucesso e praticidade com o material",
       "imageUrl": "https://image2url.com/r2/default/images/1773346284754-254fd099-f421-47bd-8fd5-85183b7f5377.webp",
       "imageHint": "customer success"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Novo feedback de satisfação sobre o material",
+      "imageUrl": "https://image2url.com/r2/default/images/1773346335556-855101a3-fb63-4d26-becf-7ce8c7f84b78.webp",
+      "imageHint": "teacher feedback"
     }
   ]
 }

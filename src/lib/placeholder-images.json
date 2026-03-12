@@ -62,9 +62,9 @@
     },
     {
       "id": "testimonial-4",
-      "description": "Nova recomendação de professora sobre os modelos",
-      "imageUrl": "https://picsum.photos/seed/testimonial4/600/800",
-      "imageHint": "teacher recommendation"
+      "description": "Novo feedback de satisfação sobre o material",
+      "imageUrl": "https://image2url.com/r2/default/images/1773346335556-855101a3-fb63-4d26-becf-7ce8c7f84b78.webp",
+      "imageHint": "teacher feedback"
     }
   ]
 }
