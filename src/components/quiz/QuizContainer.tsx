@@ -7,6 +7,7 @@ import { QuizStep } from './QuizStep'
 import { PersonalizedDescription } from '@/components/product/PersonalizedDescription'
 import { SampleGallery } from '@/components/product/SampleGallery'
 import { SocialProof } from '@/components/product/SocialProof'
+import { OfferSection } from '@/components/product/OfferSection'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
 import { Loader2, ArrowRight } from 'lucide-react'
@@ -67,37 +68,37 @@ export const QuizContainer: React.FC = () => {
       title: "Plano Educacional PEI",
       description: "Um guia completo com apoio individualizado e estratégias de atividades adaptadas.",
       image: "https://image2url.com/r2/default/images/1773351312705-04ec6820-800f-4144-8bd9-5694237c8b28.webp",
-      bgColor: "#FDF2F2" // Vermelho suave
+      bgColor: "#FDF2F2"
     },
     {
       title: "Plano de Desenvolvimento PDI e PEI",
       description: "Um guia focado na aprendizagen e na inclusão de alunos PDI e PEI.",
       image: "https://image2url.com/r2/default/images/1773351395354-2a5033b1-313f-4462-97c1-54229810db19.webp",
-      bgColor: "#F2F6FD" // Azul suave
+      bgColor: "#F2F6FD"
     },
     {
       title: "Plano Educacional PEI 4 e 5 Anos",
       description: "Um guia educacional para alunos de 4 e 5 anos na educação Infantil, histórico escolar, saúde e desenvolvimento do aluno.",
       image: "https://image2url.com/r2/default/images/1773351423137-18ea825c-b9b8-4d7d-a701-cf860462aba4.webp",
-      bgColor: "#F2FDF4" // Verde suave
+      bgColor: "#F2FDF4"
     },
     {
       title: "Plano de Desenvolvimento Psicoeducacional (PDPI)",
       description: "Um guia desenvolvido com estratégias, acompanhamento e planejamento psicoeducacional.",
       image: "https://image2url.com/r2/default/images/1773351465518-52681892-c99b-4902-8e3c-9a08778d5c53.webp",
-      bgColor: "#FDFCF2" // Amarelo suave
+      bgColor: "#FDFCF2"
     },
     {
       title: "Planejamento AEE 2026",
       description: "Um guia planejado para o Atendimento Educacional Especializado (AEE) na Sala de Recurso Multifuncional para o ano de 2026.",
       image: "https://image2url.com/r2/default/images/1773351499103-d61ae935-e459-475a-8cb5-88f110b88e3f.webp",
-      bgColor: "#F6F2FD" // Roxo suave
+      bgColor: "#F6F2FD"
     },
     {
       title: "Ficha Individual PEI",
       description: "Ficha de acompanhamento para alunos com necessidades educacionais especiais. A ficha coleta dados sobre o aluno e avalia suas habilidades em áreas como psicomotricidade.",
       image: "https://image2url.com/r2/default/images/1773351519083-42be1ab9-67d9-4a04-9330-9d9a4baaadcf.webp",
-      bgColor: "#FDF2F9" // Rosa suave
+      bgColor: "#FDF2F9"
     }
   ]
 
@@ -212,18 +213,16 @@ export const QuizContainer: React.FC = () => {
               {bonuses.map((bonus, idx) => (
                 <div 
                   key={idx} 
-                  className="group p-[3px] rounded-[2.1rem] bg-gradient-to-br from-primary/40 via-accent/40 to-primary/40 hover:from-primary hover:via-accent hover:to-primary transition-all duration-500 shadow-md hover:shadow-2xl max-w-[340px] w-full"
+                  className="group p-[3px] rounded-[2.1rem] bg-gradient-to-br from-primary/40 via-accent/40 to-primary/40 hover:from-primary hover:via-accent hover:to-primary transition-all duration-500 shadow-md hover:shadow-2xl max-w-[340px] w-full border-2 border-transparent hover:border-accent/30"
                 >
                   <div 
                     className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center h-full transition-colors duration-300"
                     style={{ backgroundColor: bonus.bgColor }}
                   >
-                    {/* Badge Bônus */}
                     <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
                       Bônus {idx + 1}º
                     </div>
                     
-                    {/* Imagem do Produto (Reduzida) */}
                     <div className="relative w-[70%] aspect-square mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-110 transition-transform duration-500">
                       <Image 
                         src={bonus.image} 
@@ -234,7 +233,6 @@ export const QuizContainer: React.FC = () => {
                       />
                     </div>
 
-                    {/* Textos */}
                     <div className="space-y-2 mb-4 flex-grow">
                       <h4 className="text-[16px] font-bold text-primary leading-tight">{bonus.title}</h4>
                       <p className="text-muted-foreground text-[12px] leading-relaxed px-1">
@@ -242,7 +240,6 @@ export const QuizContainer: React.FC = () => {
                       </p>
                     </div>
 
-                    {/* Preços */}
                     <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
                       <span className="text-muted-foreground line-through text-[11px] font-medium">R$ 47,00</span>
                       <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
@@ -251,6 +248,10 @@ export const QuizContainer: React.FC = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="mt-20">
+            <OfferSection />
           </div>
         </div>
       )}
