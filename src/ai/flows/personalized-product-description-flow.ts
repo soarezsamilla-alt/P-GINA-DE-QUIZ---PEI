@@ -12,7 +12,7 @@ import { z } from 'genkit';
 
 const PersonalizedProductDescriptionInputSchema = z.object({
   q1Answer: z.string().describe("User's answer to 'Você sente insegurança ou dificuldade em elaborar o PEI?'"),
-  q2Answer: z.string().describe("User's answer to 'O que você busca em um bom material de apoio para elaborar um PEI?'"),
+  q2Answer: z.string().describe("User's answer to 'Você já procurou por modelos de PEI prontos?'"),
   q3Answer: z.string().describe("User's answer to 'Você tem dificuldades em elaborar o PEI?'"),
   q4Answer: z.string().describe("User's answer to 'Você é:'"),
   q5Answer: z.string().describe("User's answer to 'Se pudesse investir em modelos prontos e editáveis por um valor acessível, você...'"),
@@ -43,7 +43,7 @@ Your goal is to highlight the benefits and features of this product in a way tha
 Question 1: "Você sente insegurança ou dificuldade em elaborar o PEI?"
 Answer 1: "{{{q1Answer}}}"
 
-Question 2: "O que você busca em um bom material de apoio para elaborar um PEI?"
+Question 2: "Você já procurou por modelos de PEI prontos?"
 Answer 2: "{{{q2Answer}}}"
 
 Question 3: "Você tem dificuldades em elaborar o PEI?"
@@ -61,8 +61,8 @@ Based on these answers, generate a personalized, enthusiastic, and problem-solvi
 
 For example:
 - If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon.
-- If the user seeks practicality and examples (Q2), highlight the ready-to-use and editable nature with numerous examples.
-- If the user wants organization and time-saving (Q2), stress the structured content and efficiency.
+- If the user was looking for ready-made models (Q2), highlight the ready-to-use and editable nature with numerous examples they can trust.
+- If the user wants organization and time-saving, stress the structured content and efficiency.
 - If the user has difficulties (Q3), position the product as the solution to ease their burden and increase their confidence.
 - Reinforce the immediate value if the user is keen to buy now (Q5).
 

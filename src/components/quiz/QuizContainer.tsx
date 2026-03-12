@@ -31,12 +31,12 @@ export const QuizContainer: React.FC = () => {
     {
       question: "Você sente insegurança ou dificuldade em elaborar o PEI?",
       options: [
-        { label: "Sim, nunca sei se está correto ou completo", icon: "👍" },
-        { label: "Um pouco, mas consigo me virar", icon: "😥" }
+        { label: "👍 Sim, nunca sei se está correto ou completo", icon: "👍" },
+        { label: "😥 Um pouco, mas consigo me virar", icon: "😥" }
       ]
     },
     {
-      question: "O que você busca em um bom material de apoio para elaborar um PEI?",
+      question: "Você já procurou por modelos de PEI prontos?",
       options: [
         { label: "Praticidade e exemplos prontos.", icon: "😉" },
         { label: "Organização e economia de tempo.", icon: "😟" }
