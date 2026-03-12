@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -162,7 +161,7 @@ export const QuizContainer: React.FC = () => {
             <h2 className="text-[21px] font-headline font-bold text-primary">
               Você Merece Bônus EXCLUSIVOS!
             </h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+            <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
               Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
             </p>
           </div>
