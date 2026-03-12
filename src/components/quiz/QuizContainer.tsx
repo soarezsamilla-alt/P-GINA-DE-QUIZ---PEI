@@ -24,7 +24,8 @@ export const QuizContainer: React.FC = () => {
       question: "Você é:",
       options: [
         { label: "Professora Ed. Especial", icon: "👩‍🏫" },
-        { label: "Professora Ensino Regular", icon: "👩‍🏫" }
+        { label: "Professora Ensino Regular", icon: "👩‍🏫" },
+        { label: "Orientador Educacional", icon: "👩‍🏫" }
       ]
     },
     {
@@ -66,12 +67,6 @@ export const QuizContainer: React.FC = () => {
     } else {
       setState('LOADING')
       try {
-        // As respostas agora estão em uma nova ordem no array updatedAnswers:
-        // Index 0: Você é (antiga Q4)
-        // Index 1: Já procurou (antiga Q1)
-        // Index 2: O que busca (antiga Q2)
-        // Index 3: Dificuldades (antiga Q3)
-        // Index 4: Investimento (antiga Q5)
         const result = await generatePersonalizedProductDescription({
           q1Answer: updatedAnswers[1],
           q2Answer: updatedAnswers[2],
