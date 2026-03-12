@@ -90,7 +90,6 @@ export const QuizContainer: React.FC = () => {
       {state === 'QUIZ' && (
         <div className="max-w-md mx-auto space-y-8">
           <div className="text-center space-y-2">
-            <h1 className="text-3xl font-headline font-bold text-primary tracking-tight">PEI Navigator</h1>
             <p className="text-muted-foreground text-sm uppercase tracking-widest font-semibold">Descubra o modelo ideal para você</p>
           </div>
           <div className="space-y-2">
