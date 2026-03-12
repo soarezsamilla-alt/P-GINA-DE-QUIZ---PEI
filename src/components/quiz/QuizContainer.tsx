@@ -202,7 +202,7 @@ export const QuizContainer: React.FC = () => {
 
           <div className="mt-16 mb-12 text-center space-y-4 px-4">
             <h3 className="text-[21px] font-headline font-bold text-primary">
-              Você Merece Bônus EXCLUSIVOS!
+              Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto text-[14px] leading-relaxed">
               Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
