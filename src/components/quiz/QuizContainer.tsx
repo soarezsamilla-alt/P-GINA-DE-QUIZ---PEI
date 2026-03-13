@@ -30,7 +30,7 @@ export const QuizContainer: React.FC = () => {
       options: [
         { label: "Professora de Educação Especial", icon: "👩‍🏫" },
         { label: "Professora de Ensino Regular", icon: "👩‍🏫" },
-        { label: "Orientadora ou Coordenadora Educacional", icon: "👩‍🏫" }
+        { label: "Orientadora ou Coordenadora Educacional", icon: "🗂️" }
       ]
     },
     {
