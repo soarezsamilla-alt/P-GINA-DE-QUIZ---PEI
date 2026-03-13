@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, ArrowRight, Check, Timer } from 'lucide-react'
+import { ArrowRight, Check, Timer } from 'lucide-react'
 
 export const OfferSection: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 })
@@ -139,8 +139,7 @@ export const OfferSection: React.FC = () => {
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
           
-          <div className="mt-5 flex items-start justify-center gap-2 text-[11px] text-muted-foreground leading-tight px-2">
-            <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
+          <div className="mt-5 text-[11px] text-muted-foreground leading-tight px-2">
             <p>
               APROVEITE AGORA: Você <span className="text-destructive font-black underline">NÃO</span> vai encontrar esse preço depois.
             </p>
