@@ -61,7 +61,7 @@ export const QuizContainer: React.FC = () => {
       question: "Qual é o perfil dos seus alunos que precisam de PEI?",
       options: [
         { label: "TEA, TDAH ou Deficiência Intelectual", icon: "🧩" },
-        { label: "Gostaria de ter encontrado isso antes", icon: "😆" },
+        { label: "Deficiências múltiplas ou outros diagnósticos", icon: "🔀" },
         { label: "Educação Infantil 4 e 5 anos", icon: "🌱" }
       ]
     }
