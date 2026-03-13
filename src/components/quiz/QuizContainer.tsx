@@ -37,7 +37,7 @@ export const QuizContainer: React.FC = () => {
     {
       question: "Quando você pensa em elaborar um PEI, o que passa pela sua cabeça?",
       options: [
-        { label: "Sim, nunca sei se está correto ou completo", icon: "👍" },
+        { label: "Não sei se estou fazendo certo", icon: "😰" },
         { label: "Um pouco, mas consigo me virar", icon: "😥" }
       ]
     },
