@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -9,7 +10,7 @@ import { SocialProof } from '@/components/product/SocialProof'
 import { OfferSection } from '@/components/product/OfferSection'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight } from 'lucide-react'
+import { Loader2, ArrowRight, Mail, Zap, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -254,6 +255,49 @@ export const QuizContainer: React.FC = () => {
 
           <div className="mt-8">
             <OfferSection />
+          </div>
+
+          {/* New Section: How will I receive my material? */}
+          <div className="mt-20 mb-10 text-center space-y-10 px-4 max-w-3xl mx-auto">
+            <h3 className="text-[24px] font-headline font-bold text-primary">
+              Como vou receber meu material?
+            </h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
+              <div className="flex gap-4 p-6 rounded-2xl bg-white shadow-sm border border-border/50">
+                <div className="bg-primary/10 p-3 rounded-full h-fit">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-primary text-lg">Acesso via E-mail</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Você receberá um e-mail com todos os links para download dos modelos de PEI e seus bônus exclusivos.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 p-6 rounded-2xl bg-white shadow-sm border border-border/50">
+                <div className="bg-accent/10 p-3 rounded-full h-fit">
+                  <Zap className="w-6 h-6 text-accent" />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-primary text-lg">Acesso Imediato</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Assim que seu pagamento for confirmado, o acesso é liberado instantaneamente para você começar a usar.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-secondary/20 p-6 rounded-3xl border-2 border-dashed border-primary/20 flex flex-col items-center gap-3">
+              <div className="flex items-center gap-2 text-primary font-bold">
+                <CheckCircle className="w-5 h-5" />
+                <span>Formatos Editáveis (Word/Google Docs)</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Todos os materiais são 100% editáveis para que você possa adaptar para qualquer necessidade.
+              </p>
+            </div>
           </div>
         </div>
       )}
