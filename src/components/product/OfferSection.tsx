@@ -1,14 +1,45 @@
 "use client"
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, Zap, ArrowRight, Check } from 'lucide-react'
+import { ShieldCheck, Zap, ArrowRight, Check, Timer } from 'lucide-react'
 
 export const OfferSection: React.FC = () => {
+  const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 })
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.hours === 0 && prev.minutes === 0 && prev.seconds === 0) {
+          return { hours: 23, minutes: 59, seconds: 59 }
+        }
+        let h = prev.hours
+        let m = prev.minutes
+        let s = prev.seconds - 1
+
+        if (s < 0) {
+          s = 59
+          m -= 1
+        }
+        if (m < 0) {
+          m = 59
+          h -= 1
+        }
+        return { hours: h, minutes: m, seconds: s }
+      })
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
+
   const handlePurchase = () => {
     window.location.href = "https://pay.example.com/checkout/pei-models"
   }
+
+  const formatNumber = (num: number) => num.toString().padStart(2, '0')
 
   const benefits = [
     "Mais de 200 Modelos de PEI prontos e editáveis",
@@ -32,64 +63,87 @@ export const OfferSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-primary/10 mx-auto max-w-[400px]">
-        <div className="space-y-2 mb-6 text-center">
-          <p className="text-muted-foreground line-through text-lg">De R$ 97,90</p>
-          <div className="flex items-baseline justify-center">
-            <span className="text-6xl font-bold text-primary mr-1">R$</span>
-            <span className="text-6xl font-bold text-primary tracking-tighter">16</span>
-            <span className="text-2xl font-bold text-primary">,90</span>
-          </div>
-          <p className="text-[9px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
-          
-          <div className="mt-8 relative w-full h-40">
-            <Image 
-              src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
-              alt="Garantia"
-              fill
-              className="object-contain"
-            />
+      <div className="bg-white rounded-3xl shadow-2xl border-2 border-primary/10 mx-auto max-w-[400px] overflow-hidden">
+        {/* Timer Section */}
+        <div className="bg-destructive/10 py-3 px-4 flex items-center justify-center gap-3 border-b border-destructive/20">
+          <Timer className="w-5 h-5 text-destructive animate-pulse" />
+          <span className="text-[13px] font-bold text-destructive uppercase tracking-tight">
+            Oferta expira em:
+          </span>
+          <div className="flex items-center gap-1 font-mono font-bold text-destructive text-lg">
+            {isMounted ? (
+              <>
+                <span>{formatNumber(timeLeft.hours)}</span>
+                <span className="animate-pulse">:</span>
+                <span>{formatNumber(timeLeft.minutes)}</span>
+                <span className="animate-pulse">:</span>
+                <span>{formatNumber(timeLeft.seconds)}</span>
+              </>
+            ) : (
+              <span>24:00:00</span>
+            )}
           </div>
         </div>
 
-        <div className="mt-8 space-y-3 text-left border-t pt-8 mb-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center gap-3 text-[14px] text-[#5c6570] font-medium">
-              <div className="bg-green-100 p-0.5 rounded-full">
-                <Check className="w-4 h-4 text-green-600 shrink-0" />
-              </div>
-              <span>
-                {benefit === "Todos os 6 Bônus" ? (
-                  <span className="text-[#2c293d] font-bold">Todos os 6 Bônus</span>
-                ) : benefit === "Acesso a futuras atualizações" ? (
-                  <>
-                    Acesso a <span className="text-[#2c293d] font-bold">futuras atualizações</span>
-                  </>
-                ) : benefit === "Mais de 200 Modelos de PEI prontos e editáveis" ? (
-                  <>
-                    Mais de <span className="text-[#2c293d] font-bold">200 Modelos</span> de PEI prontos e editáveis
-                  </>
-                ) : (
-                  benefit
-                )}
-              </span>
+        <div className="p-10 pt-8">
+          <div className="space-y-2 mb-6 text-center">
+            <p className="text-muted-foreground line-through text-lg">De R$ 97,90</p>
+            <div className="flex items-baseline justify-center">
+              <span className="text-6xl font-bold text-primary mr-1">R$</span>
+              <span className="text-6xl font-bold text-primary tracking-tighter">16</span>
+              <span className="text-2xl font-bold text-primary">,90</span>
             </div>
-          ))}
-        </div>
+            <p className="text-[9px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
+            
+            <div className="mt-8 relative w-full h-44">
+              <Image 
+                src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
+                alt="Garantia"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
 
-        <Button 
-          onClick={handlePurchase}
-          size="lg" 
-          className="w-full h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group animate-pulse-border hover:scale-105"
-          style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
-        >
-          LIBERAR ACESSO!
-          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-        </Button>
-        
-        <div className="mt-6 flex items-center justify-center gap-2 text-[12px] text-muted-foreground">
-          <ShieldCheck className="w-4 h-4 text-accent" />
-          <span>Pagamento 100% Seguro e Acesso Imediato</span>
+          <div className="mt-8 space-y-3 text-left border-t pt-8 mb-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center gap-3 text-[14px] text-[#5c6570] font-medium">
+                <div className="bg-green-100 p-0.5 rounded-full">
+                  <Check className="w-4 h-4 text-green-600 shrink-0" />
+                </div>
+                <span>
+                  {benefit === "Todos os 6 Bônus" ? (
+                    <span className="text-[#2c293d] font-bold">Todos os 6 Bônus</span>
+                  ) : benefit === "Acesso a futuras atualizações" ? (
+                    <>
+                      Acesso a <span className="text-[#2c293d] font-bold">futuras atualizações</span>
+                    </>
+                  ) : benefit === "Mais de 200 Modelos de PEI prontos e editáveis" ? (
+                    <>
+                      Mais de <span className="text-[#2c293d] font-bold">200 Modelos</span> de PEI prontos e editáveis
+                    </>
+                  ) : (
+                    benefit
+                  )}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <Button 
+            onClick={handlePurchase}
+            size="lg" 
+            className="w-full h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group animate-pulse-border hover:scale-105"
+            style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
+          >
+            LIBERAR ACESSO!
+            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+          </Button>
+          
+          <div className="mt-6 flex items-center justify-center gap-2 text-[12px] text-muted-foreground">
+            <ShieldCheck className="w-4 h-4 text-accent" />
+            <span>Pagamento 100% Seguro e Acesso Imediato</span>
+          </div>
         </div>
       </div>
       
