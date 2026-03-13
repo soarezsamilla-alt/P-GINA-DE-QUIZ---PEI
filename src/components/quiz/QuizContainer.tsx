@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -7,6 +8,7 @@ import { PersonalizedDescription } from '@/components/product/PersonalizedDescri
 import { SampleGallery } from '@/components/product/SampleGallery'
 import { SocialProof } from '@/components/product/SocialProof'
 import { OfferSection } from '@/components/product/OfferSection'
+import { PurchaseNotification } from '@/components/product/PurchaseNotification'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
 import { Loader2, ArrowRight, Mail, Zap, CheckCircle, ShieldCheck, Lock } from 'lucide-react'
@@ -187,6 +189,7 @@ export const QuizContainer: React.FC = () => {
 
       {state === 'PRESENTATION' && (
         <div className="max-w-5xl mx-auto pb-8">
+          <PurchaseNotification />
           <div className="mb-8">
             <PersonalizedDescription description={personalizedDesc} />
           </div>
