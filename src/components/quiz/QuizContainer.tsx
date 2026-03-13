@@ -29,7 +29,7 @@ export const QuizContainer: React.FC = () => {
       description: "Por favor escolha uma das opções abaixo!",
       options: [
         { label: "Professora de Educação Especial", icon: "👩‍🏫" },
-        { label: "Professora de Ensino Regular", icon: "👩‍🏫" },
+        { label: "Professora de Ensino Regular", icon: "📚" },
         { label: "Orientadora ou Coordenadora Educacional", icon: "🗂️" }
       ]
     },
