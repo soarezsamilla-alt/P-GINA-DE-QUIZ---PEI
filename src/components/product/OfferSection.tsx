@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -63,86 +64,89 @@ export const OfferSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="bg-white rounded-[2rem] shadow-2xl border-2 border-primary/10 mx-auto max-w-[400px] overflow-hidden">
-        {/* Compact & High Impact Timer */}
-        <div className="bg-destructive py-2.5 px-4 flex items-center justify-center gap-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-white/5 animate-pulse" />
-          
-          <div className="relative flex items-center gap-1.5">
-            <Timer className="w-3.5 h-3.5 text-white animate-bounce shrink-0" />
-            <span className="text-[10px] font-black text-white uppercase tracking-wider whitespace-nowrap">
-              Expira em:
-            </span>
-          </div>
-          
-          <div className="relative flex items-center gap-1.5">
-            <TimeUnit value={isMounted ? formatNumber(timeLeft.hours) : "24"} label="H" />
-            <span className="text-white font-bold text-sm mb-0.5">:</span>
-            <TimeUnit value={isMounted ? formatNumber(timeLeft.minutes) : "00"} label="M" />
-            <span className="text-white font-bold text-sm mb-0.5">:</span>
-            <TimeUnit value={isMounted ? formatNumber(timeLeft.seconds) : "00"} label="S" />
-          </div>
-        </div>
-
-        <div className="p-6 pt-5">
-          <div className="space-y-1 mb-3 text-center">
-            <p className="text-muted-foreground line-through text-sm">De R$ 97,90</p>
-            <div className="flex items-baseline justify-center">
-              <span className="text-5xl font-bold text-primary mr-1">R$</span>
-              <span className="text-7xl font-bold text-primary tracking-tighter">16</span>
-              <span className="text-2xl font-bold text-primary">,90</span>
-            </div>
-            <p className="text-[11px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
+      {/* Static Gradient Border Wrapper */}
+      <div className="p-[3px] rounded-[2.1rem] bg-gradient-to-br from-primary/30 via-accent/30 to-primary/30 shadow-2xl mx-auto max-w-[400px]">
+        <div className="bg-white rounded-[2rem] overflow-hidden">
+          {/* Compact & High Impact Timer */}
+          <div className="bg-destructive py-2.5 px-4 flex items-center justify-center gap-4 relative overflow-hidden">
+            <div className="absolute inset-0 bg-white/5 animate-pulse" />
             
-            <div className="mt-4 relative w-full h-48">
-              <Image 
-                src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
-                alt="Garantia"
-                fill
-                className="object-contain"
-              />
+            <div className="relative flex items-center gap-1.5">
+              <Timer className="w-3.5 h-3.5 text-white animate-bounce shrink-0" />
+              <span className="text-[10px] font-black text-white uppercase tracking-wider whitespace-nowrap">
+                Expira em:
+              </span>
+            </div>
+            
+            <div className="relative flex items-center gap-1.5">
+              <TimeUnit value={isMounted ? formatNumber(timeLeft.hours) : "24"} label="H" />
+              <span className="text-white font-bold text-sm mb-0.5">:</span>
+              <TimeUnit value={isMounted ? formatNumber(timeLeft.minutes) : "00"} label="M" />
+              <span className="text-white font-bold text-sm mb-0.5">:</span>
+              <TimeUnit value={isMounted ? formatNumber(timeLeft.seconds) : "00"} label="S" />
             </div>
           </div>
 
-          <div className="mt-4 space-y-2 text-left border-t pt-5 mb-5">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 text-[13px] text-[#5c6570] font-medium">
-                <div className="bg-green-100 p-0.5 rounded-full">
-                  <Check className="w-3.5 h-3.5 text-green-600 shrink-0" />
-                </div>
-                <span>
-                  {benefit === "Todos os 6 Bônus" ? (
-                    <span className="text-[#2c293d] font-bold">Todos os 6 Bônus</span>
-                  ) : benefit === "Acesso a futuras atualizações" ? (
-                    <>
-                      Acesso a <span className="text-[#2c293d] font-bold">futuras atualizações</span>
-                    </>
-                  ) : benefit === "Mais de 200 Modelos de PEI prontos e editáveis" ? (
-                    <>
-                      Mais de <span className="text-[#2c293d] font-bold">200 Modelos</span> de PEI prontos e editáveis
-                    </>
-                  ) : (
-                    benefit
-                  )}
-                </span>
+          <div className="p-6 pt-5">
+            <div className="space-y-1 mb-3 text-center">
+              <p className="text-muted-foreground line-through text-sm">De R$ 97,90</p>
+              <div className="flex items-baseline justify-center">
+                <span className="text-5xl font-bold text-primary mr-1">R$</span>
+                <span className="text-7xl font-bold text-primary tracking-tighter">16</span>
+                <span className="text-2xl font-bold text-primary">,90</span>
               </div>
-            ))}
-          </div>
+              <p className="text-[11px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
+              
+              <div className="mt-4 relative w-full h-48">
+                <Image 
+                  src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
+                  alt="Garantia"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-          <Button 
-            onClick={handlePurchase}
-            size="lg" 
-            className="w-full h-14 text-lg font-bold rounded-xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group animate-pulse-border hover:scale-105"
-            style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
-          >
-            LIBERAR ACESSO!
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          
-          <div className="mt-5 text-[11px] text-muted-foreground leading-tight px-2">
-            <p>
-              VOCÊ <span className="text-destructive font-black underline">NÃO</span> vai encontrar esse preço depois.
-            </p>
+            <div className="mt-4 space-y-2 text-left border-t pt-5 mb-5">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-3 text-[13px] text-[#5c6570] font-medium">
+                  <div className="bg-green-100 p-0.5 rounded-full">
+                    <Check className="w-3.5 h-3.5 text-green-600 shrink-0" />
+                  </div>
+                  <span>
+                    {benefit === "Todos os 6 Bônus" ? (
+                      <span className="text-[#2c293d] font-bold">Todos os 6 Bônus</span>
+                    ) : benefit === "Acesso a futuras atualizações" ? (
+                      <>
+                        Acesso a <span className="text-[#2c293d] font-bold">futuras atualizações</span>
+                      </>
+                    ) : benefit === "Mais de 200 Modelos de PEI prontos e editáveis" ? (
+                      <>
+                        Mais de <span className="text-[#2c293d] font-bold">200 Modelos</span> de PEI prontos e editáveis
+                      </>
+                    ) : (
+                      benefit
+                    )}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <Button 
+              onClick={handlePurchase}
+              size="lg" 
+              className="w-full h-14 text-lg font-bold rounded-xl bg-accent hover:bg-accent/90 shadow-xl hover:shadow-accent/40 transition-all group animate-pulse-border hover:scale-105"
+              style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
+            >
+              LIBERAR ACESSO!
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <div className="mt-5 text-[11px] text-muted-foreground leading-tight px-2">
+              <p>
+                VOCÊ <span className="text-destructive font-black underline">NÃO</span> vai encontrar esse preço depois.
+              </p>
+            </div>
           </div>
         </div>
       </div>
