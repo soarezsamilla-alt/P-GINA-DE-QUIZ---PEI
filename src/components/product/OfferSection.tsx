@@ -141,7 +141,7 @@ export const OfferSection: React.FC = () => {
           
           <div className="mt-5 text-[11px] text-muted-foreground leading-tight px-2">
             <p>
-              APROVEITE AGORA: Você <span className="text-destructive font-black underline">NÃO</span> vai encontrar esse preço depois.
+              VOCÊ <span className="text-destructive font-black underline">NÃO</span> vai encontrar esse preço depois.
             </p>
           </div>
         </div>
