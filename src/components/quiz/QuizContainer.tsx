@@ -53,7 +53,8 @@ export const QuizContainer: React.FC = () => {
       question: "Quanto tempo você costuma gastar para elaborar UM PEI?",
       options: [
         { label: "Entre 1 e 3 horas", icon: "🕐" },
-        { label: "Entre 3 e 6 horas", icon: "😩" }
+        { label: "Entre 3 e 6 horas", icon: "😩" },
+        { label: "Mais de 6 horas, ou simplesmente não faço", icon: "💀" }
       ]
     },
     {
