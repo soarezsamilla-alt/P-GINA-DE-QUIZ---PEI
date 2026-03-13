@@ -33,6 +33,17 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
+        {/* Utmify Pixel */}
+        <Script id="utmify-pixel" strategy="afterInteractive">
+          {`
+            window.pixelId = "69b368f81270edd36d145b5b";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `}
+        </Script>
       </head>
       <body className="font-body antialiased bg-background">
         {/* Facebook Pixel Noscript */}
