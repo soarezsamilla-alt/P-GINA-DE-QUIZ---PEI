@@ -44,6 +44,14 @@ export default function RootLayout({
             document.head.appendChild(a);
           `}
         </Script>
+        {/* Utmify Helper */}
+        <Script
+          id="utmify-helper"
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          strategy="afterInteractive"
+        />
       </head>
       <body className="font-body antialiased bg-background">
         {/* Facebook Pixel Noscript */}
