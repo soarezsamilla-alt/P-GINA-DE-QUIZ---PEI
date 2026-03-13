@@ -9,7 +9,7 @@ import { SocialProof } from '@/components/product/SocialProof'
 import { OfferSection } from '@/components/product/OfferSection'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight, Mail, Zap, CheckCircle } from 'lucide-react'
+import { Loader2, ArrowRight, Mail, Zap, CheckCircle, ShieldCheck, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -208,7 +208,7 @@ export const QuizContainer: React.FC = () => {
               Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto text-[14px] leading-relaxed">
-              Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respect da coordenação.
+              Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para trabalhar e mais respeito da coordenação.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
@@ -256,7 +256,7 @@ export const QuizContainer: React.FC = () => {
             <OfferSection />
           </div>
 
-          {/* New Section: How will I receive my material? */}
+          {/* Section: How will I receive my material? */}
           <div className="mt-20 mb-10 text-center space-y-8 px-4 max-w-3xl mx-auto">
             <div className="space-y-4">
               <h3 className="text-[23px] font-headline font-bold text-primary">
@@ -265,6 +265,26 @@ export const QuizContainer: React.FC = () => {
               <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-accent/5 p-6 rounded-2xl border border-accent/20 font-medium shadow-sm">
                 Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
               </p>
+            </div>
+          </div>
+
+          {/* Section: Is it safe? */}
+          <div className="mt-16 mb-20 text-center space-y-6 px-4 max-w-3xl mx-auto">
+            <h3 className="text-[23px] font-headline font-bold text-primary">
+              É seguro?
+            </h3>
+            <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
+              Sim! Seus dados estão 100% seguros. Utilizamos criptografia de ponta a ponta e as plataformas de pagamento mais confiáveis do mercado para garantir uma transação tranquila e protegida.
+            </p>
+            <div className="flex justify-center items-center gap-8 pt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+               <div className="flex flex-col items-center gap-1.5">
+                 <ShieldCheck className="w-8 h-8 text-green-600" />
+                 <span className="text-[10px] font-bold uppercase tracking-tighter">Pagamento Seguro</span>
+               </div>
+               <div className="flex flex-col items-center gap-1.5">
+                 <Lock className="w-8 h-8 text-primary" />
+                 <span className="text-[10px] font-bold uppercase tracking-tighter">SSL Criptografado</span>
+               </div>
             </div>
           </div>
         </div>
