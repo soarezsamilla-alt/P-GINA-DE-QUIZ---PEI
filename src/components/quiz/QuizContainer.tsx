@@ -10,10 +10,8 @@ import { OfferSection } from '@/components/product/OfferSection'
 import { PurchaseNotification } from '@/components/product/PurchaseNotification'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight, Mail, Zap, CheckCircle, ShieldCheck, Lock } from 'lucide-react'
+import { Loader2, ArrowRight, Zap, ShieldCheck, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 type QuizState = 'QUIZ' | 'LOADING' | 'PRESENTATION'
 
@@ -63,6 +61,14 @@ export const QuizContainer: React.FC = () => {
         { label: "TEA, TDAH ou Deficiência Intelectual", icon: "🧩" },
         { label: "Deficiências múltiplas ou outros diagnósticos", icon: "🔀" },
         { label: "Educação Infantil 4 e 5 anos", icon: "🌱" }
+      ]
+    },
+    {
+      question: "Você tem algum PEI para entregar nos próximos dias?",
+      options: [
+        { label: "Sim preciso resolver isso agora", icon: "🔥" },
+        { label: "Tenho prazo chegando em breve", icon: "📅" },
+        { label: "Não agora, mas quero estar preparada", icon: "🗓️" }
       ]
     }
   ]
@@ -115,16 +121,14 @@ export const QuizContainer: React.FC = () => {
     } else {
       setState('LOADING')
       try {
-        const [result] = await Promise.all([
-          generatePersonalizedProductDescription({
-            q1Answer: updatedAnswers[1],
-            q2Answer: updatedAnswers[2],
-            q3Answer: updatedAnswers[3],
-            q4Answer: updatedAnswers[0],
-            q5Answer: updatedAnswers[4],
-          }),
-          new Promise(resolve => setTimeout(resolve, 4000))
-        ])
+        const result = await generatePersonalizedProductDescription({
+          q1Answer: updatedAnswers[1],
+          q2Answer: updatedAnswers[2],
+          q3Answer: updatedAnswers[3],
+          q4Answer: updatedAnswers[0],
+          q5Answer: updatedAnswers[4],
+          q6Answer: updatedAnswers[5],
+        })
         
         setPersonalizedDesc(result.description)
         setState('PRESENTATION')
@@ -150,7 +154,7 @@ export const QuizContainer: React.FC = () => {
       <Button 
         onClick={scrollToOffer}
         size="lg" 
-        className="w-full max-w-md h-16 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
+        className="w-full max-md:h-16 h-14 text-xl font-bold rounded-2xl bg-accent hover:bg-accent/90 shadow-xl transition-all hover:scale-105 active:scale-95 group animate-pulse-border"
         style={{
           '--accent-rgb': '88, 56, 236'
         } as React.CSSProperties}
@@ -269,7 +273,7 @@ export const QuizContainer: React.FC = () => {
                 Como vou receber meu material?
               </h3>
               <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-accent/5 p-6 rounded-2xl border border-accent/20 font-medium shadow-sm">
-                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> or <span className="text-accent font-bold">Whatsapp</span>.
+                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
               </p>
             </div>
           </div>

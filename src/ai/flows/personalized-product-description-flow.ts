@@ -11,11 +11,12 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const PersonalizedProductDescriptionInputSchema = z.object({
-  q1Answer: z.string().describe("User's answer to 'Você sente insegurança ou dificuldade em elaborar o PEI?'"),
-  q2Answer: z.string().describe("User's answer to 'Você já procurou por modelos de PEI prontos?'"),
-  q3Answer: z.string().describe("User's answer to 'O que você espera de um material que ajude a elaborar um PEI?'"),
-  q4Answer: z.string().describe("User's answer to 'Você é:'"),
-  q5Answer: z.string().describe("User's answer to 'Se tivesse acesso a modelos prontos e editáveis por um preço acessível, você…'"),
+  q1Answer: z.string().describe("User's answer to 'O que passa pela sua cabeça ao elaborar um PEI?'"),
+  q2Answer: z.string().describe("User's answer to 'Como costuma resolver a entrega do PEI?'"),
+  q3Answer: z.string().describe("User's answer to 'Quanto tempo gasta para elaborar um PEI?'"),
+  q4Answer: z.string().describe("User's answer to 'Qual seu papel na escola?'"),
+  q5Answer: z.string().describe("User's answer to 'Qual o perfil dos alunos?'"),
+  q6Answer: z.string().describe("User's answer to 'Tem algum PEI para entregar nos próximos dias?'"),
 });
 export type PersonalizedProductDescriptionInput = z.infer<typeof PersonalizedProductDescriptionInputSchema>;
 
@@ -36,37 +37,37 @@ const prompt = ai.definePrompt({
 
 The product is a collection of more than 200 ready-to-use and 100% editable PEI models, planned by education professionals. They are suitable for Fundamental I and II, but are editable to adapt for ANY grade and special needs. The models are designed to save time, ensure professional results, and impress coordinators and parents.
 
-Your goal is to highlight the benefits and features of this product in a way that directly addresses the user's expressed needs and challenges, as gathered from their quiz responses below. Emphasize how the product solves their specific problems.
+Your goal is to highlight the benefits and features of this product in a way that directly addresses the user's expressed needs and challenges, as gathered from their quiz responses below. Emphasize how the product solves their specific problems and speaks to their urgency.
 
 --- User's Quiz Responses ---
 
-Question 1: "Você sente insegurança ou dificuldade em elaborar o PEI?"
+Question 1: "Quando você pensa em elaborar um PEI, o que passa pela sua cabeça?"
 Answer 1: "{{{q1Answer}}}"
 
-Question 2: "Você já procurou por modelos de PEI prontos?"
+Question 2: "Quando você precisa entregar um PEI, como costuma resolver?"
 Answer 2: "{{{q2Answer}}}"
 
-Question 3: "O que você espera de um material que ajude a elaborar um PEI?"
+Question 3: "Quanto tempo você costuma gastar para elaborar UM PEI?"
 Answer 3: "{{{q3Answer}}}"
 
-Question 4: "Você é:"
+Question 4: "Qual é o seu papel na escola?"
 Answer 4: "{{{q4Answer}}}"
 
-Question 5: "Se tivesse acesso a modelos prontos e editáveis por um preço acessível, você…"
+Question 5: "Qual é o perfil dos seus alunos que precisam de PEI?"
 Answer 5: "{{{q5Answer}}}"
+
+Question 6: "Você tem algum PEI para entregar nos próximos dias?"
+Answer 6: "{{{q6Answer}}}"
 
 ---
 
 Based on these answers, generate a personalized, enthusiastic, and problem-solving product description. Focus on the pain points and desires revealed by the user.
 
 For example:
-- If the user feels insecurity or difficulty (Q1), strongly emphasize how our ready-made models provide a safe and professional foundation to build upon, giving them the confidence they lack.
-- If the user has tried other models but didn't find what they needed (Q2), highlight the high quality, professionalism, and "exactly what's needed" nature of our massive collection of 200+ models.
-- If the user highlights "Praticidade e modelos prontos para usar" (Q3), position the product as a "plug-and-play" solution that saves massive amounts of time and effort.
-- If the user highlights "Organização e economia de tempo" (Q3), emphasize how the structured and ready-to-use nature of the material directly translates into massive time savings and a more organized workflow.
-- Reinforce the immediate value if the user is keen to buy now (Q5).
-
-Start directly with the compelling description. Keep it concise, engaging, and directly responsive to their answers. Mention that they are 100% editable and adaptable for any grade.`,
+- If the user has an urgent deadline (Q6: "Sim preciso resolver isso agora"), emphasize the IMMEDIATE download and the "plug-and-play" nature of the 200+ models.
+- If the user feels insecurity (Q1), highlight the professional foundation and confidence.
+- Mention that they are 100% editable and adaptable for any grade.
+- Keep it concise, engaging, and directly responsive.`,
 });
 
 const personalizedProductDescriptionFlow = ai.defineFlow(
