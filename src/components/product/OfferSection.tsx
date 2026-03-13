@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, Zap, ArrowRight, Check, Timer } from 'lucide-react'
+import { ShieldCheck, ArrowRight, Check, Timer } from 'lucide-react'
 
 export const OfferSection: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 })
@@ -147,12 +147,6 @@ export const OfferSection: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      <div className="flex flex-wrap justify-center gap-5 pt-2">
-        <TrustBadge icon={<Zap size={14} />} text="Acesso Vitalício" />
-        <TrustBadge icon={<Zap size={14} />} text="Download Imediato" />
-        <TrustBadge icon={<Zap size={14} />} text="Suporte Premium" />
-      </div>
     </div>
   )
 }
@@ -165,14 +159,5 @@ const TimeUnit = ({ value, label }: { value: string, label: string }) => (
     <span className="text-[6px] font-black text-white/70 uppercase">
       {label}
     </span>
-  </div>
-)
-
-const TrustBadge = ({ icon, text }: { icon: React.ReactNode, text: string }) => (
-  <div className="flex items-center gap-2 text-[10px] font-bold text-primary/60 uppercase tracking-wider">
-    <div className="bg-primary/10 p-1 rounded-full text-primary">
-      {icon}
-    </div>
-    {text}
   </div>
 )
