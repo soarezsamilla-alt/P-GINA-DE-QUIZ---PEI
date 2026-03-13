@@ -84,17 +84,17 @@ export const OfferSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-8 pt-6">
-          <div className="space-y-1.5 mb-4 text-center">
-            <p className="text-muted-foreground line-through text-base">De R$ 97,90</p>
+        <div className="p-6 pt-5">
+          <div className="space-y-1 mb-3 text-center">
+            <p className="text-muted-foreground line-through text-sm">De R$ 97,90</p>
             <div className="flex items-baseline justify-center">
-              <span className="text-5xl font-bold text-primary mr-1">R$</span>
+              <span className="text-4xl font-bold text-primary mr-1">R$</span>
               <span className="text-5xl font-bold text-primary tracking-tighter">16</span>
               <span className="text-xl font-bold text-primary">,90</span>
             </div>
             <p className="text-[11px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
             
-            <div className="mt-4 relative w-full h-44">
+            <div className="mt-4 relative w-full h-48">
               <Image 
                 src="https://image2url.com/r2/default/images/1773359501312-a55c79a5-0b66-4551-955d-14a5787c7bb4.webp"
                 alt="Garantia"
@@ -104,7 +104,7 @@ export const OfferSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-6 space-y-2.5 text-left border-t pt-6 mb-6">
+          <div className="mt-4 space-y-2 text-left border-t pt-5 mb-5">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 text-[13px] text-[#5c6570] font-medium">
                 <div className="bg-green-100 p-0.5 rounded-full">
@@ -139,9 +139,11 @@ export const OfferSection: React.FC = () => {
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
           
-          <div className="mt-5 flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
-            <ShieldCheck className="w-3.5 h-3.5 text-accent" />
-            <span>Pagamento 100% Seguro e Acesso Imediato</span>
+          <div className="mt-5 flex items-start justify-center gap-2 text-[11px] text-muted-foreground leading-tight px-2">
+            <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
+            <p>
+              APROVEITE AGORA: Você <span className="text-destructive font-black underline">NÃO</span> vai encontrar esse preço depois.
+            </p>
           </div>
         </div>
       </div>
