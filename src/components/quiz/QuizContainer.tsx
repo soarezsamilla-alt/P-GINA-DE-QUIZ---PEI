@@ -45,7 +45,7 @@ export const QuizContainer: React.FC = () => {
       question: "Quando você precisa entregar um PEI, como costuma resolver?",
       options: [
         { label: "Copio um modelo antigo e adapto", icon: "📋" },
-        { label: "Não, mas quero uma base confiável e prática", icon: "🙂" }
+        { label: "Procuro no Google mas nunca acho o que precisa", icon: "🔍" }
       ]
     },
     {
