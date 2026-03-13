@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -37,7 +36,7 @@ export const QuizContainer: React.FC = () => {
     {
       question: "Você sente insegurança ou dificuldade em elaborar o PEI?",
       options: [
-        { label: "Sim, nunca sei se está correto or completo", icon: "👍" },
+        { label: "Sim, nunca sei se está correto ou completo", icon: "👍" },
         { label: "Um pouco, mas consigo me virar", icon: "😥" }
       ]
     },
@@ -112,7 +111,6 @@ export const QuizContainer: React.FC = () => {
     } else {
       setState('LOADING')
       try {
-        // Garantindo um delay de no mínimo 4 segundos para a preparação do material
         const [result] = await Promise.all([
           generatePersonalizedProductDescription({
             q1Answer: updatedAnswers[1],
@@ -128,7 +126,6 @@ export const QuizContainer: React.FC = () => {
         setState('PRESENTATION')
       } catch (error) {
         console.error("Error generating personalized description:", error)
-        // Mesmo em erro, esperamos os 4 segundos
         setPersonalizedDesc("Dê adeus à dificuldade em elaborar seu PEI! Aqui temos modelos PRONTOS E EDITÁVEIS! Com nossos mais de 200 modelos de PEI 100% editáveis, planejados por profissionais da educação. Você entrega resultados perfeitos, ganha tempo e impressiona coordenadores e pais. Além de serem 100% editáveis você consegue Adaptar para QUALQUER TURMA.")
         setState('PRESENTATION')
       }
@@ -265,7 +262,6 @@ export const QuizContainer: React.FC = () => {
             <OfferSection />
           </div>
 
-          {/* Section: How will I receive my material? */}
           <div className="mt-4 mb-10 text-center space-y-8 px-4 max-w-3xl mx-auto">
             <div className="space-y-4">
               <h3 className="text-[23px] font-headline font-bold text-primary">
@@ -277,7 +273,6 @@ export const QuizContainer: React.FC = () => {
             </div>
           </div>
 
-          {/* Section: Is it safe? */}
           <div className="mt-16 mb-4 text-center space-y-6 px-4 max-w-3xl mx-auto">
             <h3 className="text-[23px] font-headline font-bold text-primary">
               É seguro?
