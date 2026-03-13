@@ -61,7 +61,8 @@ export const QuizContainer: React.FC = () => {
       question: "Se tivesse acesso a modelos prontos e editáveis por um preço acessível, você…",
       options: [
         { label: "Adoraria comprar agora e usar já", icon: "👍" },
-        { label: "Gostaria de ter encontrado isso antes", icon: "😆" }
+        { label: "Gostaria de ter encontrado isso antes", icon: "😆" },
+        { label: "Educação Infantil 4 e 5 anos", icon: "🌱" }
       ]
     }
   ]
