@@ -186,7 +186,7 @@ export const QuizContainer: React.FC = () => {
       )}
 
       {state === 'PRESENTATION' && (
-        <div className="max-w-5xl mx-auto pb-20">
+        <div className="max-w-5xl mx-auto pb-8">
           <div className="mb-8">
             <PersonalizedDescription description={personalizedDesc} />
           </div>
@@ -269,7 +269,7 @@ export const QuizContainer: React.FC = () => {
           </div>
 
           {/* Section: Is it safe? */}
-          <div className="mt-16 mb-20 text-center space-y-6 px-4 max-w-3xl mx-auto">
+          <div className="mt-16 mb-4 text-center space-y-6 px-4 max-w-3xl mx-auto">
             <h3 className="text-[23px] font-headline font-bold text-primary">
               É seguro?
             </h3>
