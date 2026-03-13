@@ -28,7 +28,7 @@ export const QuizContainer: React.FC = () => {
       question: "Primeiro, me conta: qual é o seu papel na escola?",
       description: "Por favor escolha uma das opções abaixo!",
       options: [
-        { label: "Professora Ed. Especial", icon: "👩‍🏫" },
+        { label: "Professora de Educação Especial", icon: "👩‍🏫" },
         { label: "Professora Ensino Regular", icon: "👩‍🏫" },
         { label: "Orientador Educacional", icon: "👩‍🏫" }
       ]
