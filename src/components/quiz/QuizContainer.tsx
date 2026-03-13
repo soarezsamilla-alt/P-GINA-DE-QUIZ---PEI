@@ -70,6 +70,14 @@ export const QuizContainer: React.FC = () => {
         { label: "Tenho prazo chegando em breve", icon: "📅" },
         { label: "Não agora, mas quero estar preparada", icon: "🗓️" }
       ]
+    },
+    {
+      question: "Ter um PEI pronto nas mãos significaria:",
+      options: [
+        { label: "Dormir tranquila sabendo que fiz o meu melhor", icon: "😌" },
+        { label: "Ser reconhecida como professora preparada", icon: "🏆" },
+        { label: "Ter meu tempo de volta, sem trabalho em casa", icon: "⏳" }
+      ]
     }
   ]
 
@@ -128,6 +136,7 @@ export const QuizContainer: React.FC = () => {
           q4Answer: updatedAnswers[0],
           q5Answer: updatedAnswers[4],
           q6Answer: updatedAnswers[5],
+          q7Answer: updatedAnswers[6],
         })
         
         setPersonalizedDesc(result.description)

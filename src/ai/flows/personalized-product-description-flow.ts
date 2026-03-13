@@ -11,12 +11,13 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const PersonalizedProductDescriptionInputSchema = z.object({
-  q1Answer: z.string().describe("User's answer to 'O que passa pela sua cabeça ao elaborar um PEI?'"),
-  q2Answer: z.string().describe("User's answer to 'Como costuma resolver a entrega do PEI?'"),
+  q1Answer: z.string().describe("User's answer to 'Quando você pensa em elaborar um PEI, o que passa pela sua cabeça?'"),
+  q2Answer: z.string().describe("User's answer to 'Quando você precisa entregar um PEI, como costuma resolver?'"),
   q3Answer: z.string().describe("User's answer to 'Quanto tempo gasta para elaborar um PEI?'"),
   q4Answer: z.string().describe("User's answer to 'Qual seu papel na escola?'"),
   q5Answer: z.string().describe("User's answer to 'Qual o perfil dos alunos?'"),
   q6Answer: z.string().describe("User's answer to 'Tem algum PEI para entregar nos próximos dias?'"),
+  q7Answer: z.string().describe("User's answer to 'Ter um PEI pronto nas mãos significaria:'"),
 });
 export type PersonalizedProductDescriptionInput = z.infer<typeof PersonalizedProductDescriptionInputSchema>;
 
@@ -37,7 +38,7 @@ const prompt = ai.definePrompt({
 
 The product is a collection of more than 200 ready-to-use and 100% editable PEI models, planned by education professionals. They are suitable for Fundamental I and II, but are editable to adapt for ANY grade and special needs. The models are designed to save time, ensure professional results, and impress coordinators and parents.
 
-Your goal is to highlight the benefits and features of this product in a way that directly addresses the user's expressed needs and challenges, as gathered from their quiz responses below. Emphasize how the product solves their specific problems and speaks to their urgency.
+Your goal is to highlight the benefits and features of this product in a way that directly addresses the user's expressed needs and challenges, as gathered from their quiz responses below. Emphasize how the product solves their specific problems and speaks to their urgency and emotional goals.
 
 --- User's Quiz Responses ---
 
@@ -59,15 +60,18 @@ Answer 5: "{{{q5Answer}}}"
 Question 6: "Você tem algum PEI para entregar nos próximos dias?"
 Answer 6: "{{{q6Answer}}}"
 
+Question 7: "Ter um PEI pronto nas mãos significaria:"
+Answer 7: "{{{q7Answer}}}"
+
 ---
 
-Based on these answers, generate a personalized, enthusiastic, and problem-solving product description. Focus on the pain points and desires revealed by the user.
+Based on these answers, generate a personalized, enthusiastic, and problem-solving product description. Focus on the pain points, urgency, and the emotional benefit (Answer 7) revealed by the user.
 
 For example:
-- If the user has an urgent deadline (Q6: "Sim preciso resolver isso agora"), emphasize the IMMEDIATE download and the "plug-and-play" nature of the 200+ models.
-- If the user feels insecurity (Q1), highlight the professional foundation and confidence.
-- Mention that they are 100% editable and adaptable for any grade.
-- Keep it concise, engaging, and directly responsive.`,
+- If Answer 7 is about "Dormir tranquila", emphasize how the models provide peace of mind and confidence in the work done.
+- If Answer 7 is about "Reconhecimento", highlight how the professional quality of the models will impress coordinators.
+- If Answer 7 is about "Ter meu tempo de volta", focus on the hours saved and the elimination of work at home.
+- Keep it concise, engaging, and directly responsive to their specific situation.`,
 });
 
 const personalizedProductDescriptionFlow = ai.defineFlow(
