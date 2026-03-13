@@ -37,7 +37,7 @@ export const OfferSection: React.FC = () => {
   }, [])
 
   const handlePurchase = () => {
-    window.location.href = "https://pay.example.com/checkout/pei-models"
+    window.location.href = "https://pay.wiapy.com/VBXdX_ymda"
   }
 
   const formatNumber = (num: number) => num.toString().padStart(2, '0')
