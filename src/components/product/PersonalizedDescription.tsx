@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -14,7 +13,7 @@ export const PersonalizedDescription: React.FC<PersonalizedDescriptionProps> = (
     const highlights = [
       { term: "PEI!", class: "text-primary font-bold" },
       { term: "PRONTOS E EDITÁVEIS!", class: "text-accent font-extrabold" },
-      { term: "QUALQUER TURMA.", class: "text-accent font-extrabold" }
+      { term: "QUALQUER ALUNO.", class: "text-accent font-extrabold" }
     ]
 
     let result: (string | JSX.Element)[] = [text]
