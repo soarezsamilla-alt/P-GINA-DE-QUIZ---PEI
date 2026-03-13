@@ -58,7 +58,7 @@ export const QuizContainer: React.FC = () => {
       ]
     },
     {
-      question: "Se tivesse acesso a modelos prontos e editáveis por um preço acessível, você…",
+      question: "Qual é o perfil dos seus alunos que precisam de PEI?",
       options: [
         { label: "Adoraria comprar agora e usar já", icon: "👍" },
         { label: "Gostaria de ter encontrado isso antes", icon: "😆" },
@@ -269,7 +269,7 @@ export const QuizContainer: React.FC = () => {
                 Como vou receber meu material?
               </h3>
               <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-accent/5 p-6 rounded-2xl border border-accent/20 font-medium shadow-sm">
-                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
+                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> or <span className="text-accent font-bold">Whatsapp</span>.
               </p>
             </div>
           </div>
