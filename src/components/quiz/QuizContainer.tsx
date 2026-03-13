@@ -266,20 +266,6 @@ export const QuizContainer: React.FC = () => {
                 Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu E-mail ou Whatsapp.
               </p>
             </div>
-            
-            <div className="flex justify-center text-left">
-              <div className="flex gap-4 p-6 rounded-2xl bg-white shadow-sm border border-border/50 max-w-md w-full">
-                <div className="bg-accent/10 p-3 rounded-full h-fit">
-                  <Zap className="w-6 h-6 text-accent" />
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-bold text-primary text-lg">Acesso Imediato</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Assim que seu pagamento for confirmado, o acesso é liberado instantaneamente para você começar a usar.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       )}
