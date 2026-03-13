@@ -112,7 +112,7 @@ export const QuizContainer: React.FC = () => {
     } else {
       setState('LOADING')
       try {
-        // Garantindo um delay de no mínimo 3 segundos para a preparação do material
+        // Garantindo um delay de no mínimo 4 segundos para a preparação do material
         const [result] = await Promise.all([
           generatePersonalizedProductDescription({
             q1Answer: updatedAnswers[1],
@@ -121,14 +121,14 @@ export const QuizContainer: React.FC = () => {
             q4Answer: updatedAnswers[0],
             q5Answer: updatedAnswers[4],
           }),
-          new Promise(resolve => setTimeout(resolve, 3000))
+          new Promise(resolve => setTimeout(resolve, 4000))
         ])
         
         setPersonalizedDesc(result.description)
         setState('PRESENTATION')
       } catch (error) {
         console.error("Error generating personalized description:", error)
-        // Mesmo em erro, esperamos os 3 segundos (que já passaram no Promise.all se der tempo)
+        // Mesmo em erro, esperamos os 4 segundos
         setPersonalizedDesc("Dê adeus à dificuldade em elaborar seu PEI! Aqui temos modelos PRONTOS E EDITÁVEIS! Com nossos mais de 200 modelos de PEI 100% editáveis, planejados por profissionais da educação. Você entrega resultados perfeitos, ganha tempo e impressiona coordenadores e pais. Além de serem 100% editáveis você consegue Adaptar para QUALQUER TURMA.")
         setState('PRESENTATION')
       }
