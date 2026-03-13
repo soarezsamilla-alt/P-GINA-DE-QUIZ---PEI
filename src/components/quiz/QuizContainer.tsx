@@ -259,7 +259,7 @@ export const QuizContainer: React.FC = () => {
           {/* New Section: How will I receive my material? */}
           <div className="mt-20 mb-10 text-center space-y-8 px-4 max-w-3xl mx-auto">
             <div className="space-y-4">
-              <h3 className="text-[18px] font-headline font-bold text-primary">
+              <h3 className="text-[23px] font-headline font-bold text-primary">
                 Como vou receber meu material?
               </h3>
               <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
