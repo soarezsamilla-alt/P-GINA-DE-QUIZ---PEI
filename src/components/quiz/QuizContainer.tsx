@@ -161,9 +161,6 @@ export const QuizContainer: React.FC = () => {
     <div className="min-h-screen py-10 px-4">
       {state === 'QUIZ' && (
         <div className="max-w-md mx-auto space-y-8">
-          <div className="text-center space-y-2">
-            <p className="text-muted-foreground text-sm uppercase tracking-widest font-semibold">Descubra o modelo ideal para você</p>
-          </div>
           <div className="space-y-2">
             <div className="flex justify-between text-xs font-bold text-primary/60 px-1">
               <span>Etapa {step + 1} de {quizSteps.length}</span>
