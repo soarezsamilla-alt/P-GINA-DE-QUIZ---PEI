@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -96,7 +95,7 @@ export const QuizContainer: React.FC = () => {
     },
     {
       title: "Ficha Individual PEI",
-      description: "Ficha de acompanhamento para alunos com necessidades educacionais especiais. A ficha coleta dados sobre o aluno e avalia suas habilidades em áreas como psicomotricidade.",
+      description: "Ficha de acompanhamento para alunos com necessidades educacionais especiais. A ficha coleta dados sobre o aluno e avalia suas habilidades em áreas como psicomotostricidade.",
       image: "https://image2url.com/r2/default/images/1773351519083-42be1ab9-67d9-4a04-9330-9d9a4baaadcf.webp",
       bgColor: "#FDF2F9"
     }
@@ -287,16 +286,6 @@ export const QuizContainer: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-secondary/20 p-6 rounded-3xl border-2 border-dashed border-primary/20 flex flex-col items-center gap-3">
-              <div className="flex items-center gap-2 text-primary font-bold">
-                <CheckCircle className="w-5 h-5" />
-                <span>Formatos Editáveis (Word/Google Docs)</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Todos os materiais são 100% editáveis para que você possa adaptar para qualquer necessidade.
-              </p>
             </div>
           </div>
         </div>
