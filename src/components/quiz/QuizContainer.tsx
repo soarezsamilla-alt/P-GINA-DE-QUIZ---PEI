@@ -257,10 +257,15 @@ export const QuizContainer: React.FC = () => {
           </div>
 
           {/* New Section: How will I receive my material? */}
-          <div className="mt-20 mb-10 text-center space-y-10 px-4 max-w-3xl mx-auto">
-            <h3 className="text-[24px] font-headline font-bold text-primary">
-              Como vou receber meu material?
-            </h3>
+          <div className="mt-20 mb-10 text-center space-y-8 px-4 max-w-3xl mx-auto">
+            <div className="space-y-4">
+              <h3 className="text-[24px] font-headline font-bold text-primary">
+                Como vou receber meu material?
+              </h3>
+              <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
+                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu E-mail ou Whatsapp.
+              </p>
+            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
               <div className="flex gap-4 p-6 rounded-2xl bg-white shadow-sm border border-border/50">
