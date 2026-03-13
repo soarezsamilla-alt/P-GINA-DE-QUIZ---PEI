@@ -64,22 +64,23 @@ export const OfferSection: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-[2.5rem] shadow-2xl border-2 border-primary/10 mx-auto max-w-[400px] overflow-hidden">
-        {/* Modern Timer Section */}
-        <div className="bg-destructive py-4 px-4 flex flex-col items-center justify-center gap-3 relative overflow-hidden">
-          <div className="absolute inset-0 bg-white/10 animate-pulse" />
-          <div className="relative flex items-center gap-2 mb-1">
-            <Timer className="w-4 h-4 text-white animate-bounce" />
-            <span className="text-[11px] font-black text-white uppercase tracking-[0.2em]">
-              Oferta termina em:
+        {/* Compact & High Impact Timer */}
+        <div className="bg-destructive py-3 px-4 flex items-center justify-center gap-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-white/5 animate-pulse" />
+          
+          <div className="relative flex items-center gap-1.5">
+            <Timer className="w-3.5 h-3.5 text-white animate-bounce shrink-0" />
+            <span className="text-[10px] font-black text-white uppercase tracking-wider whitespace-nowrap">
+              Expira em:
             </span>
           </div>
           
-          <div className="relative flex items-center gap-2">
-            <TimeUnit value={isMounted ? formatNumber(timeLeft.hours) : "24"} label="HORAS" />
-            <span className="text-white font-bold text-xl mb-4">:</span>
-            <TimeUnit value={isMounted ? formatNumber(timeLeft.minutes) : "00"} label="MINUTOS" />
-            <span className="text-white font-bold text-xl mb-4">:</span>
-            <TimeUnit value={isMounted ? formatNumber(timeLeft.seconds) : "00"} label="SEGUNDOS" />
+          <div className="relative flex items-center gap-1.5">
+            <TimeUnit value={isMounted ? formatNumber(timeLeft.hours) : "24"} label="H" />
+            <span className="text-white font-bold text-sm mb-0.5">:</span>
+            <TimeUnit value={isMounted ? formatNumber(timeLeft.minutes) : "00"} label="M" />
+            <span className="text-white font-bold text-sm mb-0.5">:</span>
+            <TimeUnit value={isMounted ? formatNumber(timeLeft.seconds) : "00"} label="S" />
           </div>
         </div>
 
@@ -155,13 +156,11 @@ export const OfferSection: React.FC = () => {
 }
 
 const TimeUnit = ({ value, label }: { value: string, label: string }) => (
-  <div className="flex flex-col items-center gap-1">
-    <div className="bg-white/20 backdrop-blur-md rounded-lg w-12 h-12 flex items-center justify-center border border-white/30 shadow-inner">
-      <span className="text-white font-mono font-black text-2xl tracking-tighter">
-        {value}
-      </span>
-    </div>
-    <span className="text-[8px] font-bold text-white/80 uppercase tracking-tighter">
+  <div className="flex items-center gap-1.5 bg-white/20 backdrop-blur-md rounded-md px-2 py-1 border border-white/20 shadow-sm">
+    <span className="text-white font-mono font-bold text-lg leading-none">
+      {value}
+    </span>
+    <span className="text-[7px] font-black text-white/70 uppercase">
       {label}
     </span>
   </div>
