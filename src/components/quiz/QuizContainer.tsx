@@ -262,8 +262,8 @@ export const QuizContainer: React.FC = () => {
               <h3 className="text-[23px] font-headline font-bold text-primary">
                 Como vou receber meu material?
               </h3>
-              <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
-                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu E-mail ou Whatsapp.
+              <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-accent/5 p-6 rounded-2xl border border-accent/20 font-medium shadow-sm">
+                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
               </p>
             </div>
           </div>
