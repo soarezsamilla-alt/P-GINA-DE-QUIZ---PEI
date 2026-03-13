@@ -273,8 +273,8 @@ export const QuizContainer: React.FC = () => {
             <h3 className="text-[23px] font-headline font-bold text-primary">
               É seguro?
             </h3>
-            <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
-              Sim! Seus dados estão 100% seguros. Utilizamos criptografia de ponta a ponta e as plataformas de pagamento mais confiáveis do mercado para garantir uma transação tranquila e protegida.
+            <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-green-50/50 p-6 rounded-2xl border border-green-200 font-medium shadow-sm">
+              Sim! Seus dados estão <span className="text-green-600 font-bold">100% seguros</span>. Utilizamos <span className="text-primary font-bold">criptografia de ponta a ponta</span> e as plataformas de pagamento mais confiáveis do mercado para garantir uma transação tranquila e protegida.
             </p>
             <div className="flex justify-center items-center gap-8 pt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
                <div className="flex flex-col items-center gap-1.5">
