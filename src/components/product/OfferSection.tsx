@@ -92,7 +92,7 @@ export const OfferSection: React.FC = () => {
               <span className="text-6xl font-bold text-primary tracking-tighter">16</span>
               <span className="text-2xl font-bold text-primary">,90</span>
             </div>
-            <p className="text-[9px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
+            <p className="text-[11px] font-bold text-[#5c6570] uppercase tracking-widest">Pagamento único</p>
             
             <div className="mt-8 relative w-full h-44">
               <Image 
