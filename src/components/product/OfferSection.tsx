@@ -63,25 +63,23 @@ export const OfferSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="bg-white rounded-3xl shadow-2xl border-2 border-primary/10 mx-auto max-w-[400px] overflow-hidden">
-        {/* Timer Section */}
-        <div className="bg-destructive/10 py-3 px-4 flex items-center justify-center gap-3 border-b border-destructive/20">
-          <Timer className="w-5 h-5 text-destructive animate-pulse" />
-          <span className="text-[13px] font-bold text-destructive uppercase tracking-tight">
-            Oferta expira em:
-          </span>
-          <div className="flex items-center gap-1 font-mono font-bold text-destructive text-lg">
-            {isMounted ? (
-              <>
-                <span>{formatNumber(timeLeft.hours)}</span>
-                <span className="animate-pulse">:</span>
-                <span>{formatNumber(timeLeft.minutes)}</span>
-                <span className="animate-pulse">:</span>
-                <span>{formatNumber(timeLeft.seconds)}</span>
-              </>
-            ) : (
-              <span>24:00:00</span>
-            )}
+      <div className="bg-white rounded-[2.5rem] shadow-2xl border-2 border-primary/10 mx-auto max-w-[400px] overflow-hidden">
+        {/* Modern Timer Section */}
+        <div className="bg-destructive py-4 px-4 flex flex-col items-center justify-center gap-3 relative overflow-hidden">
+          <div className="absolute inset-0 bg-white/10 animate-pulse" />
+          <div className="relative flex items-center gap-2 mb-1">
+            <Timer className="w-4 h-4 text-white animate-bounce" />
+            <span className="text-[11px] font-black text-white uppercase tracking-[0.2em]">
+              Oferta termina em:
+            </span>
+          </div>
+          
+          <div className="relative flex items-center gap-2">
+            <TimeUnit value={isMounted ? formatNumber(timeLeft.hours) : "24"} label="HORAS" />
+            <span className="text-white font-bold text-xl mb-4">:</span>
+            <TimeUnit value={isMounted ? formatNumber(timeLeft.minutes) : "00"} label="MINUTOS" />
+            <span className="text-white font-bold text-xl mb-4">:</span>
+            <TimeUnit value={isMounted ? formatNumber(timeLeft.seconds) : "00"} label="SEGUNDOS" />
           </div>
         </div>
 
@@ -155,6 +153,19 @@ export const OfferSection: React.FC = () => {
     </div>
   )
 }
+
+const TimeUnit = ({ value, label }: { value: string, label: string }) => (
+  <div className="flex flex-col items-center gap-1">
+    <div className="bg-white/20 backdrop-blur-md rounded-lg w-12 h-12 flex items-center justify-center border border-white/30 shadow-inner">
+      <span className="text-white font-mono font-black text-2xl tracking-tighter">
+        {value}
+      </span>
+    </div>
+    <span className="text-[8px] font-bold text-white/80 uppercase tracking-tighter">
+      {label}
+    </span>
+  </div>
+)
 
 const TrustBadge = ({ icon, text }: { icon: React.ReactNode, text: string }) => (
   <div className="flex items-center gap-2 text-xs font-bold text-primary/60 uppercase tracking-wider">
