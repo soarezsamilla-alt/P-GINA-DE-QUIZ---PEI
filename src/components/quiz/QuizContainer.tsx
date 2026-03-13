@@ -267,20 +267,8 @@ export const QuizContainer: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
-              <div className="flex gap-4 p-6 rounded-2xl bg-white shadow-sm border border-border/50">
-                <div className="bg-primary/10 p-3 rounded-full h-fit">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-bold text-primary text-lg">Acesso via E-mail</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Você receberá um e-mail com todos os links para download dos modelos de PEI e seus bônus exclusivos.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4 p-6 rounded-2xl bg-white shadow-sm border border-border/50">
+            <div className="flex justify-center text-left">
+              <div className="flex gap-4 p-6 rounded-2xl bg-white shadow-sm border border-border/50 max-w-md w-full">
                 <div className="bg-accent/10 p-3 rounded-full h-fit">
                   <Zap className="w-6 h-6 text-accent" />
                 </div>
