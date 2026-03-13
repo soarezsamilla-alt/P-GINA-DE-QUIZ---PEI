@@ -208,7 +208,7 @@ export const QuizContainer: React.FC = () => {
               Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto text-[14px] leading-relaxed">
-              Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respeito da coordenação.
+              Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para ensinar e mais respect da coordenação.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
@@ -259,7 +259,7 @@ export const QuizContainer: React.FC = () => {
           {/* New Section: How will I receive my material? */}
           <div className="mt-20 mb-10 text-center space-y-8 px-4 max-w-3xl mx-auto">
             <div className="space-y-4">
-              <h3 className="text-[24px] font-headline font-bold text-primary">
+              <h3 className="text-[32px] font-headline font-bold text-primary">
                 Como vou receber meu material?
               </h3>
               <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
