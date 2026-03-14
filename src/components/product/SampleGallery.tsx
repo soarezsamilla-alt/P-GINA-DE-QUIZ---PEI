@@ -21,7 +21,7 @@ export const SampleGallery: React.FC = () => {
         <h3 className="text-2xl font-headline text-center text-primary font-bold">
           Veja abaixo algumas amostras:
         </h3>
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto text-sm">
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto text-[14px]">
           Nossos modelos de PEI são feitos para tornar o ensino mais divertido e interativo!
         </p>
       </div>
