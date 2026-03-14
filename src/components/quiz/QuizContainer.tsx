@@ -144,7 +144,7 @@ export const QuizContainer: React.FC = () => {
         setState('PRESENTATION')
       } catch (error) {
         console.error("Error generating personalized description:", error)
-        setPersonalizedDesc("Pare de entregar PEI pela metade e torcer para que NINGUÉM PERCEBA! Receba mais de 200 modelos PRONTOS E EDITÁVEIS! Planejados por profissionais da educação inclusiva. Servem do 1º ao 9º ano. Além de ser editáveis você consegue adaptar para qualquer faixa etária e qualquer formato exigido pela sua escola.")
+        setPersonalizedDesc("Pare de entregar PEI pela metade e torcer para que NINGUÉM PERCEBA! Receba + 200 modelos PRONTOS E EDITÁVEIS! Planejados por profissionais da educação inclusiva. Servem do 1º ao 9º ano. Além de ser editáveis você consegue adaptar para qualquer faixa etária e qualquer formato exigido pela sua escola.")
         setState('PRESENTATION')
       }
     }
@@ -283,7 +283,7 @@ export const QuizContainer: React.FC = () => {
                 Como vou receber meu material?
               </h3>
               <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-accent/5 p-6 rounded-2xl border border-accent/20 font-medium shadow-sm">
-                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
+                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> or <span className="text-accent font-bold">Whatsapp</span>.
               </p>
             </div>
           </div>
