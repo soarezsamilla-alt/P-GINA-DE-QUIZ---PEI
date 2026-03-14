@@ -347,12 +347,16 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-10" />
 
           {/* New Section: Adaptability Banner Card */}
-          <section className="bg-white py-8 px-4">
+          <section className="bg-white pt-8 pb-2 px-4">
             <div className="max-w-3xl mx-auto">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-5 sm:p-6 rounded-2xl border-2 border-primary/10 shadow-lg flex flex-col sm:flex-row items-center gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-xl hover:border-primary/30 group relative overflow-hidden"
+                className="cursor-pointer bg-white p-5 sm:p-6 rounded-2xl border-2 border-primary/20 shadow-xl flex flex-col sm:flex-row items-center gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-primary/10 hover:border-primary group relative overflow-hidden"
               >
+                {/* Mobile-focused animated border line */}
+                <div className="absolute inset-0 border border-primary/10 rounded-2xl pointer-events-none sm:hidden" />
+                <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary via-accent to-primary opacity-70" />
+                
                 <div className="bg-blue-100 p-4 rounded-full shrink-0 shadow-inner group-hover:scale-110 transition-transform">
                   <Sparkles className="w-8 h-8 text-primary" />
                 </div>
