@@ -210,7 +210,7 @@ export const QuizContainer: React.FC = () => {
           <PurchaseNotification />
           
           {/* Section 1: Personalized Description */}
-          <section className="bg-white pt-10 pb-6 px-4">
+          <section className="bg-white pt-6 pb-6 px-4">
             <div className="max-w-5xl mx-auto">
               <div className="mb-6">
                 <PersonalizedDescription description={personalizedDesc} />
@@ -224,7 +224,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-10" />
 
           {/* Section 2: Sample Gallery */}
-          <section className="bg-blue-50/50 py-6 px-4">
+          <section className="bg-blue-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto">
               <SampleGallery />
             </div>
@@ -233,7 +233,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-10" />
 
           {/* Section 3: Social Proof */}
-          <section className="bg-purple-50/50 py-6 px-4">
+          <section className="bg-purple-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto">
               <SocialProof />
             </div>
@@ -241,15 +241,16 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* New Section: What you will receive */}
-          <section className="bg-slate-50 py-8 px-4">
-            <div className="max-w-5xl mx-auto text-center space-y-8">
+          {/* New Section: What you will receive - REFINED FOR MOBILE */}
+          <section className="bg-slate-50 py-12 px-4">
+            <div className="max-w-5xl mx-auto text-center space-y-10">
               <h3 className="text-[21px] font-headline font-bold text-primary">
                 O que você vai receber hoje:
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 group">
-                  <div className="bg-primary/10 p-4 rounded-full transition-colors group-hover:bg-primary/20">
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/60 to-primary/20" />
+                  <div className="bg-primary/10 p-4 rounded-full transition-colors group-active:bg-primary/20">
                     <FileText className="w-8 h-8 text-primary" />
                   </div>
                   <div className="space-y-2">
@@ -258,8 +259,9 @@ export const QuizContainer: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all duration-300 hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 group">
-                  <div className="bg-accent/10 p-4 rounded-full transition-colors group-hover:bg-accent/20">
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent/60 to-accent/20" />
+                  <div className="bg-accent/10 p-4 rounded-full transition-colors group-active:bg-accent/20">
                     <Zap className="w-8 h-8 text-accent" />
                   </div>
                   <div className="space-y-2">
@@ -268,8 +270,9 @@ export const QuizContainer: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all duration-300 hover:border-green-600/40 hover:shadow-xl hover:-translate-y-1 group">
-                  <div className="bg-green-100 p-4 rounded-full transition-colors group-hover:bg-green-200">
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-600/60 to-green-600/20" />
+                  <div className="bg-green-100 p-4 rounded-full transition-colors group-active:bg-green-200">
                     <Printer className="w-8 h-8 text-green-600" />
                   </div>
                   <div className="space-y-2">
@@ -284,7 +287,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-10" />
 
           {/* Section 4: Bonuses */}
-          <section className="bg-amber-50/50 py-8 px-4">
+          <section className="bg-amber-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-4">
               <h3 className="text-[21px] font-headline font-bold text-primary">
                 Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
@@ -338,7 +341,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-10" />
 
           {/* Section 5: Offer Section */}
-          <section className="bg-white py-8 px-4">
+          <section className="bg-white py-10 px-4">
             <div className="max-w-5xl mx-auto">
               < OfferSection />
             </div>
@@ -347,7 +350,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-10" />
 
           {/* Section 6: Delivery Info */}
-          <section className="bg-slate-50/50 py-8 px-4">
+          <section className="bg-slate-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-8">
               <div className="space-y-4">
                 <h3 className="text-[23px] font-headline font-bold text-primary">
@@ -363,7 +366,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-10" />
 
           {/* Section 7: Security Info */}
-          <section className="bg-green-50/30 py-8 px-4">
+          <section className="bg-green-50/30 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-6">
               <h3 className="text-[23px] font-headline font-bold text-primary">
                 É seguro?
