@@ -241,7 +241,7 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Section: What you will receive */}
+          {/* Section: What you will receive today */}
           <section className="bg-slate-50 py-12 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-10">
               <div className="space-y-3">
@@ -348,22 +348,22 @@ export const QuizContainer: React.FC = () => {
 
           {/* New Section: Adaptability Banner Card */}
           <section className="bg-white py-8 px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-3xl mx-auto">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-5 sm:p-6 rounded-2xl border-2 border-primary/20 shadow-lg flex flex-col sm:flex-row items-center gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-xl hover:border-primary/40 group relative overflow-hidden"
+                className="cursor-pointer bg-white p-5 sm:p-6 rounded-2xl border-2 border-primary/10 shadow-lg flex flex-col sm:flex-row items-center gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-xl hover:border-primary/30 group relative overflow-hidden"
               >
-                <div className="bg-pink-100 p-4 rounded-full shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                  <Users className="w-8 h-8 text-pink-500" />
+                <div className="bg-blue-100 p-4 rounded-full shrink-0 shadow-inner group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-8 h-8 text-primary" />
                 </div>
                 <div className="flex-grow text-center sm:text-left space-y-1">
-                  <h4 className="font-bold text-primary text-[17px] sm:text-lg">Para Todas as Idades e Matérias</h4>
+                  <h4 className="font-bold text-primary text-[17px] sm:text-lg">Flexibilidade Total</h4>
                   <p className="text-[13px] sm:text-sm text-muted-foreground leading-snug">
-                    Adapte facilmente as atividades para Ensino Fundamental e Médio, em qualquer disciplina.
+                    Edite 100% do conteúdo no Word e adapte para qualquer série ou diagnóstico específico do seu aluno.
                   </p>
                 </div>
-                <div className="flex items-center gap-1.5 text-pink-500 font-bold text-[14px] sm:text-base whitespace-nowrap group-hover:translate-x-1 transition-transform">
-                  Garantir Meu Acesso Agora <ArrowRight className="w-4 h-4" />
+                <div className="flex items-center gap-1.5 text-accent font-bold text-[14px] sm:text-base whitespace-nowrap group-hover:translate-x-1 transition-transform">
+                  Garantir Acesso <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
             </div>
@@ -388,7 +388,7 @@ export const QuizContainer: React.FC = () => {
                   Como vou receber meu material?
                 </h3>
                 <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent/10 font-medium shadow-sm">
-                  Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> or <span className="text-accent font-bold">Whatsapp</span>.
+                  Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
                 </p>
               </div>
             </div>
