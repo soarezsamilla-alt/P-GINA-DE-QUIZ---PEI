@@ -11,7 +11,7 @@ import { OfferSection } from '@/components/product/OfferSection'
 import { PurchaseNotification } from '@/components/product/PurchaseNotification'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock } from 'lucide-react'
+import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock, Printer } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 
@@ -261,21 +261,21 @@ export const QuizContainer: React.FC = () => {
                 
                 <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
                   <div className="bg-accent/10 p-4 rounded-full">
-                    <Sparkles className="w-8 h-8 text-accent" />
+                    <Zap className="w-8 h-8 text-accent" />
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-bold text-primary text-lg">6 Bônus Exclusivos</h4>
-                    <p className="text-sm text-muted-foreground">Materiais complementares (AEE, PDI, PDPI) para potencializar seus resultados.</p>
+                    <h4 className="font-bold text-primary text-lg">Acesso Digital</h4>
+                    <p className="text-sm text-muted-foreground">Receba o material instantaneamente via E-mail ou WhatsApp logo após a compra.</p>
                   </div>
                 </div>
                 
                 <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
                   <div className="bg-green-100 p-4 rounded-full">
-                    <Clock className="w-8 h-8 text-green-600" />
+                    <Printer className="w-8 h-8 text-green-600" />
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-bold text-primary text-lg">Acesso Imediato</h4>
-                    <p className="text-sm text-muted-foreground">O acesso é liberado instantaneamente após o pagamento via E-mail ou WhatsApp.</p>
+                    <h4 className="font-bold text-primary text-lg">Prontos para Imprimir</h4>
+                    <p className="text-sm text-muted-foreground">Modelos já formatados e organizados, prontos para preencher e imprimir.</p>
                   </div>
                 </div>
               </div>
