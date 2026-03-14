@@ -57,7 +57,7 @@ export const OfferSection: React.FC = () => {
     <div id="offer-section" className="pb-12 pt-4 text-center max-w-2xl mx-auto space-y-6">
       <div className="space-y-3 px-4">
         <h2 className="text-[21px] font-headline text-primary font-bold">
-          Pare de entregar PEI pela metade e torcer para que NINGUÉM PERCEBA! Receba + 200 modelos PRONTOS E EDITÁVEIS! Planejados por profissionais da educação inclusiva. Servem do 1º ao 9º ano. Além de ser editáveis você consegue adaptar para qualquer faixa etária e qualquer formato exigido pela sua escola.
+          Garanta agora os melhores modelos de PEI e otimize seu tempo!
         </h2>
         <p className="text-[14px] text-[#5c6570] font-medium max-w-lg mx-auto leading-relaxed">
           Aproveite agora tenha acesso a PEIs prontos e editáveis para otimizar seu tempo, melhorar sua performance e impressionar sua coordenação.
