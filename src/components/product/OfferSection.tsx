@@ -89,7 +89,7 @@ export const OfferSection: React.FC = () => {
 
           <div className="p-6 pt-5">
             <div className="space-y-1 mb-3 text-center">
-              <p className="text-muted-foreground line-through text-sm">De R$ 97,90</p>
+              <p className="text-muted-foreground line-through text-sm">De R$ 227,90</p>
               <div className="flex items-baseline justify-center">
                 <span className="text-5xl font-bold text-primary mr-1">R$</span>
                 <span className="text-7xl font-bold text-primary tracking-tighter">16</span>
