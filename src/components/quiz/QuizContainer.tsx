@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -10,7 +11,7 @@ import { OfferSection } from '@/components/product/OfferSection'
 import { PurchaseNotification } from '@/components/product/PurchaseNotification'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight, Zap, ShieldCheck, Lock } from 'lucide-react'
+import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 
@@ -241,6 +242,48 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
+          {/* New Section: What you will receive */}
+          <section className="bg-slate-50 py-8 px-4">
+            <div className="max-w-5xl mx-auto text-center space-y-8">
+              <h3 className="text-[21px] font-headline font-bold text-primary">
+                O que você vai receber hoje:
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
+                  <div className="bg-primary/10 p-4 rounded-full">
+                    <FileText className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-primary text-lg">200+ Modelos PEI</h4>
+                    <p className="text-sm text-muted-foreground">Material completo, planejado por profissionais e 100% editáveis no Word.</p>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
+                  <div className="bg-accent/10 p-4 rounded-full">
+                    <Sparkles className="w-8 h-8 text-accent" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-primary text-lg">6 Bônus Exclusivos</h4>
+                    <p className="text-sm text-muted-foreground">Materiais complementares (AEE, PDI, PDPI) para potencializar seus resultados.</p>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
+                  <div className="bg-green-100 p-4 rounded-full">
+                    <Clock className="w-8 h-8 text-green-600" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-primary text-lg">Acesso Imediato</h4>
+                    <p className="text-sm text-muted-foreground">O acesso é liberado instantaneamente após o pagamento via E-mail ou WhatsApp.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <Separator className="opacity-10" />
+
           {/* Section 4: Bonuses */}
           <section className="bg-amber-50/50 py-8 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-4">
@@ -298,7 +341,7 @@ export const QuizContainer: React.FC = () => {
           {/* Section 5: Offer Section */}
           <section className="bg-white py-8 px-4">
             <div className="max-w-5xl mx-auto">
-              <OfferSection />
+              < OfferSection />
             </div>
           </section>
 
