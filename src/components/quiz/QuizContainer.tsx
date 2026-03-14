@@ -254,7 +254,7 @@ export const QuizContainer: React.FC = () => {
                     <FileText className="w-8 h-8 text-primary" />
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-bold text-primary text-lg">200+ Modelos PEI</h4>
+                    <h4 className="font-bold text-primary text-lg">+ de 200 Modelos PEI</h4>
                     <p className="text-sm text-muted-foreground">Material completo, planejado por profissionais e 100% editáveis no Word.</p>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ export const QuizContainer: React.FC = () => {
                   Como vou receber meu material?
                 </h3>
                 <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent/10 font-medium shadow-sm">
-                  Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
+                  Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> or <span className="text-accent font-bold">Whatsapp</span>.
                 </p>
               </div>
             </div>
