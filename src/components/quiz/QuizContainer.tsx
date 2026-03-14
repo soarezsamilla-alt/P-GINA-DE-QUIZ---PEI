@@ -144,7 +144,7 @@ export const QuizContainer: React.FC = () => {
         setState('PRESENTATION')
       } catch (error) {
         console.error("Error generating personalized description:", error)
-        setPersonalizedDesc("Pare de entregar PEI pela metade e torcer para que NINGUÉM PERCEBA! Receba mais de 200 modelos PRONTOS E EDITÁVEIS! Planejados por profissionais da educação inclusiva. Servem do 1º ao 9º ano. Além de serem editáveis você consegue adaptar para qualquer faixa etária e qualquer formato exigido pela sua escola.")
+        setPersonalizedDesc("Pare de entregar PEI pela metade e torcer para que NINGUÉM PERCEBA! Receba mais de 200 modelos PRONTOS E EDITÁVEIS! Planejados por profissionais da educação inclusiva. Servem do 1º ao 9º ano. Além de ser editáveis você consegue adaptar para qualquer faixa etária e qualquer formato exigido pela sua escola.")
         setState('PRESENTATION')
       }
     }
