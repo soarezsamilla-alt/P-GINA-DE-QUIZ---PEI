@@ -10,7 +10,7 @@ import { OfferSection } from '@/components/product/OfferSection'
 import { PurchaseNotification } from '@/components/product/PurchaseNotification'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock, Printer } from 'lucide-react'
+import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock, Printer, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 
@@ -241,7 +241,7 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* New Section: What you will receive - REFINED FOR MOBILE */}
+          {/* Section: What you will receive */}
           <section className="bg-slate-50 py-12 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-10">
               <div className="space-y-3">
@@ -340,6 +340,31 @@ export const QuizContainer: React.FC = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          <Separator className="opacity-10" />
+
+          {/* New Section: Adaptability Banner Card */}
+          <section className="bg-white py-8 px-4">
+            <div className="max-w-5xl mx-auto">
+              <div 
+                onClick={scrollToOffer}
+                className="cursor-pointer bg-white p-5 sm:p-6 rounded-2xl border-2 border-primary/20 shadow-lg flex flex-col sm:flex-row items-center gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-xl hover:border-primary/40 group relative overflow-hidden"
+              >
+                <div className="bg-pink-100 p-4 rounded-full shrink-0 shadow-inner group-hover:scale-110 transition-transform">
+                  <Users className="w-8 h-8 text-pink-500" />
+                </div>
+                <div className="flex-grow text-center sm:text-left space-y-1">
+                  <h4 className="font-bold text-primary text-[17px] sm:text-lg">Para Todas as Idades e Matérias</h4>
+                  <p className="text-[13px] sm:text-sm text-muted-foreground leading-snug">
+                    Adapte facilmente as atividades para Ensino Fundamental e Médio, em qualquer disciplina.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1.5 text-pink-500 font-bold text-[14px] sm:text-base whitespace-nowrap group-hover:translate-x-1 transition-transform">
+                  Garantir Meu Acesso Agora <ArrowRight className="w-4 h-4" />
+                </div>
               </div>
             </div>
           </section>
