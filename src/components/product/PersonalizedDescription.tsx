@@ -51,7 +51,7 @@ export const PersonalizedDescription: React.FC<PersonalizedDescriptionProps> = (
         </CardHeader>
         <CardContent className="p-8 flex justify-center">
           <div className="max-w-3xl w-full">
-            <p className="text-[20px] font-medium text-foreground whitespace-pre-line text-center leading-relaxed">
+            <p className="text-[18px] font-medium text-foreground whitespace-pre-line text-center leading-relaxed">
               {highlightText(description)}
             </p>
           </div>
