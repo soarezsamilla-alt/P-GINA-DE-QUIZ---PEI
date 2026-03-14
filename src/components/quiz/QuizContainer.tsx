@@ -177,9 +177,9 @@ export const QuizContainer: React.FC = () => {
   )
 
   return (
-    <div className="min-h-screen py-10 px-4">
+    <div className="min-h-screen py-10 px-0">
       {state === 'QUIZ' && (
-        <div className="max-w-md mx-auto space-y-8">
+        <div className="max-w-md mx-auto space-y-8 px-4">
           <div className="space-y-2">
             <div className="flex justify-between text-xs font-bold text-primary/60 px-1">
               <span>Etapa {step + 1} de {quizSteps.length}</span>
@@ -197,7 +197,7 @@ export const QuizContainer: React.FC = () => {
       )}
 
       {state === 'LOADING' && (
-        <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 text-center">
+        <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 text-center px-4">
           <Loader2 className="w-16 h-16 animate-spin text-accent" />
           <div className="space-y-2">
             <h2 className="text-2xl font-headline font-bold text-primary">Preparando seus modelos...</h2>
@@ -207,118 +207,141 @@ export const QuizContainer: React.FC = () => {
       )}
 
       {state === 'PRESENTATION' && (
-        <div className="max-w-5xl mx-auto pb-8">
+        <div className="w-full pb-8">
           <PurchaseNotification />
-          <div className="mb-8">
-            <PersonalizedDescription description={personalizedDesc} />
-          </div>
           
-          <div className="mb-4">
-            <CTAButton />
-          </div>
+          {/* Section 1: Personalized Description */}
+          <section className="bg-white py-12 px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="mb-8">
+                <PersonalizedDescription description={personalizedDesc} />
+              </div>
+              <div className="mb-4">
+                <CTAButton />
+              </div>
+            </div>
+          </section>
 
-          <Separator className="my-16 opacity-40" />
+          <Separator className="opacity-20" />
 
-          <div className="mb-2">
-            <SampleGallery />
-          </div>
-          
-          <Separator className="my-16 opacity-40" />
+          {/* Section 2: Sample Gallery */}
+          <section className="bg-blue-50/50 py-16 px-4">
+            <div className="max-w-5xl mx-auto">
+              <SampleGallery />
+            </div>
+          </section>
 
-          <div className="mb-2">
-            <SocialProof />
-          </div>
+          <Separator className="opacity-20" />
 
-          <Separator className="my-16 opacity-40" />
+          {/* Section 3: Social Proof */}
+          <section className="bg-purple-50/50 py-16 px-4">
+            <div className="max-w-5xl mx-auto">
+              <SocialProof />
+            </div>
+          </section>
 
-          <div className="mt-16 mb-6 text-center space-y-4 px-4">
-            <h3 className="text-[21px] font-headline font-bold text-primary">
-              Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
-            </h3>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-[14px] leading-relaxed">
-              Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para trabalhar e mais respeito da coordenação.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
-              {bonuses.map((bonus, idx) => (
-                <div 
-                  key={idx} 
-                  className="group p-[3px] rounded-[2.1rem] bg-gradient-to-br from-primary/40 via-accent/40 to-primary/40 hover:from-primary hover:via-accent hover:to-primary transition-all duration-500 shadow-md hover:shadow-2xl max-w-[340px] w-full border-2 border-transparent hover:border-accent/30"
-                >
+          <Separator className="opacity-20" />
+
+          {/* Section 4: Bonuses */}
+          <section className="bg-amber-50/50 py-16 px-4">
+            <div className="max-w-5xl mx-auto text-center space-y-4">
+              <h3 className="text-[21px] font-headline font-bold text-primary">
+                Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
+              </h3>
+              <p className="text-muted-foreground max-w-3xl mx-auto text-[14px] leading-relaxed">
+                Ao adquirir, você recebe acesso imediato a 6 bônus incríveis que transformarão sua forma de trabalhar, garantindo mais tempo para trabalhar e mais respeito da coordenação.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 justify-items-center">
+                {bonuses.map((bonus, idx) => (
                   <div 
-                    className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center h-full transition-colors duration-300"
-                    style={{ backgroundColor: bonus.bgColor }}
+                    key={idx} 
+                    className="group p-[3px] rounded-[2.1rem] bg-gradient-to-br from-primary/40 via-accent/40 to-primary/40 hover:from-primary hover:via-accent hover:to-primary transition-all duration-500 shadow-md hover:shadow-2xl max-w-[340px] w-full border-2 border-transparent hover:border-accent/30"
                   >
-                    <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
-                      Bônus {idx + 1}º
-                    </div>
-                    
-                    <div className="relative w-[70%] aspect-square mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-110 transition-transform duration-500">
-                      <Image 
-                        src={bonus.image} 
-                        alt={bonus.title}
-                        fill
-                        className="object-cover"
-                        data-ai-hint="bonus digital product cover"
-                      />
-                    </div>
+                    <div 
+                      className="relative rounded-[2rem] p-4 pt-10 flex flex-col items-center text-center h-full transition-colors duration-300"
+                      style={{ backgroundColor: bonus.bgColor }}
+                    >
+                      <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-white text-[10px] font-bold shadow-sm z-10">
+                        Bônus {idx + 1}º
+                      </div>
+                      
+                      <div className="relative w-[70%] aspect-square mb-6 rounded-lg overflow-hidden shadow-md transform group-hover:scale-110 transition-transform duration-500">
+                        <Image 
+                          src={bonus.image} 
+                          alt={bonus.title}
+                          fill
+                          className="object-cover"
+                          data-ai-hint="bonus digital product cover"
+                        />
+                      </div>
 
-                    <div className="space-y-2 mb-4 flex-grow">
-                      <h4 className="text-[16px] font-bold text-primary leading-tight">{bonus.title}</h4>
-                      <p className="text-muted-foreground text-[14px] leading-relaxed px-1">
-                        {bonus.description}
-                      </p>
-                    </div>
+                      <div className="space-y-2 mb-4 flex-grow">
+                        <h4 className="text-[16px] font-bold text-primary leading-tight">{bonus.title}</h4>
+                        <p className="text-muted-foreground text-[14px] leading-relaxed px-1">
+                          {bonus.description}
+                        </p>
+                      </div>
 
-                    <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
-                      <span className="text-muted-foreground line-through text-[13px] font-medium">R$ 37,90</span>
-                      <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
+                      <div className="mt-auto pt-2 flex flex-col items-center gap-0.5">
+                        <span className="text-muted-foreground line-through text-[13px] font-medium">R$ 37,90</span>
+                        <span className="text-green-500 font-extrabold text-xl tracking-tighter">GRÁTIS</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          </section>
 
-          <Separator className="my-16 opacity-40" />
+          <Separator className="opacity-20" />
 
-          <div className="mt-8">
-            <OfferSection />
-          </div>
+          {/* Section 5: Offer Section */}
+          <section className="bg-white py-16 px-4">
+            <div className="max-w-5xl mx-auto">
+              <OfferSection />
+            </div>
+          </section>
 
-          <Separator className="my-16 opacity-40" />
+          <Separator className="opacity-20" />
 
-          <div className="mt-4 mb-10 text-center space-y-8 px-4 max-w-3xl mx-auto">
-            <div className="space-y-4">
+          {/* Section 6: Delivery Info */}
+          <section className="bg-slate-50/50 py-16 px-4">
+            <div className="max-w-5xl mx-auto text-center space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-[23px] font-headline font-bold text-primary">
+                  Como vou receber meu material?
+                </h3>
+                <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent/10 font-medium shadow-sm">
+                  Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <Separator className="opacity-20" />
+
+          {/* Section 7: Security Info */}
+          <section className="bg-green-50/30 py-16 px-4">
+            <div className="max-w-5xl mx-auto text-center space-y-6">
               <h3 className="text-[23px] font-headline font-bold text-primary">
-                Como vou receber meu material?
+                É seguro?
               </h3>
-              <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-accent/5 p-6 rounded-2xl border border-accent/20 font-medium shadow-sm">
-                Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> or <span className="text-accent font-bold">Whatsapp</span>.
+              <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-green-200 font-medium shadow-sm">
+                Sim! Seus dados estão <span className="text-green-600 font-bold">100% seguros</span>. Utilizamos <span className="text-primary font-bold">criptografia de ponta a ponta</span> e as plataformas de pagamento mais confiáveis do mercado para garantir uma transação tranquila e protegida.
               </p>
+              <div className="flex justify-center items-center gap-8 pt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+                 <div className="flex flex-col items-center gap-1.5">
+                   <ShieldCheck className="w-8 h-8 text-green-600" />
+                   <span className="text-[10px] font-bold uppercase tracking-tighter">Pagamento Seguro</span>
+                 </div>
+                 <div className="flex flex-col items-center gap-1.5">
+                   <Lock className="w-8 h-8 text-primary" />
+                   <span className="text-[10px] font-bold uppercase tracking-tighter">SSL Criptografado</span>
+                 </div>
+              </div>
             </div>
-          </div>
-
-          <Separator className="my-16 opacity-40" />
-
-          <div className="mt-16 mb-4 text-center space-y-6 px-4 max-w-3xl mx-auto">
-            <h3 className="text-[23px] font-headline font-bold text-primary">
-              É seguro?
-            </h3>
-            <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-green-50/50 p-6 rounded-2xl border border-green-200 font-medium shadow-sm">
-              Sim! Seus dados estão <span className="text-green-600 font-bold">100% seguros</span>. Utilizamos <span className="text-primary font-bold">criptografia de ponta a ponta</span> e as plataformas de pagamento mais confiáveis do mercado para garantir uma transação tranquila e protegida.
-            </p>
-            <div className="flex justify-center items-center gap-8 pt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-               <div className="flex flex-col items-center gap-1.5">
-                 <ShieldCheck className="w-8 h-8 text-green-600" />
-                 <span className="text-[10px] font-bold uppercase tracking-tighter">Pagamento Seguro</span>
-               </div>
-               <div className="flex flex-col items-center gap-1.5">
-                 <Lock className="w-8 h-8 text-primary" />
-                 <span className="text-[10px] font-bold uppercase tracking-tighter">SSL Criptografado</span>
-               </div>
-            </div>
-          </div>
+          </section>
         </div>
       )}
     </div>
