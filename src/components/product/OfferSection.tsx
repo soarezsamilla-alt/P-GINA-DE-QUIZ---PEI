@@ -56,7 +56,7 @@ export const OfferSection: React.FC = () => {
     <div id="offer-section" className="pb-8 pt-4 text-center max-w-2xl mx-auto space-y-6">
       <div className="space-y-3 px-4">
         <h2 className="text-[21px] font-headline text-primary font-bold">
-          Garanta agora os melhores modelos de PEI e otimize seu tempo!
+          Garanta agora os melhores modelos de PEI e <span className="text-accent uppercase font-black underline decoration-2 decoration-accent/30 underline-offset-4">OTIMIZE SEU TEMPO!</span>
         </h2>
         <p className="text-[14px] text-[#5c6570] font-medium max-w-lg mx-auto leading-relaxed">
           Aproveite agora tenha acesso a PEIs prontos e editáveis para otimizar seu tempo, melhorar sua performance e impressionar sua coordenação.
