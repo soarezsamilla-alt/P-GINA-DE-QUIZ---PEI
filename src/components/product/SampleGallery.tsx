@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -16,7 +15,7 @@ export const SampleGallery: React.FC = () => {
   const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 5)
 
   return (
-    <div className="py-8 px-4 bg-secondary/30 rounded-3xl">
+    <div className="py-10 px-4 bg-secondary/30 rounded-3xl">
       <div className="space-y-4 mb-8">
         <h3 className="text-2xl font-headline text-center text-primary font-bold">
           Veja abaixo algumas amostras:

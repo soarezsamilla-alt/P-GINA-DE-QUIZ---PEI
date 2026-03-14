@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -222,7 +221,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          <Separator className="opacity-20" />
+          <Separator className="opacity-10" />
 
           {/* Section 2: Sample Gallery */}
           <section className="bg-blue-50/50 py-10 px-4">
@@ -231,7 +230,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          <Separator className="opacity-20" />
+          <Separator className="opacity-10" />
 
           {/* Section 3: Social Proof */}
           <section className="bg-purple-50/50 py-10 px-4">
@@ -240,7 +239,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          <Separator className="opacity-20" />
+          <Separator className="opacity-10" />
 
           {/* Section 4: Bonuses */}
           <section className="bg-amber-50/50 py-10 px-4">
@@ -294,7 +293,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          <Separator className="opacity-20" />
+          <Separator className="opacity-10" />
 
           {/* Section 5: Offer Section */}
           <section className="bg-white py-10 px-4">
@@ -303,7 +302,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          <Separator className="opacity-20" />
+          <Separator className="opacity-10" />
 
           {/* Section 6: Delivery Info */}
           <section className="bg-slate-50/50 py-10 px-4">
@@ -319,7 +318,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          <Separator className="opacity-20" />
+          <Separator className="opacity-10" />
 
           {/* Section 7: Security Info */}
           <section className="bg-green-50/30 py-10 px-4">
