@@ -13,6 +13,7 @@ import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-
 import { Progress } from '@/components/ui/progress'
 import { Loader2, ArrowRight, Zap, ShieldCheck, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 
 type QuizState = 'QUIZ' | 'LOADING' | 'PRESENTATION'
 
@@ -216,13 +217,19 @@ export const QuizContainer: React.FC = () => {
             <CTAButton />
           </div>
 
+          <Separator className="my-16 opacity-40" />
+
           <div className="mb-2">
             <SampleGallery />
           </div>
           
+          <Separator className="my-16 opacity-40" />
+
           <div className="mb-2">
             <SocialProof />
           </div>
+
+          <Separator className="my-16 opacity-40" />
 
           <div className="mt-16 mb-6 text-center space-y-4 px-4">
             <h3 className="text-[21px] font-headline font-bold text-primary">
@@ -273,9 +280,13 @@ export const QuizContainer: React.FC = () => {
             </div>
           </div>
 
+          <Separator className="my-16 opacity-40" />
+
           <div className="mt-8">
             <OfferSection />
           </div>
+
+          <Separator className="my-16 opacity-40" />
 
           <div className="mt-4 mb-10 text-center space-y-8 px-4 max-w-3xl mx-auto">
             <div className="space-y-4">
@@ -287,6 +298,8 @@ export const QuizContainer: React.FC = () => {
               </p>
             </div>
           </div>
+
+          <Separator className="my-16 opacity-40" />
 
           <div className="mt-16 mb-4 text-center space-y-6 px-4 max-w-3xl mx-auto">
             <h3 className="text-[23px] font-headline font-bold text-primary">
