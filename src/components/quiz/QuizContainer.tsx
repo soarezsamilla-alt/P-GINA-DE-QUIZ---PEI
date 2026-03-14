@@ -248,8 +248,8 @@ export const QuizContainer: React.FC = () => {
                 O que você vai receber hoje:
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
-                  <div className="bg-primary/10 p-4 rounded-full">
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 group">
+                  <div className="bg-primary/10 p-4 rounded-full transition-colors group-hover:bg-primary/20">
                     <FileText className="w-8 h-8 text-primary" />
                   </div>
                   <div className="space-y-2">
@@ -258,8 +258,8 @@ export const QuizContainer: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
-                  <div className="bg-accent/10 p-4 rounded-full">
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all duration-300 hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 group">
+                  <div className="bg-accent/10 p-4 rounded-full transition-colors group-hover:bg-accent/20">
                     <Zap className="w-8 h-8 text-accent" />
                   </div>
                   <div className="space-y-2">
@@ -268,8 +268,8 @@ export const QuizContainer: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all hover:shadow-md">
-                  <div className="bg-green-100 p-4 rounded-full">
+                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-sm flex flex-col items-center gap-4 transition-all duration-300 hover:border-green-600/40 hover:shadow-xl hover:-translate-y-1 group">
+                  <div className="bg-green-100 p-4 rounded-full transition-colors group-hover:bg-green-200">
                     <Printer className="w-8 h-8 text-green-600" />
                   </div>
                   <div className="space-y-2">
