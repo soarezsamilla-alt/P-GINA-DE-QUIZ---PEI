@@ -211,12 +211,12 @@ export const QuizContainer: React.FC = () => {
           <PurchaseNotification />
           
           {/* Section 1: Personalized Description */}
-          <section className="bg-white py-12 px-4">
+          <section className="bg-white py-10 px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="mb-8">
+              <div className="mb-6">
                 <PersonalizedDescription description={personalizedDesc} />
               </div>
-              <div className="mb-4">
+              <div className="mb-2">
                 <CTAButton />
               </div>
             </div>
@@ -225,7 +225,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-20" />
 
           {/* Section 2: Sample Gallery */}
-          <section className="bg-blue-50/50 py-16 px-4">
+          <section className="bg-blue-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto">
               <SampleGallery />
             </div>
@@ -234,7 +234,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-20" />
 
           {/* Section 3: Social Proof */}
-          <section className="bg-purple-50/50 py-16 px-4">
+          <section className="bg-purple-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto">
               <SocialProof />
             </div>
@@ -243,7 +243,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-20" />
 
           {/* Section 4: Bonuses */}
-          <section className="bg-amber-50/50 py-16 px-4">
+          <section className="bg-amber-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-4">
               <h3 className="text-[21px] font-headline font-bold text-primary">
                 Você Merece Bônus <span className="text-accent">EXCLUSIVOS!</span>
@@ -297,7 +297,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-20" />
 
           {/* Section 5: Offer Section */}
-          <section className="bg-white py-16 px-4">
+          <section className="bg-white py-10 px-4">
             <div className="max-w-5xl mx-auto">
               <OfferSection />
             </div>
@@ -306,7 +306,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-20" />
 
           {/* Section 6: Delivery Info */}
-          <section className="bg-slate-50/50 py-16 px-4">
+          <section className="bg-slate-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-8">
               <div className="space-y-4">
                 <h3 className="text-[23px] font-headline font-bold text-primary">
@@ -322,7 +322,7 @@ export const QuizContainer: React.FC = () => {
           <Separator className="opacity-20" />
 
           {/* Section 7: Security Info */}
-          <section className="bg-green-50/30 py-16 px-4">
+          <section className="bg-green-50/30 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-6">
               <h3 className="text-[23px] font-headline font-bold text-primary">
                 É seguro?

@@ -16,8 +16,8 @@ export const SocialProof: React.FC = () => {
   const testimonials = PlaceHolderImages.filter(img => img.id.startsWith('testimonial-'))
 
   return (
-    <div className="py-12 px-4 bg-accent/5 rounded-3xl mb-8">
-      <div className="space-y-4 mb-8">
+    <div className="py-8 px-4 bg-accent/5 rounded-3xl">
+      <div className="space-y-4 mb-6">
         <h3 className="text-[21px] font-headline text-center text-primary font-bold">
           Quem adquire nossos materiais, RECOMENDA!
         </h3>
