@@ -260,7 +260,7 @@ export const QuizContainer: React.FC = () => {
                     <FileText className="w-8 h-8 text-primary" />
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-bold text-primary text-lg">+ de 200 Modelos PEI</h4>
+                    <h4 className="font-bold text-primary text-lg">+ de 200 Modelos PEI e muito mais</h4>
                     <p className="text-sm text-muted-foreground">Material completo, planejado por profissionais e 100% editáveis no Word.</p>
                   </div>
                 </div>
