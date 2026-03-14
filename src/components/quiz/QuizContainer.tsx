@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -143,7 +144,7 @@ export const QuizContainer: React.FC = () => {
         setState('PRESENTATION')
       } catch (error) {
         console.error("Error generating personalized description:", error)
-        setPersonalizedDesc("Dê adeus à dificuldade em elaborar seu PEI! Aqui temos modelos PRONTOS E EDITÁVEIS! Com nossos mais de 200 modelos de PEI 100% editáveis, planejados por profissionais da educação. Você entrega resultados perfeitos, ganha tempo e impressiona coordenadores e pais. Além de serem 100% editáveis você consegue Adaptar para QUALQUER ALUNO.")
+        setPersonalizedDesc("Pare de entregar PEI pela metade e torcer para que NINGUÉM PERCEBA! Receba mais de 200 modelos PRONTOS E EDITÁVEIS! Planejados por profissionais da educação inclusiva. Servem do 1º ao 9º ano. Além de serem editáveis você consegue adaptar para qualquer faixa etária e qualquer formato exigido pela sua escola.")
         setState('PRESENTATION')
       }
     }
