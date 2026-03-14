@@ -351,23 +351,23 @@ export const QuizContainer: React.FC = () => {
             <div className="max-w-3xl mx-auto">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-5 sm:p-6 rounded-2xl border-2 border-primary/20 shadow-xl flex flex-col sm:flex-row items-center gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-primary/10 hover:border-primary group relative overflow-hidden"
+                className="cursor-pointer bg-white p-4 sm:p-5 rounded-2xl border-2 border-primary/20 shadow-xl flex flex-col sm:flex-row items-center gap-4 sm:gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-primary/10 hover:border-primary group relative overflow-hidden"
               >
                 {/* Mobile-focused animated border line */}
                 <div className="absolute inset-0 border border-primary/10 rounded-2xl pointer-events-none sm:hidden" />
                 <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary via-accent to-primary opacity-70" />
                 
-                <div className="bg-blue-100 p-4 rounded-full shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                  <Sparkles className="w-8 h-8 text-primary" />
+                <div className="bg-blue-100 p-3 rounded-full shrink-0 shadow-inner group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-7 h-7 text-primary" />
                 </div>
-                <div className="flex-grow text-center sm:text-left space-y-1">
-                  <h4 className="font-bold text-primary text-[17px] sm:text-lg">Flexibilidade Total</h4>
-                  <p className="text-[13px] sm:text-sm text-muted-foreground leading-snug">
+                <div className="flex-grow text-center sm:text-left space-y-0.5">
+                  <h4 className="font-bold text-primary text-[16px] sm:text-lg leading-tight">Flexibilidade Total</h4>
+                  <p className="text-[12px] sm:text-sm text-muted-foreground leading-snug">
                     Edite 100% do conteúdo no Word e adapte para qualquer série ou diagnóstico específico do seu aluno.
                   </p>
                 </div>
-                <div className="flex items-center gap-1.5 text-accent font-bold text-[14px] sm:text-base whitespace-nowrap group-hover:translate-x-1 transition-transform">
-                  Garantir Acesso <ArrowRight className="w-4 h-4" />
+                <div className="flex items-center gap-1 text-accent font-bold text-[13px] sm:text-base whitespace-nowrap group-hover:translate-x-1 transition-transform">
+                  Garantir Acesso <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
             </div>
