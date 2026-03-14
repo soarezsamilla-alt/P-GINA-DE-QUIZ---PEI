@@ -244,9 +244,15 @@ export const QuizContainer: React.FC = () => {
           {/* New Section: What you will receive - REFINED FOR MOBILE */}
           <section className="bg-slate-50 py-12 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-10">
-              <h3 className="text-[21px] font-headline font-bold text-primary">
-                O que você vai receber hoje:
-              </h3>
+              <div className="space-y-3">
+                <h3 className="text-[21px] font-headline font-bold text-primary">
+                  O que você vai receber hoje:
+                </h3>
+                <p className="text-muted-foreground text-[14px] max-w-xl mx-auto leading-relaxed">
+                  Todo o suporte necessário para otimizar seu tempo e garantir um ensino de qualidade com materiais 100% editáveis.
+                </p>
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/60 to-primary/20" />
