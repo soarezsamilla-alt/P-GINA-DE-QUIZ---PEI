@@ -24,7 +24,7 @@ export const QuizContainer: React.FC = () => {
 
   const quizSteps = [
     {
-      question: "Primeiro, me conta: qual é o seu papel na escola?",
+      question: "Qual é o seu papel na escola?",
       description: "Por favor escolha uma das opções abaixo!",
       options: [
         { label: "Professora de Educação Especial", icon: "👩‍🏫" },
