@@ -345,12 +345,12 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          {/* Adaptability Card - Exactly like the delivery section cards */}
+          {/* Adaptability Card - Exactly like the delivery section cards but wider */}
           <section className="bg-white pt-6 pb-2 px-4">
             <div className="max-w-5xl mx-auto flex justify-center">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[340px] w-full animate-pulse-border"
+                className="cursor-pointer bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-2xl w-full animate-pulse-border"
                 style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
               >
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/60 to-accent/20" />
