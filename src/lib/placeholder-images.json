@@ -65,6 +65,12 @@
       "description": "Novo feedback de satisfação sobre o material",
       "imageUrl": "https://image2url.com/r2/default/images/1773677472313-1e9e2d54-925f-4de4-9ca3-4b2816c8cb03.png",
       "imageHint": "teacher feedback"
+    },
+    {
+      "id": "testimonial-5",
+      "description": "Novo depoimento de sucesso no WhatsApp",
+      "imageUrl": "https://image2url.com/r2/default/images/1773677621142-6ffaf322-fc3c-443a-80ac-788ae3e8051a.jpeg",
+      "imageHint": "whatsapp feedback"
     }
   ]
 }
