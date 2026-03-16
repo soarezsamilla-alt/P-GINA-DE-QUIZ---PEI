@@ -244,7 +244,7 @@ export const QuizContainer: React.FC = () => {
 
           {/* Section: What you will receive today */}
           <section className="bg-slate-50 py-12 px-4">
-            <div className="max-w-5xl mx-auto text-center space-y-10">
+            <div className="max-w-6xl mx-auto text-center space-y-10">
               <div className="space-y-3">
                 <h3 className="text-[21px] font-headline font-bold text-primary">
                   O que você vai receber hoje:
@@ -254,8 +254,8 @@ export const QuizContainer: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 justify-items-center">
-                <div className="bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[320px] w-full">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 justify-items-center">
+                <div className="bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[380px] w-full">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/60 to-primary/20" />
                   <div className="bg-primary/10 p-3 rounded-full transition-colors group-active:bg-primary/20">
                     <FileText className="w-6 h-6 text-primary" />
@@ -266,7 +266,7 @@ export const QuizContainer: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[320px] w-full">
+                <div className="bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[380px] w-full">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/60 to-accent/20" />
                   <div className="bg-accent/10 p-3 rounded-full transition-colors group-active:bg-accent/20">
                     <Zap className="w-6 h-6 text-accent" />
@@ -277,7 +277,7 @@ export const QuizContainer: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[320px] w-full">
+                <div className="bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[380px] w-full">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-600/60 to-green-600/20" />
                   <div className="bg-green-100 p-3 rounded-full transition-colors group-active:bg-green-200">
                     <Printer className="w-6 h-6 text-green-600" />
@@ -347,10 +347,10 @@ export const QuizContainer: React.FC = () => {
 
           {/* Adaptability Card */}
           <section className="bg-white pt-6 pb-2 px-4">
-            <div className="max-w-5xl mx-auto flex justify-center">
+            <div className="max-w-6xl mx-auto flex justify-center">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[320px] w-full animate-pulse-border"
+                className="cursor-pointer bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[380px] w-full animate-pulse-border"
                 style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/60 to-accent/20" />
