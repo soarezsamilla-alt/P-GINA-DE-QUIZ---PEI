@@ -65,6 +65,24 @@
       "description": "Novo feedback de satisfação sobre o material",
       "imageUrl": "https://image2url.com/r2/default/images/1773346335556-855101a3-fb63-4d26-becf-7ce8c7f84b78.webp",
       "imageHint": "teacher feedback"
+    },
+    {
+      "id": "testimonial-5",
+      "description": "Depoimento WhatsApp professora agradecendo agilidade",
+      "imageUrl": "https://picsum.photos/seed/wa5/600/800",
+      "imageHint": "whatsapp chat"
+    },
+    {
+      "id": "testimonial-6",
+      "description": "Feedback WhatsApp sobre economia de tempo",
+      "imageUrl": "https://picsum.photos/seed/wa6/600/800",
+      "imageHint": "whatsapp testimonial"
+    },
+    {
+      "id": "testimonial-7",
+      "description": "Agradecimento de coordenadora pedagógica",
+      "imageUrl": "https://picsum.photos/seed/wa7/600/800",
+      "imageHint": "teacher appreciation"
     }
   ]
 }

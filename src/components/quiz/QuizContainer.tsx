@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -346,27 +347,24 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* New Section: Adaptability Banner Card */}
-          <section className="bg-white pt-8 pb-2 px-4">
-            <div className="max-w-3xl mx-auto">
+          {/* Compact Adaptability Card */}
+          <section className="bg-white py-12 px-4">
+            <div className="max-w-5xl mx-auto flex justify-center">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-4 sm:p-5 rounded-2xl border-2 border-primary/20 shadow-xl flex flex-col sm:flex-row items-center gap-4 sm:gap-6 transition-all duration-300 active:scale-[0.98] hover:shadow-primary/10 hover:border-primary group relative overflow-hidden"
+                className="cursor-pointer bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-sm w-full"
               >
-                {/* Mobile-focused animated border line */}
-                <div className="absolute inset-0 border border-primary/10 rounded-2xl pointer-events-none sm:hidden" />
-                <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary via-accent to-primary opacity-70" />
-                
-                <div className="bg-blue-100 p-3 rounded-full shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                  <Sparkles className="w-7 h-7 text-primary" />
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-accent to-primary opacity-80" />
+                <div className="bg-blue-100 p-4 rounded-full transition-colors group-active:bg-blue-200">
+                  <Sparkles className="w-8 h-8 text-primary" />
                 </div>
-                <div className="flex-grow text-center sm:text-left space-y-0.5">
-                  <h4 className="font-bold text-primary text-[16px] sm:text-lg leading-tight">Flexibilidade Total</h4>
-                  <p className="text-[12px] sm:text-sm text-muted-foreground leading-snug">
+                <div className="space-y-2 text-center">
+                  <h4 className="font-bold text-primary text-lg">Flexibilidade Total</h4>
+                  <p className="text-sm text-muted-foreground">
                     Edite 100% do conteúdo no Word e adapte para qualquer série ou diagnóstico específico do seu aluno.
                   </p>
                 </div>
-                <div className="flex items-center gap-1 text-accent font-bold text-[13px] sm:text-base whitespace-nowrap group-hover:translate-x-1 transition-transform">
+                <div className="flex items-center gap-1 text-accent font-bold text-xs uppercase tracking-wider mt-2 group-hover:translate-x-1 transition-transform">
                   Garantir Acesso <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
