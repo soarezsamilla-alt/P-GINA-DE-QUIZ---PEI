@@ -254,37 +254,37 @@ export const QuizContainer: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/60 to-primary/20" />
-                  <div className="bg-primary/10 p-4 rounded-full transition-colors group-active:bg-primary/20">
-                    <FileText className="w-8 h-8 text-primary" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 justify-items-center">
+                <div className="bg-white p-4 md:p-5 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-3 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[280px] w-full">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/60 to-primary/20" />
+                  <div className="bg-primary/10 p-3 rounded-full transition-colors group-active:bg-primary/20">
+                    <FileText className="w-6 h-6 text-primary" />
                   </div>
-                  <div className="space-y-2">
-                    <h4 className="font-bold text-primary text-lg">+ de 200 Modelos PEI e muito mais</h4>
-                    <p className="text-sm text-muted-foreground">Material completo, planejado por profissionais e 100% editáveis no Word.</p>
-                  </div>
-                </div>
-                
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent/60 to-accent/20" />
-                  <div className="bg-accent/10 p-4 rounded-full transition-colors group-active:bg-accent/20">
-                    <Zap className="w-8 h-8 text-accent" />
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-bold text-primary text-lg">Acesso Digital</h4>
-                    <p className="text-sm text-muted-foreground">Receba o material instantaneamente via E-mail ou WhatsApp logo após a compra.</p>
+                  <div className="space-y-1.5">
+                    <h4 className="font-bold text-primary text-base leading-tight">+ de 200 Modelos PEI e muito mais</h4>
+                    <p className="text-[13px] text-muted-foreground leading-tight">Material completo, planejado por profissionais e 100% editáveis no Word.</p>
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-600/60 to-green-600/20" />
-                  <div className="bg-green-100 p-4 rounded-full transition-colors group-active:bg-green-200">
-                    <Printer className="w-8 h-8 text-green-600" />
+                <div className="bg-white p-4 md:p-5 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-3 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[280px] w-full">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/60 to-accent/20" />
+                  <div className="bg-accent/10 p-3 rounded-full transition-colors group-active:bg-accent/20">
+                    <Zap className="w-6 h-6 text-accent" />
                   </div>
-                  <div className="space-y-2">
-                    <h4 className="font-bold text-primary text-lg">Prontos para Imprimir</h4>
-                    <p className="text-sm text-muted-foreground">Modelos já formatados e organizados, prontos para preencher e imprimir.</p>
+                  <div className="space-y-1.5">
+                    <h4 className="font-bold text-primary text-base leading-tight">Acesso Digital</h4>
+                    <p className="text-[13px] text-muted-foreground leading-tight">Receba o material instantaneamente via E-mail ou WhatsApp logo após a compra.</p>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-4 md:p-5 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-3 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[280px] w-full">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-600/60 to-green-600/20" />
+                  <div className="bg-green-100 p-3 rounded-full transition-colors group-active:bg-green-200">
+                    <Printer className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <h4 className="font-bold text-primary text-base leading-tight">Prontos para Imprimir</h4>
+                    <p className="text-[13px] text-muted-foreground leading-tight">Modelos já formatados e organizados, prontos para preencher e imprimir.</p>
                   </div>
                 </div>
               </div>
@@ -345,21 +345,21 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          {/* Adaptability Card - Exactly like the delivery section cards but wider */}
+          {/* Adaptability Card - Reduzido e compacto */}
           <section className="bg-white pt-6 pb-2 px-4">
             <div className="max-w-5xl mx-auto flex justify-center">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-2xl w-full animate-pulse-border"
+                className="cursor-pointer bg-white p-4 md:p-5 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-3 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[400px] w-full animate-pulse-border"
                 style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
               >
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/60 to-accent/20" />
-                <div className="bg-accent/10 p-4 rounded-full transition-colors group-active:bg-accent/20">
-                  <Sparkles className="w-8 h-8 text-accent" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/60 to-accent/20" />
+                <div className="bg-accent/10 p-3 rounded-full transition-colors group-active:bg-accent/20">
+                  <Sparkles className="w-6 h-6 text-accent" />
                 </div>
-                <div className="space-y-2 text-center">
-                  <h4 className="font-bold text-primary text-lg">Flexibilidade Total</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                <div className="space-y-1 text-center">
+                  <h4 className="font-bold text-primary text-base">Flexibilidade Total</h4>
+                  <p className="text-[13px] text-muted-foreground leading-snug px-2">
                     Edite 100% no Word e adapte para qualquer série ou diagnóstico.
                   </p>
                 </div>
