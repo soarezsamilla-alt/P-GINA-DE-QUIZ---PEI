@@ -347,34 +347,32 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Compact Adaptability Card */}
-          <section className="bg-white py-12 px-4">
+          {/* Compact Adaptability Card - Closer to the Offer */}
+          <section className="bg-white pt-8 pb-4 px-4">
             <div className="max-w-5xl mx-auto flex justify-center">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-sm w-full"
+                className="cursor-pointer bg-white p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-3 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[320px] w-full"
               >
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-accent to-primary opacity-80" />
-                <div className="bg-blue-100 p-4 rounded-full transition-colors group-active:bg-blue-200">
-                  <Sparkles className="w-8 h-8 text-primary" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-80" />
+                <div className="bg-blue-100 p-3 rounded-full transition-colors group-active:bg-blue-200">
+                  <Sparkles className="w-6 h-6 text-primary" />
                 </div>
-                <div className="space-y-2 text-center">
-                  <h4 className="font-bold text-primary text-lg">Flexibilidade Total</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Edite 100% do conteúdo no Word e adapte para qualquer série ou diagnóstico específico do seu aluno.
+                <div className="space-y-1 text-center">
+                  <h4 className="font-bold text-primary text-md">Flexibilidade Total</h4>
+                  <p className="text-[13px] text-muted-foreground leading-snug">
+                    Edite 100% no Word e adapte para qualquer série ou diagnóstico do seu aluno.
                   </p>
                 </div>
-                <div className="flex items-center gap-1 text-accent font-bold text-xs uppercase tracking-wider mt-2 group-hover:translate-x-1 transition-transform">
-                  Garantir Acesso <ArrowRight className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-1 text-accent font-bold text-[10px] uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                  Garantir Acesso <ArrowRight className="w-3 h-3" />
                 </div>
               </div>
             </div>
           </section>
 
-          <Separator className="opacity-10" />
-
           {/* Section 5: Offer Section */}
-          <section className="bg-white py-10 px-4">
+          <section className="bg-white py-4 px-4">
             <div className="max-w-5xl mx-auto">
               < OfferSection />
             </div>
