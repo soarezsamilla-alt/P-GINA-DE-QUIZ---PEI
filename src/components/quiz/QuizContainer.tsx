@@ -345,26 +345,23 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          {/* Compact Adaptability Card - Closer and Pulsating */}
+          {/* Adaptability Card - Exactly like the delivery section cards */}
           <section className="bg-white pt-6 pb-2 px-4">
             <div className="max-w-5xl mx-auto flex justify-center">
               <div 
                 onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-3 rounded-2xl border-2 border-accent/20 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[280px] w-full animate-pulse-border"
+                className="cursor-pointer bg-white p-6 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-4 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[340px] w-full animate-pulse-border"
                 style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
               >
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-80" />
-                <div className="bg-blue-100 p-2 rounded-full transition-colors group-active:bg-blue-200">
-                  <Sparkles className="w-5 h-5 text-primary" />
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/60 to-accent/20" />
+                <div className="bg-accent/10 p-4 rounded-full transition-colors group-active:bg-accent/20">
+                  <Sparkles className="w-8 h-8 text-accent" />
                 </div>
-                <div className="space-y-0.5 text-center">
-                  <h4 className="font-bold text-primary text-sm">Flexibilidade Total</h4>
-                  <p className="text-[12px] text-muted-foreground leading-tight">
+                <div className="space-y-2 text-center">
+                  <h4 className="font-bold text-primary text-lg">Flexibilidade Total</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     Edite 100% no Word e adapte para qualquer série ou diagnóstico.
                   </p>
-                </div>
-                <div className="flex items-center gap-1 text-accent font-bold text-[9px] uppercase tracking-wider group-hover:translate-x-1 transition-transform">
-                  Garantir Acesso <ArrowRight className="w-3 h-3" />
                 </div>
               </div>
             </div>
