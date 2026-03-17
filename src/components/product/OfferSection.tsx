@@ -49,7 +49,8 @@ export const OfferSection: React.FC = () => {
     "Incluindo PEI para deficiências múltiplas",
     "PEI Autismo Ed. Infantil",
     "Relatórios AEE",
-    "Acesso a futuras atualizações"
+    "Acesso a futuras atualizações",
+    "Suporte prioritário via WhatsApp"
   ]
 
   return (
