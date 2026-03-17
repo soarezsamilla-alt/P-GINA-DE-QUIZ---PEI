@@ -124,6 +124,8 @@ export const OfferSection: React.FC = () => {
                       <>
                         Mais de <span className="text-[#2c293d] font-bold">200 Modelos</span> de PEI prontos e editáveis
                       </>
+                    ) : benefit === "Suporte prioritário via WhatsApp" ? (
+                      <span className="text-primary font-bold">Suporte prioritário via WhatsApp</span>
                     ) : (
                       benefit
                     )}
