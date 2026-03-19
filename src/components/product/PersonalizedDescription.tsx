@@ -44,7 +44,7 @@ export const PersonalizedDescription: React.FC<PersonalizedDescriptionProps> = (
     <div className="space-y-8 animate-in fade-in duration-700">
       <Card className="border-none shadow-lg bg-white/80 backdrop-blur-sm overflow-hidden">
         <CardHeader className="bg-primary text-primary-foreground p-6">
-          <CardTitle className="text-2xl font-headline text-center">
+          <CardTitle className="text-xl font-headline text-center">
             Tudo pronto Professora! O material ideal para você foi preparado!
           </CardTitle>
         </CardHeader>
