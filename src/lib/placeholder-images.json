@@ -33,7 +33,7 @@
     {
       "id": "pei-sample-6",
       "description": "Planejamento de aula para educação especial",
-      "imageUrl": "https://image2url.com/r2/default/images/1773941483597-ad0672cb-3506-4fe6-9033-1b6bf758a6b2.png",
+      "imageUrl": "https://image2url.com/r2/default/images/1773941902197-38111fda-0159-465a-822e-6a9dd842ae07.png",
       "imageHint": "lesson planning"
     },
     {
@@ -41,6 +41,12 @@
       "description": "Ficha de avaliação do aluno",
       "imageUrl": "https://picsum.photos/seed/pei7/600/800",
       "imageHint": "student assessment"
+    },
+    {
+      "id": "pei-sample-8",
+      "description": "Plano de atendimento individualizado detalhado",
+      "imageUrl": "https://picsum.photos/seed/pei8/600/800",
+      "imageHint": "detailed planning"
     },
     {
       "id": "testimonial-1",
