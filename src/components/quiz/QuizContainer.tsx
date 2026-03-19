@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -9,6 +8,7 @@ import { SampleGallery } from '@/components/product/SampleGallery'
 import { SocialProof } from '@/components/product/SocialProof'
 import { OfferSection } from '@/components/product/OfferSection'
 import { PurchaseNotification } from '@/components/product/PurchaseNotification'
+import { LiveVisitors } from '@/components/product/LiveVisitors'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
 import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock, Printer, Users } from 'lucide-react'
@@ -180,6 +180,7 @@ export const QuizContainer: React.FC = () => {
     <div className="min-h-screen py-10 px-0">
       {state === 'QUIZ' && (
         <div className="max-w-md mx-auto space-y-8 px-4">
+          <LiveVisitors />
           <div className="space-y-2">
             <div className="flex justify-between text-xs font-bold text-primary/60 px-1">
               <span>Etapa {step + 1} de {quizSteps.length}</span>
