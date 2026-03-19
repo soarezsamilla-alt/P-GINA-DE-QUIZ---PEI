@@ -51,7 +51,7 @@ export const OfferSection: React.FC = () => {
     "Relatórios AEE",
     "Acesso a futuras atualizações",
     "Suporte prioritário via WhatsApp",
-    "Acesso ao grupo de WhatsApp Clube da Inclusão"
+    "Acesso ao WhatsApp Clube da Inclusão"
   ]
 
   return (
@@ -127,8 +127,8 @@ export const OfferSection: React.FC = () => {
                       </>
                     ) : benefit === "Suporte prioritário via WhatsApp" ? (
                       <span className="text-primary font-bold">Suporte prioritário via WhatsApp</span>
-                    ) : benefit === "Acesso ao grupo de WhatsApp Clube da Inclusão" ? (
-                      <span className="text-accent font-bold">Acesso ao grupo de WhatsApp Clube da Inclusão</span>
+                    ) : benefit === "Acesso ao WhatsApp Clube da Inclusão" ? (
+                      <span className="text-accent font-bold">Acesso ao WhatsApp Clube da Inclusão</span>
                     ) : (
                       benefit
                     )}
