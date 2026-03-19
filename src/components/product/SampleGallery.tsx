@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/carousel"
 
 export const SampleGallery: React.FC = () => {
-  const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 6)
+  const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 8)
 
   return (
     <div className="py-6 px-4 bg-secondary/30 rounded-3xl">

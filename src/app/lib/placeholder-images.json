@@ -44,6 +44,12 @@
       "imageHint": "student assessment"
     },
     {
+      "id": "pei-sample-8",
+      "description": "Plano de atendimento individualizado detalhado",
+      "imageUrl": "https://picsum.photos/seed/pei8/600/800",
+      "imageHint": "detailed planning"
+    },
+    {
       "id": "testimonial-1",
       "description": "Depoimento de professora satisfeita no WhatsApp",
       "imageUrl": "https://image2url.com/r2/default/images/1773676800405-d3cadb2d-d305-460d-926c-82acc1360e0d.jpeg",
