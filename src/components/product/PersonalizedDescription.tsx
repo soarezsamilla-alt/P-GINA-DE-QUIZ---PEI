@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -46,7 +45,7 @@ export const PersonalizedDescription: React.FC<PersonalizedDescriptionProps> = (
       <Card className="border-none shadow-lg bg-white/80 backdrop-blur-sm overflow-hidden">
         <CardHeader className="bg-primary text-primary-foreground p-6">
           <CardTitle className="text-2xl font-headline text-center">
-            Tudo pronto, material preparado!
+            Tudo pronto Professora! O material ideal para você foi preparado!
           </CardTitle>
         </CardHeader>
         <CardContent className="p-8 flex justify-center">
