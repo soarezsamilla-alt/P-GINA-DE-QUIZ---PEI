@@ -180,7 +180,6 @@ export const QuizContainer: React.FC = () => {
     <div className="min-h-screen py-10 px-0">
       {state === 'QUIZ' && (
         <div className="max-w-md mx-auto space-y-8 px-4">
-          <LiveVisitors />
           <div className="space-y-2">
             <div className="flex justify-between text-xs font-bold text-primary/60 px-1">
               <span>Etapa {step + 1} de {quizSteps.length}</span>
@@ -214,6 +213,7 @@ export const QuizContainer: React.FC = () => {
           {/* Section 1: Personalized Description */}
           <section className="bg-white pt-6 pb-6 px-4">
             <div className="max-w-5xl mx-auto">
+              <LiveVisitors />
               <div className="mb-6">
                 <PersonalizedDescription description={personalizedDesc} />
               </div>
