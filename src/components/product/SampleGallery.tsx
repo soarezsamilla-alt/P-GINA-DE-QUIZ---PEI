@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/carousel"
 
 export const SampleGallery: React.FC = () => {
-  // Aumentado o slice para 11 para incluir a nova imagem
-  const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 11)
+  // Aumentado o slice para 12 para incluir a nova imagem
+  const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 12)
 
   return (
     <div className="py-6 px-4 bg-secondary/30 rounded-3xl overflow-hidden">
