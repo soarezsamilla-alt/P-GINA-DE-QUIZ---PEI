@@ -180,12 +180,23 @@ export const QuizContainer: React.FC = () => {
     <div className="min-h-screen py-10 px-0">
       {state === 'QUIZ' && (
         <div className="max-w-md mx-auto space-y-8 px-4">
-          <div className="space-y-2">
-            <div className="flex justify-between text-xs font-bold text-primary/60 px-1">
-              <span>Etapa {step + 1} de {quizSteps.length}</span>
-              <span>{Math.round(progress)}%</span>
+          <div className="space-y-3">
+            <div className="flex justify-between items-end mb-1">
+              <div className="flex flex-col">
+                <span className="text-[10px] uppercase tracking-widest font-black text-primary/40 leading-none mb-1">Progresso</span>
+                <span className="text-sm font-bold text-primary">Etapa {step + 1} de {quizSteps.length}</span>
+              </div>
+              <div className="bg-primary/10 px-2 py-0.5 rounded-full">
+                <span className="text-xs font-black text-primary tracking-tighter">{Math.round(progress)}%</span>
+              </div>
             </div>
-            <Progress value={progress} className="h-2" />
+            <div className="relative h-2.5 w-full bg-primary/10 rounded-full overflow-hidden shadow-inner">
+               <div 
+                className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] transition-all duration-500 ease-out animate-shimmer" 
+                style={{ width: `${progress}%` }}
+               />
+               <div className="absolute top-0 left-0 w-full h-full bg-white/10 pointer-events-none" />
+            </div>
           </div>
           <QuizStep 
             question={quizSteps[step].question}
@@ -198,7 +209,10 @@ export const QuizContainer: React.FC = () => {
 
       {state === 'LOADING' && (
         <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 text-center px-4">
-          <Loader2 className="w-16 h-16 animate-spin text-accent" />
+          <div className="relative">
+            <Loader2 className="w-16 h-16 animate-spin text-accent" />
+            <Sparkles className="absolute -top-2 -right-2 w-6 h-6 text-yellow-400 animate-pulse" />
+          </div>
           <div className="space-y-2">
             <h2 className="text-2xl font-headline font-bold text-primary">Preparando seus modelos...</h2>
             <p className="text-muted-foreground">Analisando suas respostas para criar a oferta perfeita.</p>

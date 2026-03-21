@@ -1,4 +1,3 @@
-
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -94,11 +93,16 @@ export default {
           '70%': { boxShadow: '0 0 0 10px hsl(var(--accent) / 0)' },
           '100%': { boxShadow: '0 0 0 0 hsl(var(--accent) / 0)' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '100% 0' },
+          '100%': { backgroundPosition: '-100% 0' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-border': 'pulse-border 2s infinite',
+        shimmer: 'shimmer 3s infinite linear',
       },
     },
   },
