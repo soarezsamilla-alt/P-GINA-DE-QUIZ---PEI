@@ -15,8 +15,8 @@ export const SampleGallery: React.FC = () => {
   const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 12)
 
   return (
-    <div className="py-6 px-4 bg-secondary/30 rounded-3xl overflow-hidden">
-      <div className="space-y-3 mb-6">
+    <div className="py-8 px-4 bg-secondary/30 rounded-3xl overflow-hidden">
+      <div className="space-y-3 mb-8">
         <h3 className="text-2xl font-headline text-center text-primary font-bold">
           Veja abaixo algumas amostras:
         </h3>
@@ -25,7 +25,7 @@ export const SampleGallery: React.FC = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative">
         <Carousel 
           opts={{
             align: "start",
@@ -42,10 +42,10 @@ export const SampleGallery: React.FC = () => {
           ]}
           className="w-full pointer-events-none sm:pointer-events-auto"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-4 md:-ml-6">
             {samples.map((sample) => (
-              <CarouselItem key={sample.id} className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
-                <div className="relative group overflow-hidden rounded-2xl shadow-lg bg-white border-2 border-white transition-all duration-300">
+              <CarouselItem key={sample.id} className="pl-4 md:pl-6 basis-[70%] md:basis-1/3 lg:basis-1/4">
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl bg-white border-2 border-white transition-all duration-300">
                   <div className="relative aspect-[2/3] overflow-hidden">
                     <Image 
                       src={sample.imageUrl} 
@@ -55,7 +55,7 @@ export const SampleGallery: React.FC = () => {
                       data-ai-hint={sample.imageHint}
                     />
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <span className="bg-destructive/80 text-white px-3 py-1 rounded-full font-bold text-xs uppercase tracking-widest -rotate-12 shadow-lg border border-white">
+                      <span className="bg-destructive/80 text-white px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-widest -rotate-12 shadow-lg border-2 border-white">
                         Amostra
                       </span>
                     </div>
