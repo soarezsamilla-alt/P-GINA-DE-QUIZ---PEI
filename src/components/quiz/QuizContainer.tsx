@@ -160,6 +160,13 @@ export const QuizContainer: React.FC = () => {
 
   const progress = ((step + 1) / quizSteps.length) * 100
 
+  // Função para definir a cor da barra baseada no progresso
+  const getProgressColorClass = () => {
+    if (progress < 40) return 'from-primary via-primary/80 to-primary/60';
+    if (progress < 75) return 'from-primary via-accent to-accent/80';
+    return 'from-accent via-destructive/80 to-destructive animate-pulse';
+  }
+
   const CTAButton = () => (
     <div className="flex justify-center px-4">
       <Button 
@@ -190,12 +197,13 @@ export const QuizContainer: React.FC = () => {
                 <span className="text-xs font-black text-primary tracking-tighter">{Math.round(progress)}%</span>
               </div>
             </div>
-            <div className="relative h-2.5 w-full bg-primary/10 rounded-full overflow-hidden shadow-inner">
+            <div className="relative h-3 w-full bg-primary/5 rounded-full overflow-hidden shadow-inner border border-primary/10">
                <div 
-                className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] transition-all duration-500 ease-out animate-shimmer" 
+                className={`absolute top-0 left-0 h-full bg-gradient-to-r ${getProgressColorClass()} bg-[length:200%_100%] transition-all duration-700 ease-in-out shadow-[0_0_15px_rgba(255,255,255,0.4)]`} 
                 style={{ width: `${progress}%` }}
-               />
-               <div className="absolute top-0 left-0 w-full h-full bg-white/10 pointer-events-none" />
+               >
+                 <div className="absolute inset-0 bg-white/20 animate-shimmer pointer-events-none" />
+               </div>
             </div>
           </div>
           <QuizStep 
@@ -399,7 +407,7 @@ export const QuizContainer: React.FC = () => {
                   Como vou receber meu material?
                 </h3>
                 <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent/10 font-medium shadow-sm">
-                  Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> ou <span className="text-accent font-bold">Whatsapp</span>.
+                  Clicando no botão, você será redirecionado para a página de pagamento, e após confirmação receberá acesso imediato no seu <span className="text-accent font-bold">E-mail</span> or <span className="text-accent font-bold">Whatsapp</span>.
                 </p>
               </div>
             </div>
