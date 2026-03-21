@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
-import Autoplay from 'embla-carousel-autoplay'
+import AutoScroll from 'embla-carousel-auto-scroll'
 import {
   Carousel,
   CarouselContent,
@@ -29,10 +29,13 @@ export const SampleGallery: React.FC = () => {
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
           }}
           plugins={[
-            Autoplay({
-              delay: 3000,
+            AutoScroll({
+              speed: 1,
+              stopOnInteraction: false,
+              stopOnMouseEnter: false,
             }),
           ]}
           className="w-full"
@@ -40,7 +43,7 @@ export const SampleGallery: React.FC = () => {
           <CarouselContent className="-ml-2 md:-ml-4">
             {samples.map((sample) => (
               <CarouselItem key={sample.id} className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
-                <div className="relative group overflow-hidden rounded-2xl shadow-lg bg-white border-2 border-white">
+                <div className="relative group overflow-hidden rounded-2xl shadow-lg bg-white border-2 border-white transition-all duration-300">
                   <div className="relative aspect-[2/3] overflow-hidden">
                     <Image 
                       src={sample.imageUrl} 
