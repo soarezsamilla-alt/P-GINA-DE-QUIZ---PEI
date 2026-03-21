@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -12,7 +11,7 @@ import {
 } from "@/components/ui/carousel"
 
 export const SampleGallery: React.FC = () => {
-  // Aumentado o slice para 12 para incluir a nova imagem
+  // Utilizamos as 12 imagens de amostra configuradas
   const samples = PlaceHolderImages.filter(img => img.id.startsWith('pei-sample-')).slice(0, 12)
 
   return (
@@ -31,16 +30,17 @@ export const SampleGallery: React.FC = () => {
           opts={{
             align: "start",
             loop: true,
-            dragFree: true,
+            watchDrag: false, // Desabilita o arraste manual para que o usuário não consiga parar a rolagem
           }}
           plugins={[
             AutoScroll({
               speed: 1,
-              stopOnInteraction: false,
-              stopOnMouseEnter: false,
+              stopOnInteraction: false, // Garante que não pare ao clicar/tocar
+              stopOnMouseEnter: false,  // Garante que não pare ao passar o mouse
+              stopOnFocusIn: false      // Garante que não pare ao ganhar foco
             }),
           ]}
-          className="w-full"
+          className="w-full pointer-events-none sm:pointer-events-auto"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {samples.map((sample) => (
@@ -51,7 +51,7 @@ export const SampleGallery: React.FC = () => {
                       src={sample.imageUrl} 
                       alt={sample.description}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover"
                       data-ai-hint={sample.imageHint}
                     />
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
