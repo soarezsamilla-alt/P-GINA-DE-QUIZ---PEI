@@ -69,8 +69,14 @@
     {
       "id": "pei-sample-12",
       "description": "Amostra de planejamento PEI inclusivo",
-      "imageUrl": "https://image2url.com/r2/default/images/1774100896380-77d0e50b-ed0e-4fa1-aad0-da556203932e.jfif",
+      "imageUrl": "https://image2url.com/r2/default/images/1774100896380-77d0e50b-ed0e-4fa1-aad0-da555203932e.jfif",
       "imageHint": "inclusive document"
+    },
+    {
+      "id": "bncc-seal",
+      "description": "Selo de compatibilidade BNCC",
+      "imageUrl": "https://picsum.photos/seed/bncc-seal/400/400",
+      "imageHint": "bncc seal"
     },
     {
       "id": "testimonial-1",
