@@ -433,14 +433,14 @@ export const QuizContainer: React.FC = () => {
               <p className="text-foreground text-[15px] leading-relaxed max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-green-200 font-medium shadow-sm">
                 Sim! Seus dados estão <span className="text-green-600 font-bold">100% seguros</span>. Utilizamos <span className="text-primary font-bold">criptografia de ponta a ponta</span> e as plataformas de pagamento mais confiáveis do mercado para garantir uma transação tranquila e protegida.
               </p>
-              <div className="flex justify-center items-center gap-8 pt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+              <div className="flex justify-center items-center gap-6 pt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
                  <div className="flex flex-col items-center gap-1.5">
-                   <ShieldCheck className="w-8 h-8 text-green-600" />
-                   <span className="text-accent font-bold uppercase tracking-tighter">Pagamento Seguro</span>
+                   <ShieldCheck className="w-6 h-6 text-green-600" />
+                   <span className="text-accent font-bold uppercase tracking-tighter text-[10px]">Pagamento Seguro</span>
                  </div>
                  <div className="flex flex-col items-center gap-1.5">
-                   <Lock className="w-8 h-8 text-primary" />
-                   <span className="text-accent font-bold uppercase tracking-tighter">SSL Criptografado</span>
+                   <Lock className="w-6 h-6 text-primary" />
+                   <span className="text-accent font-bold uppercase tracking-tighter text-[10px]">SSL Criptografado</span>
                  </div>
               </div>
             </div>
