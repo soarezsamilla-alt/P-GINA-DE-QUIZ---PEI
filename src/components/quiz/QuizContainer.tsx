@@ -365,22 +365,38 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          <section className="bg-white pt-6 pb-2 px-4">
-            <div className="max-w-6xl mx-auto flex justify-center">
-              <div 
-                onClick={scrollToOffer}
-                className="cursor-pointer bg-white p-3 md:p-4 rounded-2xl border border-border/50 shadow-md flex flex-col items-center gap-2 transition-all duration-300 active:scale-[0.98] md:hover:scale-105 group relative overflow-hidden max-w-[380px] w-full animate-pulse-border"
-                style={{ '--accent-rgb': '88, 56, 236' } as React.CSSProperties}
-              >
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/60 to-accent/20" />
-                <div className="bg-accent/10 p-3 rounded-full transition-colors group-active:bg-accent/20">
-                  <Sparkles className="w-6 h-6 text-accent" />
+          {/* BNCC Section - Integrated here as requested */}
+          <section className="bg-white py-12 px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              {bnccImage && (
+                <div className="relative w-32 h-32 mx-auto mb-4 animate-in zoom-in duration-700">
+                  <Image 
+                    src={bnccImage.imageUrl} 
+                    alt={bnccImage.description}
+                    fill
+                    className="object-contain"
+                    data-ai-hint={bnccImage.imageHint}
+                  />
                 </div>
-                <div className="space-y-1 text-center">
-                  <h4 className="font-bold text-primary text-base">Flexibilidade Total</h4>
-                  <p className="text-[13px] text-muted-foreground leading-snug px-2">
-                    Edite 100% no Word e adapte para qualquer série ou diagnóstico.
+              )}
+              <div className="space-y-4">
+                <h3 className="text-[22px] font-headline font-black text-primary uppercase tracking-tight">
+                  Compatível com BNCC
+                </h3>
+                <div className="bg-primary/5 p-6 rounded-3xl border border-primary/10 shadow-sm">
+                  <p className="text-[16px] md:text-[18px] text-foreground font-medium leading-relaxed max-w-2xl mx-auto">
+                    <span className="text-primary font-bold">Planejamento de inclusão seguro e oficial!</span> Leve +200 modelos de PEI alinhados à BNCC, prontos para você editar no Word e usar na sala de aula amanhã mesmo.
                   </p>
+                </div>
+                <div className="flex justify-center gap-4 pt-2">
+                  <div className="flex items-center gap-2 text-[11px] font-black uppercase text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-100">
+                    <CheckCircle className="w-3.5 h-3.5" />
+                    100% Atualizado
+                  </div>
+                  <div className="flex items-center gap-2 text-[11px] font-black uppercase text-primary bg-primary/5 px-3 py-1 rounded-full border border-primary/10">
+                    <Zap className="w-3.5 h-3.5" />
+                    Edição Rápida
+                  </div>
                 </div>
               </div>
             </div>
@@ -426,45 +442,6 @@ export const QuizContainer: React.FC = () => {
                    <Lock className="w-8 h-8 text-primary" />
                    <span className="text-accent font-bold uppercase tracking-tighter">SSL Criptografado</span>
                  </div>
-              </div>
-            </div>
-          </section>
-
-          <Separator className="opacity-10" />
-
-          {/* BNCC Section */}
-          <section className="bg-white py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
-              {bnccImage && (
-                <div className="relative w-32 h-32 mx-auto mb-4 animate-in zoom-in duration-700">
-                  <Image 
-                    src={bnccImage.imageUrl} 
-                    alt={bnccImage.description}
-                    fill
-                    className="object-contain"
-                    data-ai-hint={bnccImage.imageHint}
-                  />
-                </div>
-              )}
-              <div className="space-y-4">
-                <h3 className="text-[22px] font-headline font-black text-primary uppercase tracking-tight">
-                  Compatível com BNCC
-                </h3>
-                <div className="bg-primary/5 p-6 rounded-3xl border border-primary/10 shadow-sm">
-                  <p className="text-[16px] md:text-[18px] text-foreground font-medium leading-relaxed max-w-2xl mx-auto">
-                    <span className="text-primary font-bold">Planejamento de inclusão seguro e oficial!</span> Leve +200 modelos de PEI alinhados à BNCC, prontos para você editar no Word e usar na sala de aula amanhã mesmo.
-                  </p>
-                </div>
-                <div className="flex justify-center gap-4 pt-2">
-                  <div className="flex items-center gap-2 text-[11px] font-black uppercase text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-100">
-                    <CheckCircle className="w-3.5 h-3.5" />
-                    100% Atualizado
-                  </div>
-                  <div className="flex items-center gap-2 text-[11px] font-black uppercase text-primary bg-primary/5 px-3 py-1 rounded-full border border-primary/10">
-                    <Zap className="w-3.5 h-3.5" />
-                    Edição Rápida
-                  </div>
-                </div>
               </div>
             </div>
           </section>
