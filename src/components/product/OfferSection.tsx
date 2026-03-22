@@ -43,6 +43,7 @@ export const OfferSection: React.FC = () => {
 
   const benefits = [
     "Mais de 200 Modelos de PEI prontos e editáveis",
+    "160 Atividades Lúdicas alinhadas à BNCC",
     "Combo Ed. Especial com materiais extras",
     "Acesso aos modelos fundamentais",
     "Todos os 6 Bônus",
@@ -124,6 +125,10 @@ export const OfferSection: React.FC = () => {
                     ) : benefit === "Mais de 200 Modelos de PEI prontos e editáveis" ? (
                       <>
                         Mais de <span className="text-[#2c293d] font-bold">200 Modelos</span> de PEI prontos e editáveis
+                      </>
+                    ) : benefit === "160 Atividades Lúdicas alinhadas à BNCC" ? (
+                      <>
+                        <span className="text-[#2c293d] font-bold">160 Atividades Lúdicas</span> alinhadas à <span className="text-primary font-bold">BNCC</span>
                       </>
                     ) : benefit === "Suporte prioritário via WhatsApp" ? (
                       <span className="text-primary font-bold">Suporte prioritário via WhatsApp</span>
