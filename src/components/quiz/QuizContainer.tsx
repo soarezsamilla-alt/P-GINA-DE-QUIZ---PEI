@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -448,7 +447,7 @@ export const QuizContainer: React.FC = () => {
                 </div>
               )}
               <div className="space-y-4">
-                <h3 className="text-[24px] font-headline font-black text-primary uppercase tracking-tight">
+                <h3 className="text-[22px] font-headline font-black text-primary uppercase tracking-tight">
                   Compatível com BNCC
                 </h3>
                 <div className="bg-primary/5 p-6 rounded-3xl border border-primary/10 shadow-sm">
