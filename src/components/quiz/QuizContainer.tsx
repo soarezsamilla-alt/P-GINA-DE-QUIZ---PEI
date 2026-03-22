@@ -385,7 +385,7 @@ export const QuizContainer: React.FC = () => {
                 </h3>
                 <div className="bg-primary/5 p-6 rounded-3xl border border-primary/10 shadow-sm">
                   <p className="text-[16px] md:text-[18px] text-foreground font-medium leading-relaxed max-w-2xl mx-auto">
-                    <span className="text-primary font-bold">Planejamento de inclusão seguro e oficial!</span> Leve +200 modelos de PEI alinhados à BNCC, prontos para você editar no Word e usar na sala de aula amanhã mesmo.
+                    <span className="text-primary font-bold">Planejamento de inclusão seguro e oficial!</span> Leve +200 modelos de PEI também alinhados à BNCC, prontos para você editar no Word e usar na sala de aula amanhã mesmo.
                   </p>
                 </div>
                 <div className="flex justify-center gap-4 pt-2">
