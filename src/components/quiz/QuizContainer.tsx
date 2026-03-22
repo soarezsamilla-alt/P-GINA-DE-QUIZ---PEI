@@ -367,9 +367,9 @@ export const QuizContainer: React.FC = () => {
 
           {/* BNCC Section - Integrated here as requested */}
           <section className="bg-white py-12 px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <div className="max-w-4xl mx-auto text-center space-y-2">
               {bnccImage && (
-                <div className="relative w-32 h-32 mx-auto mb-4 animate-in zoom-in duration-700">
+                <div className="relative w-32 h-32 mx-auto animate-in zoom-in duration-700">
                   <Image 
                     src={bnccImage.imageUrl} 
                     alt={bnccImage.description}
