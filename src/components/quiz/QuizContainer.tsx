@@ -421,11 +421,11 @@ export const QuizContainer: React.FC = () => {
               <div className="flex justify-center items-center gap-8 pt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
                  <div className="flex flex-col items-center gap-1.5">
                    <ShieldCheck className="w-8 h-8 text-green-600" />
-                   <span className="text-[10px] font-bold uppercase tracking-tighter">Pagamento Seguro</span>
+                   <span className="text-accent font-bold uppercase tracking-tighter">Pagamento Seguro</span>
                  </div>
                  <div className="flex flex-col items-center gap-1.5">
                    <Lock className="w-8 h-8 text-primary" />
-                   <span className="text-[10px] font-bold uppercase tracking-tighter">SSL Criptografado</span>
+                   <span className="text-accent font-bold uppercase tracking-tighter">SSL Criptografado</span>
                  </div>
               </div>
             </div>
@@ -469,16 +469,6 @@ export const QuizContainer: React.FC = () => {
               </div>
             </div>
           </section>
-
-          {/* Final Footer Spacer/Info */}
-          <footer className="bg-slate-900 text-slate-400 py-8 px-4 text-center">
-            <div className="max-w-5xl mx-auto space-y-4">
-              <p className="text-[11px] uppercase tracking-widest font-bold">PEI Navigator © {new Date().getFullYear()}</p>
-              <p className="text-[10px] max-w-lg mx-auto leading-tight opacity-50">
-                Este produto não garante a aprovação automática de alunos, mas oferece ferramentas profissionais para auxiliar no processo de inclusão escolar conforme as diretrizes da BNCC.
-              </p>
-            </div>
-          </footer>
         </div>
       )}
     </div>
