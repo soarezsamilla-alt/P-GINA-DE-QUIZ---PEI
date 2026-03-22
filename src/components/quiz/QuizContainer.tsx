@@ -385,7 +385,7 @@ export const QuizContainer: React.FC = () => {
                 </h3>
                 <div className="bg-primary/5 p-6 rounded-3xl border border-primary/10 shadow-sm">
                   <p className="text-[16px] md:text-[18px] text-foreground font-medium leading-relaxed max-w-2xl mx-auto">
-                    Alinhado à BNCC: Atividades e planejamentos baseados nas diretrizes nacionais, prontos para uso e adaptação imediata em sala de aula.
+                    <span className="text-primary font-bold">Alinhado à BNCC:</span> Atividades e planejamentos baseados nas diretrizes nacionais, prontos para uso e adaptação imediata em sala de aula.
                   </p>
                 </div>
                 <div className="flex justify-center gap-4 pt-2">
