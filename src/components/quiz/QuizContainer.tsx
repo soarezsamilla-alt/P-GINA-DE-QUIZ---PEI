@@ -365,7 +365,7 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          {/* BNCC Section - Integrated here as requested */}
+          {/* BNCC Section */}
           <section className="bg-white py-12 px-4">
             <div className="max-w-4xl mx-auto text-center space-y-2">
               {bnccImage && (
@@ -385,7 +385,7 @@ export const QuizContainer: React.FC = () => {
                 </h3>
                 <div className="bg-primary/5 p-6 rounded-3xl border border-primary/10 shadow-sm">
                   <p className="text-[16px] md:text-[18px] text-foreground font-medium leading-relaxed max-w-2xl mx-auto">
-                    <span className="text-primary font-bold">Planejamento de inclusão seguro e oficial!</span> Leve +200 modelos de PEI também alinhados à BNCC, prontos para você editar no Word e usar na sala de aula amanhã mesmo.
+                    Alinhado à BNCC: Atividades e planejamentos baseados nas diretrizes nacionais, prontos para uso e adaptação imediata em sala de aula.
                   </p>
                 </div>
                 <div className="flex justify-center gap-4 pt-2">
