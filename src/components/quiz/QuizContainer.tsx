@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -11,9 +12,10 @@ import { PurchaseNotification } from '@/components/product/PurchaseNotification'
 import { LiveVisitors } from '@/components/product/LiveVisitors'
 import { generatePersonalizedProductDescription } from '@/ai/flows/personalized-product-description-flow'
 import { Progress } from '@/components/ui/progress'
-import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock, Printer, Users } from 'lucide-react'
+import { Loader2, ArrowRight, Zap, ShieldCheck, Lock, FileText, Sparkles, Clock, Printer, Users, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 type QuizState = 'QUIZ' | 'LOADING' | 'PRESENTATION'
 
@@ -22,6 +24,8 @@ export const QuizContainer: React.FC = () => {
   const [answers, setAnswers] = useState<string[]>([])
   const [state, setState] = useState<QuizState>('QUIZ')
   const [personalizedDesc, setPersonalizedDesc] = useState('')
+
+  const bnccImage = PlaceHolderImages.find(img => img.id === 'bncc-seal')
 
   const quizSteps = [
     {
@@ -160,7 +164,6 @@ export const QuizContainer: React.FC = () => {
 
   const progress = ((step + 1) / quizSteps.length) * 100
 
-  // Função para definir a cor da barra baseada no progresso
   const getProgressColorClass = () => {
     if (progress < 40) return 'from-primary via-primary/80 to-primary/60';
     if (progress < 75) return 'from-primary via-accent to-accent/80';
@@ -233,7 +236,6 @@ export const QuizContainer: React.FC = () => {
           <LiveVisitors />
           <PurchaseNotification />
           
-          {/* Section 1: Personalized Description */}
           <section className="bg-white pt-6 pb-6 px-4">
             <div className="max-w-5xl mx-auto">
               <div className="mb-6">
@@ -247,7 +249,6 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Section 2: Sample Gallery */}
           <section className="bg-blue-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto">
               <SampleGallery />
@@ -256,7 +257,6 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Section 3: Social Proof */}
           <section className="bg-purple-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto">
               <SocialProof />
@@ -265,7 +265,6 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Section: What you will receive today */}
           <section className="bg-slate-50 py-12 px-4">
             <div className="max-w-6xl mx-auto text-center space-y-10">
               <div className="space-y-3">
@@ -316,7 +315,6 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Section 4: Bonuses */}
           <section className="bg-amber-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-4">
               <h3 className="text-[21px] font-headline font-bold text-primary">
@@ -368,7 +366,6 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          {/* Adaptability Card */}
           <section className="bg-white pt-6 pb-2 px-4">
             <div className="max-w-6xl mx-auto flex justify-center">
               <div 
@@ -390,7 +387,6 @@ export const QuizContainer: React.FC = () => {
             </div>
           </section>
 
-          {/* Section 5: Offer Section */}
           <section className="bg-white py-2 px-4">
             <div className="max-w-5xl mx-auto">
               < OfferSection />
@@ -399,7 +395,6 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Section 6: Delivery Info */}
           <section className="bg-slate-50/50 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-8">
               <div className="space-y-4">
@@ -415,7 +410,6 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          {/* Section 7: Security Info */}
           <section className="bg-green-50/30 py-10 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-6">
               <h3 className="text-[23px] font-headline font-bold text-primary">
@@ -436,6 +430,55 @@ export const QuizContainer: React.FC = () => {
               </div>
             </div>
           </section>
+
+          <Separator className="opacity-10" />
+
+          {/* BNCC Section */}
+          <section className="bg-white py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              {bnccImage && (
+                <div className="relative w-32 h-32 mx-auto mb-4 animate-in zoom-in duration-700">
+                  <Image 
+                    src={bnccImage.imageUrl} 
+                    alt={bnccImage.description}
+                    fill
+                    className="object-contain"
+                    data-ai-hint={bnccImage.imageHint}
+                  />
+                </div>
+              )}
+              <div className="space-y-4">
+                <h3 className="text-3xl font-headline font-black text-primary uppercase tracking-tight">
+                  Compatível com BNCC
+                </h3>
+                <div className="bg-primary/5 p-6 rounded-3xl border border-primary/10 shadow-sm">
+                  <p className="text-[16px] md:text-[18px] text-foreground font-medium leading-relaxed max-w-2xl mx-auto">
+                    <span className="text-primary font-bold">Planejamento de inclusão seguro e oficial!</span> Leve +200 modelos de PEI alinhados à BNCC, prontos para você editar no Word e usar na sala de aula amanhã mesmo.
+                  </p>
+                </div>
+                <div className="flex justify-center gap-4 pt-2">
+                  <div className="flex items-center gap-2 text-[11px] font-black uppercase text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-100">
+                    <CheckCircle className="w-3.5 h-3.5" />
+                    100% Atualizado
+                  </div>
+                  <div className="flex items-center gap-2 text-[11px] font-black uppercase text-primary bg-primary/5 px-3 py-1 rounded-full border border-primary/10">
+                    <Zap className="w-3.5 h-3.5" />
+                    Edição Rápida
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Final Footer Spacer/Info */}
+          <footer className="bg-slate-900 text-slate-400 py-8 px-4 text-center">
+            <div className="max-w-5xl mx-auto space-y-4">
+              <p className="text-[11px] uppercase tracking-widest font-bold">PEI Navigator © {new Date().getFullYear()}</p>
+              <p className="text-[10px] max-w-lg mx-auto leading-tight opacity-50">
+                Este produto não garante a aprovação automática de alunos, mas oferece ferramentas profissionais para auxiliar no processo de inclusão escolar conforme as diretrizes da BNCC.
+              </p>
+            </div>
+          </footer>
         </div>
       )}
     </div>

@@ -74,6 +74,12 @@
       "imageHint": "inclusive document"
     },
     {
+      "id": "bncc-seal",
+      "description": "Selo de compatibilidade BNCC",
+      "imageUrl": "https://picsum.photos/seed/bncc/200/200",
+      "imageHint": "bncc seal"
+    },
+    {
       "id": "testimonial-1",
       "description": "Depoimento de professora satisfeita no WhatsApp",
       "imageUrl": "https://image2url.com/r2/default/images/1773676800405-d3cadb2d-d305-460d-926c-82acc1360e0d.jpeg",
