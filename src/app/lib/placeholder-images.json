@@ -69,8 +69,8 @@
     },
     {
       "id": "pei-sample-12",
-      "description": "Amostra de planejamento PEI inclusivo",
-      "imageUrl": "https://image2url.com/r2/default/images/1774100896380-77d0e50b-ed0e-4fa1-aad0-da555203932e.jfif",
+      "description": "Amostra de planejamento PEI inclusivo atualizada",
+      "imageUrl": "https://image2url.com/r2/default/images/1774365832684-14b22406-948c-4450-b4de-939ff92702d3.jfif",
       "imageHint": "inclusive document"
     },
     {
@@ -108,6 +108,12 @@
       "description": "Novo depoimento de sucesso no WhatsApp",
       "imageUrl": "https://image2url.com/r2/default/images/1773677621142-6ffaf322-fc3c-443a-80ac-788ae3e8051a.jpeg",
       "imageHint": "whatsapp feedback"
+    },
+    {
+      "id": "testimonial-6",
+      "description": "Depoimento adicional de satisfação",
+      "imageUrl": "https://image2url.com/r2/default/images/1774318869342-2b503065-b25d-4351-a566-1f8757fd4bfb.jpeg",
+      "imageHint": "whatsapp review"
     }
   ]
 }
