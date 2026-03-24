@@ -256,14 +256,7 @@ export const QuizContainer: React.FC = () => {
 
           <Separator className="opacity-10" />
 
-          <section className="bg-purple-50/50 py-10 px-4">
-            <div className="max-w-5xl mx-auto">
-              <SocialProof />
-            </div>
-          </section>
-
-          <Separator className="opacity-10" />
-
+          {/* Section: O que você vai receber hoje (Moved UP) */}
           <section className="bg-slate-50 py-12 px-4">
             <div className="max-w-6xl mx-auto text-center space-y-10">
               <div className="space-y-3">
@@ -309,6 +302,15 @@ export const QuizContainer: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          <Separator className="opacity-10" />
+
+          {/* Section: Depoimentos (Social Proof) */}
+          <section className="bg-purple-50/50 py-10 px-4">
+            <div className="max-w-5xl mx-auto">
+              <SocialProof />
             </div>
           </section>
 
