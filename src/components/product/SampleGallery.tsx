@@ -34,7 +34,7 @@ export const SampleGallery: React.FC = () => {
           }}
           plugins={[
             AutoScroll({
-              speed: 1,
+              speed: 2, // Aumentado de 1 para 2 para passar mais rápido
               stopOnInteraction: false, // Garante que não pare ao clicar/tocar
               stopOnMouseEnter: false,  // Garante que não pare ao passar o mouse
               stopOnFocusIn: false      // Garante que não pare ao ganhar foco
