@@ -101,7 +101,7 @@ export const OfferSection: React.FC = () => {
               
               <div className="mt-4 relative w-full h-48">
                 <Image 
-                  src="https://image2url.com/r2/default/images/1774363222916-76f6f897-9b0e-4bd7-86d2-9807eb1bd1c4.png"
+                  src="https://image2url.com/r2/default/images/1774364056245-de221ccc-b803-48b9-91d9-e4a124ff2591.png"
                   alt="Garantia"
                   fill
                   className="object-contain"
